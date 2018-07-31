@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?><root>
+  <AirLowFareSearchRS Uri="57d22a48e4b0ce2848da8450" Type="CALENDAR_ONE_WAY_COMBINABLE" RqCriteria="http://10.72.45.74:9090/tdprest/api/search-low-fare-trips.json?pos=CHANGAN_558&traveler=code%3AADT&flexible=false&cabin=Economy&OTACode=CHANGAN_558×tamp=1473391170068&token=1580f02245e969edf92cc94c1cf4b920&leg=index%3A0%3Borigin%3AXIY%3BoriginType%3AA%3Bdestination%3AHZG%3BdestinationType%3AA%3Bdate%3A2016-12-01&ln=zh_CN">
+    <ClientId>CHANGAN_558</ClientId>
+    <UserSessionId>57d22a47e4b0ce2848da844e</UserSessionId>
+    <SelectedTrip Uri="57d22a48e4b0ce2848da844f">
+      <FlightItineraryPricePoints>
+        <FlightItineraryPricePointRef>c41c5921-c811-4238-86ac-3289af81d3cc</FlightItineraryPricePointRef>
+        <FlightItineraryPricePointRef>c41c5921-c811-4238-86ac-3289af81d3cc</FlightItineraryPricePointRef>
+      </FlightItineraryPricePoints>
+      <TripPricing TotalFareAmount="250" TotalFareCurrency="CNY">
+        <TravelerTripPricing>
+          <GuestType Code="ADT" Quantity="1"></GuestType>
+          <Fare BaseFareAmount="200" BaseFareCurrency="CNY" TotalFareAmount="250" TotalFareCurrency="CNY">
+            <Taxes>
+              <Tax Amount="50" CurrencyCode="CNY" TaxFeeRef="CN"></Tax>
+            </Taxes>
+            <Fees>
+              <Fee Amount="0" CurrencyCode="CNY" TaxFeeRef="YQ"></Fee>
+            </Fees>
+          </Fare>
+        </TravelerTripPricing>
+      </TripPricing>
+    </SelectedTrip>
+    <FlightItineraryPricePoints>
+      <FlightItineraryPricePoint Index="0" Leg="0" ID="25e495ce-4674-4f23-a2f6-4576b6eec1f9">
+        <FlightInformationRef>3098bd23-7039-4579-8207-6711925b3a57</FlightInformationRef>
+        <PricePointRef>164f82cf-4568-408c-9ce3-feedc3f09d64</PricePointRef>
+        <FlightInformationAttributes FlightSegmentRef="1b4ad7d0-09d4-4d5f-90b4-feb2a228a09c" CabinClass="Business" BookingClass="J" SeatsAvailable="7"></FlightInformationAttributes>
+        <FlightInformationAttributes FlightSegmentRef="1b4ad7d0-09d4-4d5f-90b4-feb2a228a09c" CabinClass="Business" BookingClass="J" SeatsAvailable="7"></FlightInformationAttributes>
+      </FlightItineraryPricePoint>
+      <FlightItineraryPricePoint Index="1" Leg="0" ID="82198346-e9ef-47b6-bf26-7405ff255a3d">
+        <FlightInformationRef>d2099075-dbbd-47f4-9826-77382db66832</FlightInformationRef>
+        <PricePointRef>7238d59d-018d-4fc5-97fe-33a21d5bbb42</PricePointRef>
+        <FlightInformationAttributes FlightSegmentRef="182d8b3b-a6e1-4d6e-abc5-a12c87ec3366" CabinClass="Economy" BookingClass="N" SeatsAvailable="2"></FlightInformationAttributes>
+      </FlightItineraryPricePoint>
+      <FlightItineraryPricePoint Index="2" Leg="0" ID="c41c5921-c811-4238-86ac-3289af81d3cc">
+        <FlightInformationRef>0575b658-915d-4b37-a75d-470f0a12bcaf</FlightInformationRef>
+        <PricePointRef>a8395f50-55d4-4be7-9177-e9a7bb05a20f</PricePointRef>
+        <FlightInformationAttributes FlightSegmentRef="68247548-e063-48f7-bc0f-ec78b1b6daf1" CabinClass="Economy" BookingClass="W" SeatsAvailable="1"></FlightInformationAttributes>
+      </FlightItineraryPricePoint>
+      <FlightItineraryPricePoint Index="3" Leg="0" ID="9d9aca7f-4fb7-4f52-b940-7f5309fc7c95">
+        <FlightInformationRef>0575b658-915d-4b37-a75d-470f0a12bcaf</FlightInformationRef>
+        <PricePointRef>88d8ee54-527d-435b-89af-9e848d049107</PricePointRef>
+        <FlightInformationAttributes FlightSegmentRef="68247548-e063-48f7-bc0f-ec78b1b6daf1" CabinClass="Economy" BookingClass="E" SeatsAvailable="2"></FlightInformationAttributes>
+      </FlightItineraryPricePoint>
+      <FlightItineraryPricePoint Index="4" Leg="0" ID="896cdb5c-596f-4339-8cfc-d54b7d7e158c">
+        <FlightInformationRef>0575b658-915d-4b37-a75d-470f0a12bcaf</FlightInformationRef>
+        <PricePointRef>2fd7009a-dd63-4176-a81f-d64cc248001d</PricePointRef>
+        <FlightInformationAttributes FlightSegmentRef="68247548-e063-48f7-bc0f-ec78b1b6daf1" CabinClass="Economy" BookingClass="M" SeatsAvailable="6"></FlightInformationAttributes>
+      </FlightItineraryPricePoint>
+      <FlightItineraryPricePoint Index="5" Leg="0" ID="e3406481-2787-4f4f-adea-818838a7b220">
+        <FlightInformationRef>fc20c7c5-deb5-4ee1-99bb-97fb081dcf90</FlightInformationRef>
+        <PricePointRef>2fd7009a-dd63-4176-a81f-d64cc248001d</PricePointRef>
+        <FlightInformationAttributes FlightSegmentRef="fec99678-2f8b-4e36-85b5-cdae80e07c0c" CabinClass="Economy" BookingClass="M"></FlightInformationAttributes>
+      </FlightItineraryPricePoint>
+      <FlightItineraryPricePoint Index="6" Leg="0" ID="34634868-f43c-43eb-a913-c5cead1a489a">
+        <FlightInformationRef>0575b658-915d-4b37-a75d-470f0a12bcaf</FlightInformationRef>
+        <PricePointRef>b4d53141-1403-4465-9b4a-1d3dbb77f744</PricePointRef>
+        <FlightInformationAttributes FlightSegmentRef="68247548-e063-48f7-bc0f-ec78b1b6daf1" CabinClass="Economy" BookingClass="Y"></FlightInformationAttributes>
+      </FlightItineraryPricePoint>
+    </FlightItineraryPricePoints>
+    <FlightInformationSummary>
+      <FlightInformation ID="3098bd23-7039-4579-8207-6711925b3a57">
+        <Flight TotalTravelDuration="PT1H35M">
+          <FlightSegment ID="1b4ad7d0-09d4-4d5f-90b4-feb2a228a09c" Sequence="0" OriginCode="XIY" OriginLocationName="西安咸阳国际机场" DestinationCode="HZG" DestinationLocationName="汉中西关机场" DepartureDate="2016-12-04T08:00:00.000+08:00" ArrivalDate="2016-12-04T09:35:00.000+08:00" MarketingAirline="9H" FlightNumber="2123" EquipmentCode="738" NumberOfStops="0" TotalFlightDuration="PT1H35M"></FlightSegment>
+          <FlightSegment ID="1b4ad7d0-09d4-4d5f-90b4-feb2a228a09c" Sequence="0" OriginCode="XIY" OriginLocationName="西安咸阳国际机场" DestinationCode="HZG" DestinationLocationName="汉中西关机场" DepartureDate="2016-12-04T08:00:00.000+08:00" ArrivalDate="2016-12-04T09:35:00.000+08:00" MarketingAirline="9H" FlightNumber="2123" EquipmentCode="738" NumberOfStops="0" TotalFlightDuration="PT1H35M"></FlightSegment>
+        </Flight>
+      </FlightInformation>
+      <FlightInformation ID="fc20c7c5-deb5-4ee1-99bb-97fb081dcf90">
+        <Flight TotalTravelDuration="PT1H35M">
+          <FlightSegment ID="fec99678-2f8b-4e36-85b5-cdae80e07c0c" Sequence="0" OriginCode="XIY" OriginLocationName="西安咸阳国际机场" DestinationCode="HZG" DestinationLocationName="汉中西关机场" DepartureDate="2016-12-02T08:00:00.000+08:00" ArrivalDate="2016-12-02T09:35:00.000+08:00" MarketingAirline="9H" FlightNumber="2123" EquipmentCode="738" NumberOfStops="0" TotalFlightDuration="PT1H35M"></FlightSegment>
+        </Flight>
+      </FlightInformation>
+      <FlightInformation ID="d2099075-dbbd-47f4-9826-77382db66832">
+        <Flight TotalTravelDuration="PT1H35M">
+          <FlightSegment ID="182d8b3b-a6e1-4d6e-abc5-a12c87ec3366" Sequence="0" OriginCode="XIY" OriginLocationName="西安咸阳国际机场" DestinationCode="HZG" DestinationLocationName="汉中西关机场" DepartureDate="2016-12-03T08:00:00.000+08:00" ArrivalDate="2016-12-03T09:35:00.000+08:00" MarketingAirline="9H" FlightNumber="2123" EquipmentCode="738" NumberOfStops="0" TotalFlightDuration="PT1H35M"></FlightSegment>
+        </Flight>
+      </FlightInformation>
+      <FlightInformation ID="0575b658-915d-4b37-a75d-470f0a12bcaf">
+        <Flight TotalTravelDuration="PT1H35M">
+          <FlightSegment ID="68247548-e063-48f7-bc0f-ec78b1b6daf1" Sequence="0" OriginCode="XIY" OriginLocationName="西安咸阳国际机场" DestinationCode="HZG" DestinationLocationName="汉中西关机场" DepartureDate="2016-12-01T08:00:00.000+08:00" ArrivalDate="2016-12-01T09:35:00.000+08:00" MarketingAirline="9H" FlightNumber="2123" EquipmentCode="738" NumberOfStops="0" TotalFlightDuration="PT1H35M"></FlightSegment>
+        </Flight>
+      </FlightInformation>
+    </FlightInformationSummary>
+    <PricePointSummary>
+      <PricePoint ID="164f82cf-4568-408c-9ce3-feedc3f09d64">
+        <FareFamilyRef>9HTH</FareFamilyRef>
+        <BasedOnPTCPricing>
+          <GuestType Code="ADT" Quantity="1"></GuestType>
+          <Fare BaseFareAmount="50" BaseFareCurrency="CNY" TotalFareAmount="50" TotalFareCurrency="CNY"></Fare>
+        </BasedOnPTCPricing>
+      </PricePoint>
+      <PricePoint ID="b4d53141-1403-4465-9b4a-1d3dbb77f744">
+        <FareFamilyRef>9HQJ</FareFamilyRef>
+        <BasedOnPTCPricing>
+          <GuestType Code="ADT" Quantity="1"></GuestType>
+          <Fare BaseFareAmount="500" BaseFareCurrency="CNY" TotalFareAmount="500" TotalFareCurrency="CNY"></Fare>
+        </BasedOnPTCPricing>
+      </PricePoint>
+      <PricePoint ID="a8395f50-55d4-4be7-9177-e9a7bb05a20f">
+        <FareFamilyRef>9HTH</FareFamilyRef>
+        <BasedOnPTCPricing>
+          <GuestType Code="ADT" Quantity="1"></GuestType>
+          <Fare BaseFareAmount="200" BaseFareCurrency="CNY" TotalFareAmount="200" TotalFareCurrency="CNY"></Fare>
+        </BasedOnPTCPricing>
+      </PricePoint>
+      <PricePoint ID="2fd7009a-dd63-4176-a81f-d64cc248001d">
+        <FareFamilyRef>9HSS</FareFamilyRef>
+        <BasedOnPTCPricing>
+          <GuestType Code="ADT" Quantity="1"></GuestType>
+          <Fare BaseFareAmount="370" BaseFareCurrency="CNY" TotalFareAmount="370" TotalFareCurrency="CNY"></Fare>
+        </BasedOnPTCPricing>
+      </PricePoint>
+      <PricePoint ID="7238d59d-018d-4fc5-97fe-33a21d5bbb42">
+        <FareFamilyRef>9HTH</FareFamilyRef>
+        <BasedOnPTCPricing>
+          <GuestType Code="ADT" Quantity="1"></GuestType>
+          <Fare BaseFareAmount="59" BaseFareCurrency="CNY" TotalFareAmount="59" TotalFareCurrency="CNY"></Fare>
+        </BasedOnPTCPricing>
+      </PricePoint>
+      <PricePoint ID="88d8ee54-527d-435b-89af-9e848d049107">
+        <FareFamilyRef>9HFB</FareFamilyRef>
+        <BasedOnPTCPricing>
+          <GuestType Code="ADT" Quantity="1"></GuestType>
+          <Fare BaseFareAmount="230" BaseFareCurrency="CNY" TotalFareAmount="230" TotalFareCurrency="CNY"></Fare>
+        </BasedOnPTCPricing>
+      </PricePoint>
+    </PricePointSummary>
+    <FareFamilyContent>
+      <FareFamily Sequence="3" ID="9HQJ">
+        <Name>
+          <Entry LanguageCode="en" Value="Economy Deluxe"></Entry>
+          <Entry LanguageCode="zh_CN" Value="全价经济"></Entry>
+        </Name>
+        <URL>
+          <Entry LanguageCode="en"></Entry>
+          <Entry LanguageCode="zh_CN"></Entry>
+        </URL>
+        <CombinabilityRule></CombinabilityRule>
+        <CombinabilityRule></CombinabilityRule>
+        <CombinabilityRule FareFamilyRef="9HSS"></CombinabilityRule>
+        <CombinabilityRule FareFamilyRef="9HFB"></CombinabilityRule>
+        <CombinabilityRule FareFamilyRef="9HTH"></CombinabilityRule>
+        <CombinabilityRule FareFamilyRef="9HQJ"></CombinabilityRule>
+        <Attribute>
+          <Entry LanguageCode="en" Value="Change Fee: Over 48 hours (inclusive) before departure: 5%; 
+ Within 48 hours before departure: 10%;  
+ After flight departure: 15%."></Entry>
+          <Entry LanguageCode="zh_CN" Value="变更费：航班计划离站时间48小时前（含）: 5%; 
+ 航班计划离站时间48小时内: 10%; 
+ 航班离站后：15%."></Entry>
+        </Attribute>
+        <Attribute>
+          <Entry LanguageCode="en" Value="Refund Fee: Over 48 hours (inclusive) before departure: 10%; 
+ Within 48 hours before departure: 20%; 
+ After flight departure: 30%."></Entry>
+          <Entry LanguageCode="zh_CN" Value="退票费：航班计划离站时间48小时前（含）: 10%; 
+ 航班计划离站时间48小时内: 20%; 
+ 航班离站后：30%."></Entry>
+        </Attribute>
+        <Attribute>
+          <Entry LanguageCode="en" Value="Endorsement: Allowed."></Entry>
+          <Entry LanguageCode="zh_CN" Value="签转:允许."></Entry>
+        </Attribute>
+      </FareFamily>
+      <FareFamily Sequence="4" ID="9HSS">
+        <Name>
+          <Entry LanguageCode="en" Value="Economy Flex"></Entry>
+          <Entry LanguageCode="zh_CN" Value="自由经济"></Entry>
+        </Name>
+        <URL>
+          <Entry LanguageCode="en"></Entry>
+          <Entry LanguageCode="zh_CN"></Entry>
+        </URL>
+        <CombinabilityRule></CombinabilityRule>
+        <CombinabilityRule></CombinabilityRule>
+        <CombinabilityRule FareFamilyRef="9HQJ"></CombinabilityRule>
+        <CombinabilityRule FareFamilyRef="9HFB"></CombinabilityRule>
+        <CombinabilityRule FareFamilyRef="9HTH"></CombinabilityRule>
+        <CombinabilityRule FareFamilyRef="9HSS"></CombinabilityRule>
+        <Attribute>
+          <Entry LanguageCode="en" Value="Change Fee: Over 48 hours (inclusive) before departure: 5%; 
+ Within 48 hours before departure: 10%;  
+ After flight departure: 15%."></Entry>
+          <Entry LanguageCode="zh_CN" Value="变更费：航班计划离站时间48小时前（含）: 5%; 
+ 航班计划离站时间48小时内: 10%; 
+ 航班离站后：15%."></Entry>
+        </Attribute>
+        <Attribute>
+          <Entry LanguageCode="en" Value="Refund Fee: Over 48 hours (inclusive) before departure: 10%; 
+ Within 48 hours before departure: 20%; 
+ After flight departure: 30%."></Entry>
+          <Entry LanguageCode="zh_CN" Value="退票费：航班计划离站时间48小时前（含）: 10%; 
+ 航班计划离站时间48小时内: 20%; 
+ 航班离站后：30%."></Entry>
+        </Attribute>
+        <Attribute>
+          <Entry LanguageCode="en" Value="Endorsement: Not allowed."></Entry>
+          <Entry LanguageCode="zh_CN" Value="签转:不允许."></Entry>
+        </Attribute>
+      </FareFamily>
+      <FareFamily Sequence="5" ID="9HFB">
+        <Name>
+          <Entry LanguageCode="en" Value="Economy Value"></Entry>
+          <Entry LanguageCode="zh_CN" Value="超值经济"></Entry>
+        </Name>
+        <URL>
+          <Entry LanguageCode="en"></Entry>
+          <Entry LanguageCode="zh_CN"></Entry>
+        </URL>
+        <CombinabilityRule></CombinabilityRule>
+        <CombinabilityRule></CombinabilityRule>
+        <CombinabilityRule FareFamilyRef="9HQJ"></CombinabilityRule>
+        <CombinabilityRule FareFamilyRef="9HSS"></CombinabilityRule>
+        <CombinabilityRule FareFamilyRef="9HTH"></CombinabilityRule>
+        <CombinabilityRule FareFamilyRef="9HFB"></CombinabilityRule>
+        <Attribute>
+          <Entry LanguageCode="en" Value="Change Fee: Over 48 hours (inclusive) before departure: 10%; 
+ Within 48 hours before departure: 15%;  
+ After flight departure: 20%."></Entry>
+          <Entry LanguageCode="zh_CN" Value="变更费：航班计划离站时间48小时前（含）: 10%; 
+ 航班计划离站时间48小时内: 15%; 
+ 航班离站后：20%."></Entry>
+        </Attribute>
+        <Attribute>
+          <Entry LanguageCode="en" Value="Refund Fee: Over 48 hours (inclusive) before departure: 20%; 
+ Within 48 hours before departure: 25%; 
+ After flight departure: 40%."></Entry>
+          <Entry LanguageCode="zh_CN" Value="退票费：航班计划离站时间48小时前（含）: 20%; 
+ 航班计划离站时间48小时内: 25%; 
+ 航班离站后：40%."></Entry>
+        </Attribute>
+        <Attribute>
+          <Entry LanguageCode="en" Value="Endorsement: Not allowed."></Entry>
+          <Entry LanguageCode="zh_CN" Value="签转:不允许."></Entry>
+        </Attribute>
+      </FareFamily>
+      <FareFamily Sequence="6" ID="9HTH">
+        <Name>
+          <Entry LanguageCode="en" Value="Economy Saver"></Entry>
+          <Entry LanguageCode="zh_CN" Value="特惠经济"></Entry>
+        </Name>
+        <URL>
+          <Entry LanguageCode="en"></Entry>
+          <Entry LanguageCode="zh_CN"></Entry>
+        </URL>
+        <CombinabilityRule></CombinabilityRule>
+        <CombinabilityRule></CombinabilityRule>
+        <CombinabilityRule FareFamilyRef="9HQJ"></CombinabilityRule>
+        <CombinabilityRule FareFamilyRef="9HSS"></CombinabilityRule>
+        <CombinabilityRule FareFamilyRef="9HFB"></CombinabilityRule>
+        <CombinabilityRule FareFamilyRef="9HTH"></CombinabilityRule>
+        <Attribute>
+          <Entry LanguageCode="en" Value="Change Fee: Not allowed."></Entry>
+          <Entry LanguageCode="zh_CN" Value="变更费：不允许."></Entry>
+        </Attribute>
+        <Attribute>
+          <Entry LanguageCode="en" Value="Refund Fee: Not allowed."></Entry>
+          <Entry LanguageCode="zh_CN" Value="退票费：不允许."></Entry>
+        </Attribute>
+        <Attribute>
+          <Entry LanguageCode="en" Value="Endorsement: Not allowed."></Entry>
+          <Entry LanguageCode="zh_CN" Value="签转:不允许."></Entry>
+        </Attribute>
+      </FareFamily>
+    </FareFamilyContent>
+    <PromotionContent></PromotionContent>
+    <TaxFeeContent>
+      <TaxFee ID="CN">
+        <Entry Name="Airport Fee (Domestic)" CountryCode="CN"></Entry>
+      </TaxFee>
+      <TaxFee ID="YQ">
+        <Entry Name="Service Fee" AirlineCode="9H"></Entry>
+      </TaxFee>
+    </TaxFeeContent>
+    <MediaContent></MediaContent>
+  </AirLowFareSearchRS>
+</root>

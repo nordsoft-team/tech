@@ -1,0 +1,184 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="success"/>
+        <xs:element type="xs:string" name="message"/>
+        <xs:element type="xs:string" name="errorCode"/>
+        <xs:element type="xs:string" name="errorMessage"/>
+        <xs:element type="xs:long" name="systime"/>
+        <xs:element type="xs:string" name="requestIP"/>
+        <xs:element name="data">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="ok"/>
+              <xs:element type="xs:string" name="errorCode"/>
+              <xs:element type="xs:string" name="errorMessage"/>
+              <xs:element name="airItineraries" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="duration"/>
+                    <xs:element type="xs:string" name="durationCN"/>
+                    <xs:element name="flightSegs" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="place">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="airCode"/>
+                                <xs:element type="xs:string" name="time"/>
+                                <xs:element type="xs:string" name="date"/>
+                                <xs:element type="xs:string" name="isAmerica"/>
+                                <xs:element type="xs:string" name="name"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="plane">
+                            <xs:complexType mixed="true">
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="airline" minOccurs="0"/>
+                                <xs:element type="xs:string" name="planeStyle" minOccurs="0"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="type"/>
+                          <xs:element type="xs:byte" name="id"/>
+                          <xs:element type="xs:string" name="wideBody"/>
+                          <xs:element type="xs:string" name="codeShare"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="taxPrice"/>
+                    <xs:element type="xs:short" name="lowestPrice"/>
+                    <xs:element type="xs:string" name="lowestMemberPrice"/>
+                    <xs:element name="pricePoints" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:short" name="accumulatedMileage"/>
+                          <xs:element type="xs:short" name="adtPrice"/>
+                          <xs:element type="xs:short" name="chdPrice"/>
+                          <xs:element type="xs:string" name="cabins"/>
+                          <xs:element type="xs:string" name="familyName"/>
+                          <xs:element type="xs:string" name="seatNumber"/>
+                          <xs:element type="xs:byte" name="taxPrice"/>
+                          <xs:element name="ticketDetail">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="mainCabin"/>
+                                <xs:element name="details" maxOccurs="unbounded" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="time"/>
+                                      <xs:element name="info">
+                                        <xs:complexType mixed="true">
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="hasMeal" minOccurs="0"/>
+                                            <xs:element type="xs:string" name="fltNo" minOccurs="0"/>
+                                            <xs:element type="xs:string" name="cabin" minOccurs="0"/>
+                                            <xs:element type="xs:string" name="airline" minOccurs="0"/>
+                                            <xs:element type="xs:string" name="planeStyle" minOccurs="0"/>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element type="xs:date" name="date"/>
+                                      <xs:element type="xs:string" name="description"/>
+                                      <xs:element type="xs:string" name="type"/>
+                                      <xs:element type="xs:byte" name="id"/>
+                                      <xs:element type="xs:string" name="discount"/>
+                                      <xs:element type="xs:string" name="pass"/>
+                                      <xs:element type="xs:string" name="stop"/>
+                                      <xs:element type="xs:string" name="wideBody"/>
+                                      <xs:element type="xs:string" name="codeShare"/>
+                                      <xs:element type="xs:string" name="terminal"/>
+                                      <xs:element type="xs:string" name="passOver"/>
+                                      <xs:element type="xs:string" name="name"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="cabinInfos" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="fareFamily">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="additional"/>
+                                      <xs:element type="xs:string" name="cabinName"/>
+                                      <xs:element type="xs:string" name="changeToOpen"/>
+                                      <xs:element type="xs:string" name="chgAfterDeparture"/>
+                                      <xs:element type="xs:float" name="chgAfterDepartureRate"/>
+                                      <xs:element type="xs:string" name="chgBeforeDeparture"/>
+                                      <xs:element type="xs:float" name="chgBeforeDepartureRate"/>
+                                      <xs:element type="xs:string" name="chgLimit"/>
+                                      <xs:element type="xs:byte" name="chgTimeThreshold"/>
+                                      <xs:element type="xs:string" name="chgType"/>
+                                      <xs:element type="xs:string" name="domesticSelfCheckin"/>
+                                      <xs:element type="xs:byte" name="drawTable"/>
+                                      <xs:element type="xs:string" name="fareFamilyCode"/>
+                                      <xs:element type="xs:string" name="fareFamilyName"/>
+                                      <xs:element type="xs:string" name="internationalSelfCheckin"/>
+                                      <xs:element type="xs:string" name="productCkin"/>
+                                      <xs:element type="xs:string" name="productEi"/>
+                                      <xs:element type="xs:string" name="productType"/>
+                                      <xs:element type="xs:string" name="refAfterDeparture"/>
+                                      <xs:element type="xs:float" name="refAfterDepartureRate"/>
+                                      <xs:element type="xs:string" name="refBeforeDeparture"/>
+                                      <xs:element type="xs:float" name="refBeforeDepartureRate"/>
+                                      <xs:element type="xs:string" name="refEligible"/>
+                                      <xs:element type="xs:byte" name="refTimeThreshold"/>
+                                      <xs:element type="xs:string" name="refVoluntary"/>
+                                      <xs:element type="xs:string" name="upgradable"/>
+                                      <xs:element type="xs:string" name="userType"/>
+                                      <xs:element type="xs:string" name="productName"/>
+                                      <xs:element type="xs:string" name="description"/>
+                                      <xs:element type="xs:string" name="to"/>
+                                      <xs:element type="xs:string" name="from"/>
+                                      <xs:element type="xs:string" name="username"/>
+                                      <xs:element type="xs:string" name="fareBasis"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:byte" name="changeTicketSize"/>
+                          <xs:element type="xs:string" name="discount"/>
+                          <xs:element type="xs:string" name="pricePointKey"/>
+                          <xs:element type="xs:string" name="memberPricePointKey"/>
+                          <xs:element type="xs:string" name="adtMemberPrice"/>
+                          <xs:element type="xs:string" name="chdMemberPrice"/>
+                          <xs:element type="xs:string" name="isMemberDayPrice"/>
+                          <xs:element type="xs:string" name="totalMemberPrice"/>
+                          <xs:element type="xs:short" name="totalPrice"/>
+                          <xs:element type="xs:string" name="isAdditionalCabin"/>
+                          <xs:element type="xs:string" name="additionalCabinDesc"/>
+                          <xs:element type="xs:string" name="baseIntegral"/>
+                          <xs:element type="xs:string" name="gradeIntegral"/>
+                          <xs:element type="xs:string" name="gradeSeg"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="remain"/>
+                    <xs:element type="xs:byte" name="plusDays"/>
+                    <xs:element type="xs:byte" name="stopTimes"/>
+                    <xs:element type="xs:string" name="stopType"/>
+                    <xs:element type="xs:string" name="hasInsurance"/>
+                    <xs:element type="xs:string" name="isHasMemberDayPrice"/>
+                    <xs:element type="xs:string" name="fltNos" maxOccurs="unbounded" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="shoppingKey"/>
+              <xs:element type="xs:string" name="recommend"/>
+              <xs:element type="xs:string" name="isInternal"/>
+              <xs:element type="xs:string" name="isAmerica"/>
+              <xs:element type="xs:string" name="message"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

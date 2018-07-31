@@ -1,0 +1,81 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="Msg"/>
+        <xs:element type="xs:string" name="Code"/>
+        <xs:element type="xs:string" name="IsSuccess"/>
+        <xs:element name="Data">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="OrderSerialNumber"/>
+              <xs:element type="xs:string" name="Status"/>
+              <xs:element type="xs:string" name="StatusCode"/>
+              <xs:element type="xs:string" name="CreateTime"/>
+              <xs:element type="xs:string" name="PayLimitTime"/>
+              <xs:element type="xs:string" name="TotalPrice"/>
+              <xs:element name="PnrList" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="ID"/>
+                    <xs:element type="xs:string" name="PRODUCT_CODE"/>
+                    <xs:element name="LegList" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="ID"/>
+                          <xs:element type="xs:string" name="DEPARTURE"/>
+                          <xs:element type="xs:string" name="ARRIVAL"/>
+                          <xs:element type="xs:string" name="TAKEOFF_TIME"/>
+                          <xs:element type="xs:string" name="ARRIVE_TIME"/>
+                          <xs:element type="xs:string" name="FLIGHTNO"/>
+                          <xs:element type="xs:string" name="CLASSLEVEL"/>
+                          <xs:element name="TicketList" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="ID"/>
+                                <xs:element type="xs:string" name="PASSENGERID"/>
+                                <xs:element type="xs:string" name="TICKETNO"/>
+                                <xs:element type="xs:string" name="TICKETPRICE"/>
+                                <xs:element type="xs:string" name="AIRPORT_TAX"/>
+                                <xs:element type="xs:string" name="FUEL_TAX"/>
+                                <xs:element type="xs:string" name="TICKET_STATUS"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="PassengerList" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="ID"/>
+                          <xs:element type="xs:string" name="PASSENGER_NAME"/>
+                          <xs:element type="xs:string" name="PASSENGER_TYPE"/>
+                          <xs:element type="xs:string" name="CERTIFICATE_TYPE"/>
+                          <xs:element type="xs:string" name="CERTIFICATE_NO"/>
+                          <xs:element type="xs:string" name="BIRTH"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PayList" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="PayId"/>
+                    <xs:element type="xs:string" name="SerialNumber"/>
+                    <xs:element type="xs:string" name="PayType"/>
+                    <xs:element type="xs:string" name="DuePrice"/>
+                    <xs:element type="xs:string" name="PayPrice"/>
+                    <xs:element type="xs:string" name="PayStatusCode"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

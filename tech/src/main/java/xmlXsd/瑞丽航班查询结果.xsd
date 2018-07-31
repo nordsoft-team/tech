@@ -1,0 +1,124 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="Msg"/>
+        <xs:element type="xs:string" name="Code"/>
+        <xs:element type="xs:string" name="IsSuccess"/>
+        <xs:element name="Data">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="QueryResultGuid"/>
+              <xs:element name="BaseRateInfo">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="BaseFare"/>
+                    <xs:element type="xs:string" name="AirportTax"/>
+                    <xs:element type="xs:string" name="FuelTax"/>
+                    <xs:element type="xs:string" name="ChildFuelTax"/>
+                    <xs:element name="RouteInfo">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="DepartureCity"/>
+                          <xs:element type="xs:string" name="DepartureAirportName"/>
+                          <xs:element type="xs:string" name="DepartureIataCode"/>
+                          <xs:element type="xs:string" name="ArrivalCity"/>
+                          <xs:element type="xs:string" name="ArrivalAirportName"/>
+                          <xs:element type="xs:string" name="ArrivalIataCode"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="ClassPublishedRateInfo" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="ClassCode"/>
+                          <xs:element type="xs:string" name="DisplayName"/>
+                          <xs:element type="xs:string" name="ClassDescription"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="QueryResultFlightList" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="QueryResultSegmentList" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="Airline"/>
+                          <xs:element type="xs:string" name="FlightNo"/>
+                          <xs:element type="xs:string" name="CodeShare"/>
+                          <xs:element type="xs:string" name="CodeShareAirline"/>
+                          <xs:element type="xs:string" name="CodeShareCarrierFlight"/>
+                          <xs:element type="xs:string" name="PlaneModel"/>
+                          <xs:element type="xs:string" name="OrgCity"/>
+                          <xs:element type="xs:string" name="DstCity"/>
+                          <xs:element type="xs:string" name="DepartureTerminal"/>
+                          <xs:element type="xs:string" name="ArriveTerminal"/>
+                          <xs:element type="xs:dateTime" name="DepartureTime"/>
+                          <xs:element type="xs:dateTime" name="ArriveTime"/>
+                          <xs:element type="xs:string" name="StopNumber"/>
+                          <xs:element name="QueryResultSeatClassList" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="ClassCode"/>
+                                <xs:element type="xs:string" name="AvailableNumber"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="QueryResultProductList" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ProductBasicInfo">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="ProductCode"/>
+                                      <xs:element type="xs:string" name="ProductName"/>
+                                      <xs:element type="xs:string" name="ProductDescription"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="PassengerFareList" maxOccurs="unbounded" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="ClassCode"/>
+                                      <xs:element name="AdultFare">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="Price"/>
+                                            <xs:element type="xs:string" name="AirportTax"/>
+                                            <xs:element type="xs:string" name="FuelTax"/>
+                                            <xs:element type="xs:string" name="ProductDiscountPrice"/>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="InfantFare">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="Price"/>
+                                            <xs:element type="xs:string" name="AirportTax"/>
+                                            <xs:element type="xs:string" name="FuelTax"/>
+                                            <xs:element type="xs:string" name="ProductDiscountPrice"/>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

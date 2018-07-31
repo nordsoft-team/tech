@@ -1,0 +1,153 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="resp">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CheckPrice">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="flightFareList" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="zjBasePrice"/>
+                          <xs:element type="xs:string" name="fareBasisCode"/>
+                          <xs:element type="xs:string" name="baseFareAmount"/>
+                          <xs:element type="xs:string" name="baseFareCurrency"/>
+                          <xs:element type="xs:string" name="fareFamilyRef"/>
+                          <xs:element type="xs:string" name="guestCode"/>
+                          <xs:element type="xs:string" name="mileage"/>
+                          <xs:element type="xs:string" name="departureAirport"/>
+                          <xs:element type="xs:string" name="tourCode"/>
+                          <xs:element type="xs:string" name="arrivalAirport"/>
+                          <xs:element type="xs:string" name="filingAirline"/>
+                          <xs:element type="xs:string" name="flightSegmentRef"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="nuc"/>
+                    <xs:element type="xs:string" name="jpy_bx"/>
+                    <xs:element type="xs:string" name="totalPriceAmount"/>
+                    <xs:element type="xs:string" name="jpy_NUC"/>
+                    <xs:element type="xs:string" name="sek_bx"/>
+                    <xs:element type="xs:string" name="iszj"/>
+                    <xs:element type="xs:string" name="usd_price"/>
+                    <xs:element type="xs:string" name="totalPriceCurrency"/>
+                    <xs:element type="xs:string" name="krw_NUC"/>
+                    <xs:element type="xs:string" name="sek_price"/>
+                    <xs:element type="xs:string" name="ratioMileage"/>
+                    <xs:element name="tripList">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="CNN">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="baseFareAmount"/>
+                                <xs:element type="xs:string" name="baseFareCurrency"/>
+                                <xs:element name="taxesFeesList" maxOccurs="unbounded" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="taxFeePrice"/>
+                                      <xs:element type="xs:string" name="taxFeePriceType"/>
+                                      <xs:element type="xs:string" name="taxFeeName"/>
+                                      <xs:element type="xs:string" name="taxFeeType"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:string" name="totalFareAmount"/>
+                                <xs:element type="xs:string" name="quantity"/>
+                                <xs:element type="xs:string" name="code"/>
+                                <xs:element type="xs:string" name="totalFareAmount_zjprice"/>
+                                <xs:element type="xs:string" name="totalFareCurrency"/>
+                                <xs:element type="xs:string" name="baseFareAmount_zjprice"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="ADT">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="baseFareAmount"/>
+                                <xs:element type="xs:string" name="baseFareCurrency"/>
+                                <xs:element name="taxesFeesList" maxOccurs="unbounded" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="taxFeePrice"/>
+                                      <xs:element type="xs:string" name="taxFeePriceType"/>
+                                      <xs:element type="xs:string" name="taxFeeName"/>
+                                      <xs:element type="xs:string" name="taxFeeType"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:string" name="totalFareAmount"/>
+                                <xs:element type="xs:string" name="quantity"/>
+                                <xs:element type="xs:string" name="code"/>
+                                <xs:element type="xs:string" name="totalFareAmount_zjprice"/>
+                                <xs:element type="xs:string" name="totalFareCurrency"/>
+                                <xs:element type="xs:string" name="baseFareAmount_zjprice"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="evPrice"/>
+                    <xs:element type="xs:string" name="mileage"/>
+                    <xs:element type="xs:string" name="usd_bx"/>
+                    <xs:element type="xs:string" name="totalPriceAmount_zjprice"/>
+                    <xs:element type="xs:string" name="krw_price"/>
+                    <xs:element type="xs:string" name="gbp_price"/>
+                    <xs:element type="xs:string" name="tripId"/>
+                    <xs:element type="xs:string" name="krw_bx"/>
+                    <xs:element type="xs:string" name="zj_number"/>
+                    <xs:element type="xs:string" name="cashPercent"/>
+                    <xs:element type="xs:string" name="isCashMileage"/>
+                    <xs:element type="xs:string" name="upsellBean"/>
+                    <xs:element type="xs:string" name="usd_NUC"/>
+                    <xs:element type="xs:string" name="fromCurrency"/>
+                    <xs:element type="xs:string" name="eur_NUC"/>
+                    <xs:element type="xs:string" name="jpy_price"/>
+                    <xs:element type="xs:string" name="sek_NUC"/>
+                    <xs:element type="xs:string" name="eur_price"/>
+                    <xs:element type="xs:string" name="totalMeligezj"/>
+                    <xs:element type="xs:string" name="gbp_bx"/>
+                    <xs:element type="xs:string" name="cny_NUC"/>
+                    <xs:element name="tripSegmentList" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="cabinClass"/>
+                          <xs:element type="xs:string" name="totalFlightDuration"/>
+                          <xs:element type="xs:string" name="zj_flag"/>
+                          <xs:element type="xs:string" name="departureDate"/>
+                          <xs:element type="xs:string" name="flightBagge"/>
+                          <xs:element type="xs:string" name="freeBaggageAllow"/>
+                          <xs:element type="xs:string" name="originCode"/>
+                          <xs:element type="xs:string" name="numberOfStops"/>
+                          <xs:element type="xs:string" name="operatingAirline"/>
+                          <xs:element type="xs:string" name="flightNumber"/>
+                          <xs:element type="xs:string" name="destinationCode"/>
+                          <xs:element type="xs:string" name="bookingClass"/>
+                          <xs:element type="xs:string" name="id"/>
+                          <xs:element type="xs:string" name="bookingClassName"/>
+                          <xs:element type="xs:string" name="sequence"/>
+                          <xs:element type="xs:string" name="equipmentCode"/>
+                          <xs:element type="xs:string" name="arrivalDate"/>
+                          <xs:element type="xs:string" name="marketingAirline"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="isInsure"/>
+                    <xs:element type="xs:string" name="gbp_NUC"/>
+                    <xs:element type="xs:string" name="eur_bx"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="freeBaggageChange"/>
+              <xs:element type="xs:string" name="code"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,124 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.opentravel.org/OTA/2003/05" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="POS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Source">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="RequestorID">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="CompanyName">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="Code"/>
+                                  <xs:attribute type="xs:string" name="CompanyShortName"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="ID"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="ISOCountry"/>
+                  <xs:attribute type="xs:string" name="ISOCurrency"/>
+                  <xs:attribute type="xs:string" name="PseudoCityCode"/>
+                  <xs:attribute type="xs:string" name="Channel"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OriginDestinationInformation" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="DepartureDateTime"/>
+              <xs:element name="OriginLocation">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="CodeContext" use="optional"/>
+                      <xs:attribute type="xs:string" name="LocationCode" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DestinationLocation">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="CodeContext" use="optional"/>
+                      <xs:attribute type="xs:string" name="LocationCode" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SpecificFlightInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BookingClassPref" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="ResBookDesigCode"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TravelPreferences">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="ETicketDesired"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TravelerInfoSummary">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="SeatsRequested"/>
+              <xs:element name="AirTravelerAvail">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="PassengerTypeQuantity" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="Code" use="optional"/>
+                            <xs:attribute type="xs:string" name="Quantity" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="MaxResponses"/>
+      <xs:attribute type="xs:string" name="PackageType"/>
+      <xs:attribute type="xs:string" name="PrimaryLangID"/>
+      <xs:attribute type="xs:string" name="RetransmissionIndicator"/>
+      <xs:attribute type="xs:string" name="SessionID"/>
+      <xs:attribute type="xs:string" name="TransactionIdentifier"/>
+      <xs:attribute type="xs:string" name="Version"/>
+      <xs:attribute type="xs:string" name="xPromotionId"/>
+      <xs:attribute type="xs:string" name="xPromotionProfileId"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

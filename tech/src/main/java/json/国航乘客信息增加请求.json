@@ -1,0 +1,9 @@
+{
+    "m": {
+        "req": "{\"mId\":\"75DE0EA0048D61FC0414F092C99D8889\",\"type\":\"1\",\"lastName\":\"李\",\"firstName\":\"淼\",\"passengerType\":\"1\",\"credentialType\":\"C\",\"credentialId\":\"21018119890911582X\",\"birthDate\":\"1989-09-11\",\"phone\":\"18600432552\",\"frequentFlyerType\":\"CA\",\"frequentlyerNO\":\"\"}",
+        "token": "h5001",
+        "lang": "zh_CN"
+    },
+    "a": "4",
+    "p": "1"
+}

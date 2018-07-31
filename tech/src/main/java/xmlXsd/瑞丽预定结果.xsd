@@ -1,0 +1,21 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="Msg"/>
+        <xs:element type="xs:string" name="Code"/>
+        <xs:element type="xs:string" name="IsSuccess"/>
+        <xs:element name="Data">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="OrderId"/>
+              <xs:element type="xs:string" name="PayId"/>
+              <xs:element type="xs:string" name="OrderAction"/>
+              <xs:element type="xs:string" name="PayLimit"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,127 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="resp">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="resbean">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="lastDepartureDate"/>
+                    <xs:element type="xs:string" name="ifShareActivity"/>
+                    <xs:element type="xs:string" name="if_email"/>
+                    <xs:element type="xs:string" name="express_type"/>
+                    <xs:element type="xs:string" name="openforchange"/>
+                    <xs:element name="ticketFeeList" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="TRAVEL_NUMBER"/>
+                          <xs:element type="xs:string" name="TAX_TYPE"/>
+                          <xs:element type="xs:string" name="PERSON_ID"/>
+                          <xs:element type="xs:string" name="TAX_FEE"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="internationalFlag"/>
+                    <xs:element type="xs:string" name="ticketInsuranceList"/>
+                    <xs:element type="xs:string" name="departureAirport"/>
+                    <xs:element type="xs:string" name="acceptDate"/>
+                    <xs:element type="xs:string" name="roundTrip"/>
+                    <xs:element type="xs:string" name="connectPhone"/>
+                    <xs:element type="xs:string" name="openforcheckin"/>
+                    <xs:element name="feeList" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="count"/>
+                          <xs:element type="xs:string" name="passengerType"/>
+                          <xs:element type="xs:string" name="personId"/>
+                          <xs:element type="xs:string" name="mileages"/>
+                          <xs:element type="xs:string" name="spendFee"/>
+                          <xs:element type="xs:string" name="travelNumber"/>
+                          <xs:element type="xs:string" name="spendType"/>
+                          <xs:element type="xs:string" name="currency"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="if_display"/>
+                    <xs:element type="xs:string" name="connectPerson"/>
+                    <xs:element type="xs:string" name="orderPrices"/>
+                    <xs:element type="xs:string" name="mileage"/>
+                    <xs:element type="xs:string" name="error"/>
+                    <xs:element name="ticketList" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="realflightnum"/>
+                          <xs:element type="xs:string" name="departureCity"/>
+                          <xs:element type="xs:string" name="departureDate"/>
+                          <xs:element type="xs:string" name="seatleveldescription"/>
+                          <xs:element type="xs:string" name="departureTime"/>
+                          <xs:element type="xs:string" name="flightNumber"/>
+                          <xs:element type="xs:string" name="seatlevel"/>
+                          <xs:element type="xs:string" name="travelNumber"/>
+                          <xs:element type="xs:string" name="arrivalCity"/>
+                          <xs:element type="xs:string" name="travelOrder"/>
+                          <xs:element type="xs:string" name="flightCom"/>
+                          <xs:element type="xs:string" name="arrivalTime"/>
+                          <xs:element type="xs:string" name="departureAirport"/>
+                          <xs:element type="xs:string" name="orgTerminal"/>
+                          <xs:element type="xs:string" name="arrivalAirport"/>
+                          <xs:element name="travelerlist" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="lastName"/>
+                                <xs:element type="xs:string" name="travelBounder"/>
+                                <xs:element type="xs:string" name="printTicketDate"/>
+                                <xs:element type="xs:string" name="agy"/>
+                                <xs:element type="xs:string" name="travelType"/>
+                                <xs:element type="xs:string" name="ticketNumber"/>
+                                <xs:element type="xs:string" name="agencyDataIATA"/>
+                                <xs:element type="xs:string" name="isOpen"/>
+                                <xs:element type="xs:string" name="oldregisnum"/>
+                                <xs:element type="xs:string" name="specialState"/>
+                                <xs:element type="xs:string" name="travelOrder"/>
+                                <xs:element type="xs:string" name="changeType"/>
+                                <xs:element type="xs:string" name="oldticketnum"/>
+                                <xs:element type="xs:string" name="couponStatus"/>
+                                <xs:element type="xs:string" name="travelTicketNumber"/>
+                                <xs:element type="xs:string" name="personId"/>
+                                <xs:element type="xs:string" name="ticketSeat"/>
+                                <xs:element type="xs:string" name="identifyId"/>
+                                <xs:element type="xs:string" name="identifyNo"/>
+                                <xs:element type="xs:string" name="firstName"/>
+                                <xs:element type="xs:string" name="isInsurance"/>
+                                <xs:element type="xs:string" name="exchange"/>
+                                <xs:element type="xs:string" name="revalidationNumber"/>
+                                <xs:element type="xs:string" name="travelStatus"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="realflightcom"/>
+                          <xs:element type="xs:string" name="arrivalDate"/>
+                          <xs:element type="xs:string" name="dstTerminal"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="orderType"/>
+                    <xs:element type="xs:string" name="ifPnrPay"/>
+                    <xs:element type="xs:string" name="stopFlag"/>
+                    <xs:element type="xs:string" name="orderStatus"/>
+                    <xs:element type="xs:string" name="transitFlg"/>
+                    <xs:element type="xs:string" name="ticketNo"/>
+                    <xs:element type="xs:string" name="openforrefund"/>
+                    <xs:element type="xs:string" name="arrivalAirport"/>
+                    <xs:element type="xs:string" name="orderNumber"/>
+                    <xs:element type="xs:string" name="openforuse"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="code"/>
+              <xs:element type="xs:string" name="msg"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

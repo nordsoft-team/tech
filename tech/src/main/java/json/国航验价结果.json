@@ -1,0 +1,139 @@
+{
+    "resp": {
+        "CheckPrice": {
+            "flightFareList": [
+                {
+                    "zjBasePrice": "",
+                    "fareBasisCode": "S1",
+                    "baseFareAmount": "640",
+                    "baseFareCurrency": "CNY",
+                    "fareFamilyRef": "DE4",
+                    "guestCode": "ADT",
+                    "mileage": "",
+                    "departureAirport": "PEK",
+                    "tourCode": "",
+                    "arrivalAirport": "CKG",
+                    "filingAirline": "CA",
+                    "flightSegmentRef": "320304b7-7f5f-49eb-b465-c33a855ac8ed"
+                },
+                {
+                    "zjBasePrice": "",
+                    "fareBasisCode": "S1",
+                    "baseFareAmount": "640",
+                    "baseFareCurrency": "CNY",
+                    "fareFamilyRef": "DE4",
+                    "guestCode": "CNN",
+                    "mileage": "",
+                    "departureAirport": "PEK",
+                    "tourCode": "",
+                    "arrivalAirport": "CKG",
+                    "filingAirline": "CA",
+                    "flightSegmentRef": "320304b7-7f5f-49eb-b465-c33a855ac8ed"
+                }
+            ],
+            "nuc": "",
+            "jpy_bx": "",
+            "totalPriceAmount": "2020",
+            "jpy_NUC": "",
+            "sek_bx": "",
+            "iszj": "0",
+            "usd_price": "",
+            "totalPriceCurrency": "CNY",
+            "krw_NUC": "",
+            "sek_price": "",
+            "ratioMileage": "",
+            "tripList": {
+                "CNN": {
+                    "baseFareAmount": "640",
+                    "baseFareCurrency": "CNY",
+                    "taxesFeesList": [
+                        {
+                            "taxFeePrice": "0",
+                            "taxFeePriceType": "CNY",
+                            "taxFeeName": "燃油及附加费",
+                            "taxFeeType": "YQ"
+                        }
+                    ],
+                    "totalFareAmount": "640",
+                    "quantity": "1",
+                    "code": "CNN",
+                    "totalFareAmount_zjprice": "0",
+                    "totalFareCurrency": "CNY",
+                    "baseFareAmount_zjprice": "0"
+                },
+                "ADT": {
+                    "baseFareAmount": "640",
+                    "baseFareCurrency": "CNY",
+                    "taxesFeesList": [
+                        {
+                            "taxFeePrice": "50",
+                            "taxFeePriceType": "CNY",
+                            "taxFeeName": "税费",
+                            "taxFeeType": "CN"
+                        },
+                        {
+                            "taxFeePrice": "0",
+                            "taxFeePriceType": "CNY",
+                            "taxFeeName": "燃油及附加费",
+                            "taxFeeType": "YQ"
+                        }
+                    ],
+                    "totalFareAmount": "690",
+                    "quantity": "2",
+                    "code": "ADT",
+                    "totalFareAmount_zjprice": "0",
+                    "totalFareCurrency": "CNY",
+                    "baseFareAmount_zjprice": "0"
+                }
+            },
+            "evPrice": "",
+            "mileage": "",
+            "usd_bx": "",
+            "totalPriceAmount_zjprice": "0",
+            "krw_price": "",
+            "gbp_price": "",
+            "tripId": "",
+            "krw_bx": "",
+            "zj_number": "0",
+            "cashPercent": "",
+            "isCashMileage": "0",
+            "upsellBean": "",
+            "usd_NUC": "",
+            "fromCurrency": "",
+            "eur_NUC": "",
+            "jpy_price": "",
+            "sek_NUC": "",
+            "eur_price": "",
+            "totalMeligezj": "0",
+            "gbp_bx": "",
+            "cny_NUC": "",
+            "tripSegmentList": [
+                {
+                    "cabinClass": "Economy",
+                    "totalFlightDuration": "PT3H",
+                    "zj_flag": "0",
+                    "departureDate": "2017-10-29T07:00:00.000+08:00",
+                    "flightBagge": "",
+                    "freeBaggageAllow": "20kg",
+                    "originCode": "PEK",
+                    "numberOfStops": "0",
+                    "operatingAirline": "",
+                    "flightNumber": "1437",
+                    "destinationCode": "CKG",
+                    "bookingClass": "S1",
+                    "id": "320304b7-7f5f-49eb-b465-c33a855ac8ed",
+                    "bookingClassName": "",
+                    "sequence": "0",
+                    "equipmentCode": "738",
+                    "arrivalDate": "2017-10-29T10:00:00.000+08:00",
+                    "marketingAirline": "CA"
+                }
+            ],
+            "isInsure": "0",
+            "gbp_NUC": "",
+            "eur_bx": ""
+        },
+        "freeBaggageChange": "0",
+        "code": "00000000"
+    }
+}

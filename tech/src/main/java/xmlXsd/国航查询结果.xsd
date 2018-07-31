@@ -1,0 +1,96 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="mileageType"/>
+        <xs:element name="taxesFeesList" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="taxFeePrice"/>
+              <xs:element type="xs:string" name="taxFeePriceType"/>
+              <xs:element type="xs:string" name="taxFeeName"/>
+              <xs:element type="xs:string" name="taxFeeType"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="flightInfomationList" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="eur_zjprice"/>
+              <xs:element type="xs:string" name="diffPrice"/>
+              <xs:element name="flightSegmentList" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="hasWifi"/>
+                    <xs:element type="xs:string" name="isDirect"/>
+                    <xs:element type="xs:string" name="modelImageUrl"/>
+                    <xs:element type="xs:string" name="freeBaggageAllow"/>
+                    <xs:element type="xs:string" name="flightModelType"/>
+                    <xs:element type="xs:string" name="airBuild"/>
+                    <xs:element type="xs:string" name="searchId"/>
+                    <xs:element type="xs:string" name="operatingAirline"/>
+                    <xs:element type="xs:string" name="flightNo"/>
+                    <xs:element type="xs:string" name="flightArr"/>
+                    <xs:element type="xs:string" name="flightDeptimePlan"/>
+                    <xs:element type="xs:string" name="flightModel"/>
+                    <xs:element type="xs:string" name="hasFood"/>
+                    <xs:element type="xs:string" name="modelFlag"/>
+                    <xs:element type="xs:string" name="fuel"/>
+                    <xs:element type="xs:string" name="flightArrdatePlan"/>
+                    <xs:element type="xs:string" name="stopStation"/>
+                    <xs:element type="xs:string" name="stopStationName"/>
+                    <xs:element type="xs:string" name="flightArrtimePlan"/>
+                    <xs:element type="xs:string" name="flightCompany"/>
+                    <xs:element type="xs:string" name="nation"/>
+                    <xs:element type="xs:string" name="backNation"/>
+                    <xs:element type="xs:string" name="stopTime"/>
+                    <xs:element type="xs:string" name="modelImageName"/>
+                    <xs:element type="xs:string" name="flightTerminal"/>
+                    <xs:element type="xs:string" name="hasFun"/>
+                    <xs:element type="xs:string" name="ratio"/>
+                    <xs:element type="xs:string" name="sequence"/>
+                    <xs:element type="xs:string" name="flightDepdatePlan"/>
+                    <xs:element type="xs:string" name="flightHTerminal"/>
+                    <xs:element type="xs:string" name="isShared"/>
+                    <xs:element type="xs:string" name="flightDep"/>
+                    <xs:element type="xs:string" name="totalTime"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="usd_zjprice"/>
+              <xs:element type="xs:string" name="zj_mileageNum"/>
+              <xs:element type="xs:string" name="goIsZj"/>
+              <xs:element type="xs:string" name="iszj"/>
+              <xs:element type="xs:string" name="krw_zjprice"/>
+              <xs:element type="xs:string" name="usd_price"/>
+              <xs:element type="xs:string" name="gbp_zjprice"/>
+              <xs:element type="xs:string" name="sek_price"/>
+              <xs:element type="xs:string" name="pcName"/>
+              <xs:element type="xs:string" name="mileage"/>
+              <xs:element type="xs:string" name="gbp_price"/>
+              <xs:element type="xs:string" name="krw_price"/>
+              <xs:element type="xs:string" name="vip_price"/>
+              <xs:element type="xs:string" name="lowClassnum"/>
+              <xs:element type="xs:string" name="ticketNum"/>
+              <xs:element type="xs:string" name="isSpecial"/>
+              <xs:element type="xs:string" name="sek_zjprice"/>
+              <xs:element type="xs:string" name="lowPrice"/>
+              <xs:element type="xs:string" name="jpy_zjprice"/>
+              <xs:element type="xs:string" name="jpy_price"/>
+              <xs:element type="xs:string" name="flightID"/>
+              <xs:element type="xs:string" name="eur_price"/>
+              <xs:element type="xs:string" name="lowClass"/>
+              <xs:element type="xs:string" name="seatMileage"/>
+              <xs:element type="xs:string" name="isCombination"/>
+              <xs:element type="xs:string" name="basePcPrice"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="pre"/>
+        <xs:element type="xs:string" name="next"/>
+        <xs:element type="xs:string" name="today"/>
+        <xs:element type="xs:string" name="todayMileage"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

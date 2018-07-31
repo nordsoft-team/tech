@@ -1,0 +1,14 @@
+{
+    "m": {
+        "req": "{\"userId\":\"75DE0EA0048D61FC0414F092C99D8889\",\"memLevel\":\"Normal\",\"memCrId\":\"C\",\"memCrNo\":\"152723198409293018\",\"totalPrice\":\"1010\",\"interFlag\":\"0\",\"isBack\":\"0\",\"productType\":\"1\",\"shareFlag\":\"0\",\"flightList\":[{\"flightLine\":\"PEK-CKG\",\"startDate\":\"2017-10-17 23:05:00\",\"flightNo\":\"CA986\",\"cabbinId\":\"V\"}],\"departureCityCode\":\"PEK\",\"arrivalCityCode\":\"CKG\",\"passengerList\":[{\"passCrNo\":\"152723198409293018\",\"passType\":\"1\",\"passCrId\":\"C\",\"passFirstName\":\"\",\"passLastName\":\"樊飞\"}],\"pccode\":\"HB213\",\"mid\":\"MEM_CA814522752\",\"openJawFlag\":\"0\",\"openJawList\":[]}",
+        "token": "h5001",
+        "lang": "zh_CN",
+        "userInfo1": "41500",
+        "infoID": "B545B6DCEAA3B1611ABC6B72024FA5CB",
+        "userID": "75DE0EA0048D61FC0414F092C99D8889",
+        "deviceType": "Android",
+        "ziYinNo": "001814522752"
+    },
+    "a": "9",
+    "p": "25"
+}

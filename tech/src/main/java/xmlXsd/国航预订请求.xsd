@@ -1,0 +1,183 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="m">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="req">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="fares">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="TravelerIDRef"/>
+                          <xs:element type="xs:string" name="Taxes_Amount"/>
+                          <xs:element type="xs:string" name="BaseFare_Amount"/>
+                          <xs:element type="xs:string" name="Type"/>
+                          <xs:element name="fareInfos" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="FareBasisCode"/>
+                                <xs:element type="xs:string" name="ArrivalCode"/>
+                                <xs:element type="xs:string" name="DepartureCode"/>
+                                <xs:element type="xs:string" name="DepartureDate"/>
+                                <xs:element name="RelatedSegments">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="ArrivalCode"/>
+                                      <xs:element type="xs:string" name="DepartureCode"/>
+                                      <xs:element type="xs:string" name="DepartureDate"/>
+                                      <xs:element type="xs:string" name="SegmentIDRef"/>
+                                      <xs:element type="xs:string" name="AirlineCode"/>
+                                      <xs:element type="xs:string" name="BaggageAllowance"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="fareComponent">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="CurrencyCode"/>
+                                      <xs:element name="taxs" maxOccurs="unbounded" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="Designator"/>
+                                            <xs:element type="xs:string" name="Amount"/>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element type="xs:string" name="Taxes_Amount"/>
+                                      <xs:element type="xs:string" name="Amount"/>
+                                      <xs:element type="xs:string" name="Total"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="taxs" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="Designator"/>
+                                <xs:element type="xs:string" name="Amount"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="IfPcPay"/>
+                          <xs:element type="xs:string" name="IfEcPay"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="telephones" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="TelephoneNumber"/>
+                          <xs:element type="xs:string" name="TravelerIDRef"/>
+                          <xs:element type="xs:string" name="Type"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="APISs" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="DocType"/>
+                          <xs:element type="xs:string" name="DateOfBirth"/>
+                          <xs:element type="xs:string" name="TravelerIDRef"/>
+                          <xs:element type="xs:string" name="Surname"/>
+                          <xs:element type="xs:string" name="DocNumber"/>
+                          <xs:element type="xs:string" name="GivenName"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="journeySheet">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="type"/>
+                          <xs:element type="xs:string" name="version"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="flights" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="Carrier_FlightNumber"/>
+                          <xs:element type="xs:string" name="Carrier_AirlineCode"/>
+                          <xs:element type="xs:string" name="ClassOfService"/>
+                          <xs:element type="xs:string" name="AssociationID"/>
+                          <xs:element type="xs:string" name="Arrival_AirportCode"/>
+                          <xs:element type="xs:string" name="Arrival_Date"/>
+                          <xs:element type="xs:string" name="Departure_Date"/>
+                          <xs:element type="xs:string" name="Real_AirlineCode"/>
+                          <xs:element type="xs:string" name="Real_FlightNumer"/>
+                          <xs:element type="xs:string" name="Departure_Time"/>
+                          <xs:element type="xs:string" name="Arrival_Time"/>
+                          <xs:element type="xs:string" name="Departure_AirportCode"/>
+                          <xs:element type="xs:string" name="Arrival_Terminal"/>
+                          <xs:element type="xs:string" name="Departure_Terminal"/>
+                          <xs:element type="xs:string" name="NumberInParty"/>
+                          <xs:element type="xs:string" name="flightType"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="travelers" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="DateOfBirth"/>
+                          <xs:element type="xs:string" name="Surname"/>
+                          <xs:element type="xs:string" name="Type"/>
+                          <xs:element type="xs:string" name="AssociationID"/>
+                          <xs:element type="xs:string" name="GivenName"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="insurances"/>
+                    <xs:element type="xs:string" name="contactPhone"/>
+                    <xs:element type="xs:string" name="contactUser"/>
+                    <xs:element type="xs:string" name="mobileSysVer"/>
+                    <xs:element type="xs:string" name="transitflag"/>
+                    <xs:element type="xs:string" name="upsale"/>
+                    <xs:element type="xs:string" name="upsale_fee"/>
+                    <xs:element type="xs:string" name="ticketType"/>
+                    <xs:element type="xs:string" name="stopflag"/>
+                    <xs:element type="xs:string" name="mobileIp"/>
+                    <xs:element type="xs:string" name="tripId"/>
+                    <xs:element type="xs:string" name="International_Flag"/>
+                    <xs:element type="xs:string" name="segmentflag"/>
+                    <xs:element type="xs:string" name="mobileType"/>
+                    <xs:element type="xs:string" name="departAirport"/>
+                    <xs:element type="xs:string" name="arrivalAirport"/>
+                    <xs:element type="xs:string" name="userId"/>
+                    <xs:element type="xs:string" name="InfantDocNumber"/>
+                    <xs:element type="xs:string" name="InfantDocType"/>
+                    <xs:element type="xs:string" name="ifVipPrice"/>
+                    <xs:element type="xs:string" name="vipFee"/>
+                    <xs:element type="xs:string" name="goFareFamilyId"/>
+                    <xs:element type="xs:string" name="backFareFamilyId"/>
+                    <xs:element type="xs:string" name="searchId"/>
+                    <xs:element type="xs:string" name="mId"/>
+                    <xs:element name="frequentTravelerGroups" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="frequentFlyerType"/>
+                          <xs:element type="xs:string" name="TravelerIDRef"/>
+                          <xs:element type="xs:string" name="FFNumber"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="pcId"/>
+                    <xs:element type="xs:string" name="pcCheckCode"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="token"/>
+              <xs:element type="xs:string" name="lang"/>
+              <xs:element type="xs:string" name="userInfo1"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="a"/>
+        <xs:element type="xs:string" name="p"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><root>
+  <RefundDetailRS Success="true" Msg="请求成功！" OperateCode="0">
+    <Data>
+      <Refunds CreateTime="1474449168000" OrderNo="0000977000" Source="泰复" RefundNo="20160921171200000155" Status="等待审核" Remark="泰复航空测试退票" RefundType="非自愿退票" ApplicantName="" RefundAmount="1350.00" TotalPoundage="0.00" ReimburseType="" RefundTicketStatus="成功" CancelSeatStatus="失败" InsuranceRefundStatus="INIT" AncillaryRefundStatus="INIT" RefundAll="true" FlightDate="1481068800000" Description="[9H2123/XIY-HZG]" TicketNos="" PNRS="" HandleStatus="未处理" Handler="" HandleTime="">
+        <PassengerSegments CreateTime="1474449168000" Sequence="1" Cabin="Y" Poundage="0.00" PoundageRate="0.00" MarketPrice="250.00" TaxFee="0.00" FuelFee="0.00" TicketNo="856-2110039537" IssueTicketDate="1474426122000" SegmentSequence="1" Airline="9H" FlightNo="9H2123" Org="XIY" Dst="HZG" DepTime="1481068800000" ArrTime="1481074500000" PassengerSequence="3" Name="测试王五" CardType="IDCARD" CardNo="500107201003305715" PassengerType="CHILD" Gender="" Mobile="" PNR="ND0KHY" Refund="" ExchangedSegment="false" OriginalSellingPrice="0.00">
+          <Insurances></Insurances>
+          <Ancillaries></Ancillaries>
+        </PassengerSegments>
+        <PassengerSegments CreateTime="1474449168000" Sequence="1" Cabin="Y" Poundage="0.00" PoundageRate="0.00" MarketPrice="500.00" TaxFee="50.00" FuelFee="0.00" TicketNo="856-2110039538" IssueTicketDate="1474426122000" SegmentSequence="1" Airline="9H" FlightNo="9H2123" Org="XIY" Dst="HZG" DepTime="1481068800000" ArrTime="1481074500000" PassengerSequence="2" Name="测试张三" CardType="IDCARD" CardNo="21018119890911582X" PassengerType="ADULT" Gender="" Mobile="" PNR="ND0KHY" Refund="" ExchangedSegment="false" OriginalSellingPrice="0.00">
+          <Insurances></Insurances>
+          <Ancillaries></Ancillaries>
+        </PassengerSegments>
+        <PassengerSegments CreateTime="1474449168000" Sequence="1" Cabin="Y" Poundage="0.00" PoundageRate="0.00" MarketPrice="500.00" TaxFee="50.00" FuelFee="0.00" TicketNo="856-2110039536" IssueTicketDate="1474426122000" SegmentSequence="1" Airline="9H" FlightNo="9H2123" Org="XIY" Dst="HZG" DepTime="1481068800000" ArrTime="1481074500000" PassengerSequence="1" Name="测试樊飞" CardType="IDCARD" CardNo="152723198409293018" PassengerType="ADULT" Gender="" Mobile="" PNR="ND0KHY" Refund="" ExchangedSegment="false" OriginalSellingPrice="0.00">
+          <Insurances></Insurances>
+          <Ancillaries></Ancillaries>
+        </PassengerSegments>
+        <Reimburses></Reimburses>
+      </Refunds>
+      <Order OrderNo="0000977000" Status="BOOKED_AND_PAID">
+        <Customer FirstName="试樊飞" LastName="测" Phone="18600432553" Email="lishuigen@panatrip.net"></Customer>
+        <Guests Sequence="1" Name="测试樊飞" Type="ADULT" Phone="18600432553" DocType="ID_CARD" DocNumber="152723198409293018">
+          <Paxs Name="测试樊飞" Type="ADULT" ID="1_1" Org="XIY" Dst="HZG" FlightNo="9H2123" FlightDate="2016-12-07" DepTime="08:00" ResStatus="BOOKED" TicketNo="856-2110039536" TicketStatus="RFND" GuestSeq="" Cabin="Y" RefundRule="退票费：航班计划离站时间48小时前（含）: 10%; 
+ 航班计划离站时间48小时内: 20%; 
+ 航班离站后：30%."></Paxs>
+        </Guests>
+        <Guests Sequence="2" Name="测试张三" Type="ADULT" Phone="18600432553" DocType="ID_CARD" DocNumber="21018119890911582X">
+          <Paxs Name="测试张三" Type="ADULT" ID="2_1" Org="XIY" Dst="HZG" FlightNo="9H2123" FlightDate="2016-12-07" DepTime="08:00" ResStatus="BOOKED" TicketNo="856-2110039538" TicketStatus="RFND" GuestSeq="" Cabin="Y" RefundRule="退票费：航班计划离站时间48小时前（含）: 10%; 
+ 航班计划离站时间48小时内: 20%; 
+ 航班离站后：30%."></Paxs>
+        </Guests>
+        <Guests Sequence="3" Name="测试王五" Type="CHILD" Phone="18600432553" DocType="ID_CARD" DocNumber="500107201003305715">
+          <Paxs Name="测试王五" Type="CHILD" ID="3_1" Org="XIY" Dst="HZG" FlightNo="9H2123" FlightDate="2016-12-07" DepTime="08:00" ResStatus="BOOKED" TicketNo="856-2110039537" TicketStatus="RFND" GuestSeq="" Cabin="Y" RefundRule="退票费：航班计划离站时间48小时前（含）: 10%; 
+ 航班计划离站时间48小时内: 20%; 
+ 航班离站后：30%."></Paxs>
+        </Guests>
+        <Fares Org="XIY" Dst="HZG" Code="9HQJ" Description="退票费：航班计划离站时间48小时前（含）: 10%; 
+ 航班计划离站时间48小时内: 20%; 
+ 航班离站后：30%."></Fares>
+      </Order>
+    </Data>
+  </RefundDetailRS>
+</root>

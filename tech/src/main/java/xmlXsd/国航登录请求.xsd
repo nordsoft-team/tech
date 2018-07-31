@@ -1,0 +1,43 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="m">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="req">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="showTmpOrderFalg"/>
+                    <xs:element type="xs:string" name="qryOrdersEnddate"/>
+                    <xs:element type="xs:string" name="mobileType"/>
+                    <xs:element type="xs:string" name="version"/>
+                    <xs:element type="xs:string" name="loginType"/>
+                    <xs:element type="xs:string" name="registerType"/>
+                    <xs:element type="xs:string" name="operType"/>
+                    <xs:element type="xs:string" name="loginName"/>
+                    <xs:element type="xs:string" name="password"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="token"/>
+              <xs:element type="xs:string" name="lang"/>
+              <xs:element type="xs:string" name="geetest"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="a"/>
+        <xs:element type="xs:string" name="p"/>
+        <xs:element type="xs:string" name="showTmpOrderFalg"/>
+        <xs:element type="xs:string" name="qryOrdersEnddate"/>
+        <xs:element type="xs:string" name="mobileType"/>
+        <xs:element type="xs:string" name="version"/>
+        <xs:element type="xs:string" name="loginType"/>
+        <xs:element type="xs:string" name="registerType"/>
+        <xs:element type="xs:string" name="operType"/>
+        <xs:element type="xs:string" name="loginName"/>
+        <xs:element type="xs:string" name="password"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

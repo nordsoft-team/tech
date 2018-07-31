@@ -1,0 +1,52 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.opentravel.org/OTA/2003/05" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="POS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Source">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="RequestorID">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="CompanyName">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="Code"/>
+                                  <xs:attribute type="xs:string" name="CompanyShortName"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="ID"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="Channel"/>
+                  <xs:attribute type="xs:string" name="ISOCurrency"/>
+                  <xs:attribute type="xs:string" name="PseudoCityCode"/>
+                  <xs:attribute type="xs:string" name="TerminalID"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="UniqueID">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="ID"/>
+                <xs:attribute type="xs:string" name="Type"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="EchoToken"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

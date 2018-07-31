@@ -1,0 +1,21 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="searchId"/>
+        <xs:element type="xs:string" name="flightID"/>
+        <xs:element type="xs:string" name="org"/>
+        <xs:element type="xs:string" name="dst"/>
+        <xs:element type="xs:string" name="adultNum"/>
+        <xs:element type="xs:string" name="airline"/>
+        <xs:element type="xs:string" name="arrivedate"/>
+        <xs:element type="xs:string" name="childNum"/>
+        <xs:element type="xs:string" name="flag"/>
+        <xs:element type="xs:string" name="flightno"/>
+        <xs:element type="xs:string" name="infantNum"/>
+        <xs:element type="xs:string" name="takeoffdate"/>
+        <xs:element type="xs:string" name="iszj"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

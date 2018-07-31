@@ -1,0 +1,38 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="code"/>
+        <xs:element type="xs:string" name="msg"/>
+        <xs:element type="xs:string" name="phone"/>
+        <xs:element type="xs:string" name="viceCardNo"/>
+        <xs:element type="xs:string" name="ziYinNo"/>
+        <xs:element type="xs:string" name="mId"/>
+        <xs:element type="xs:string" name="userId"/>
+        <xs:element type="xs:string" name="InfoId"/>
+        <xs:element type="xs:string" name="credentialType"/>
+        <xs:element type="xs:string" name="credentialTypeDesc"/>
+        <xs:element type="xs:string" name="credentialNum"/>
+        <xs:element type="xs:string" name="birthday"/>
+        <xs:element type="xs:string" name="primaryTierName"/>
+        <xs:element type="xs:string" name="primaryTierDesc"/>
+        <xs:element type="xs:string" name="LastName"/>
+        <xs:element type="xs:string" name="FirstName"/>
+        <xs:element type="xs:string" name="CNLastName"/>
+        <xs:element type="xs:string" name="CNFirstName"/>
+        <xs:element type="xs:string" name="registerType"/>
+        <xs:element type="xs:string" name="festivalUrl"/>
+        <xs:element type="xs:string" name="headUrl"/>
+        <xs:element type="xs:string" name="mileage"/>
+        <xs:element type="xs:string" name="redPointFlag"/>
+        <xs:element type="xs:string" name="ifAuthenticated"/>
+        <xs:element type="xs:string" name="smeNo"/>
+        <xs:element type="xs:string" name="nationality"/>
+        <xs:element type="xs:string" name="Gender"/>
+        <xs:element type="xs:string" name="renovateFlag"/>
+        <xs:element type="xs:string" name="ifSign"/>
+        <xs:element type="xs:string" name="rw"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

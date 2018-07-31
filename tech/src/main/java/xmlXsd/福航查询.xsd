@@ -1,0 +1,70 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="flightList" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="flightNo"/>
+              <xs:element type="xs:string" name="arriveTime"/>
+              <xs:element type="xs:string" name="departureTime"/>
+              <xs:element type="xs:string" name="orgCity"/>
+              <xs:element type="xs:string" name="dstCity"/>
+              <xs:element type="xs:string" name="mileage"/>
+              <xs:element type="xs:string" name="carrier"/>
+              <xs:element type="xs:string" name="planeType"/>
+              <xs:element type="xs:string" name="baseFare"/>
+              <xs:element name="cabinList" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="cabinCode"/>
+                    <xs:element type="xs:string" name="inventory"/>
+                    <xs:element name="productList" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="code"/>
+                          <xs:element type="xs:string" name="name"/>
+                          <xs:element name="adultFare">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="marketFare"/>
+                                <xs:element type="xs:string" name="netPrice"/>
+                                <xs:element type="xs:string" name="fuelsurcharge"/>
+                                <xs:element type="xs:string" name="airporttax"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="childFare">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="marketFare"/>
+                                <xs:element type="xs:string" name="netPrice"/>
+                                <xs:element type="xs:string" name="fuelsurcharge"/>
+                                <xs:element type="xs:string" name="airporttax"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="infantFare">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="marketFare"/>
+                                <xs:element type="xs:string" name="netPrice"/>
+                                <xs:element type="xs:string" name="fuelsurcharge"/>
+                                <xs:element type="xs:string" name="airporttax"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="ticketRemark"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

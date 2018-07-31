@@ -1,0 +1,125 @@
+{
+  "resp": {
+    "resbean": {
+      "lastDepartureDate": "2017-10-19 07:00:00",
+      "ifShareActivity": "0",
+      "if_email": "0",
+      "express_type": "2",
+      "openforchange": false,
+      "ticketFeeList": [
+        {
+          "TRAVEL_NUMBER": "5f313568c3184acba09dd66d93a0acd4",
+          "TAX_TYPE": "WASQ",
+          "PERSON_ID": "a863c74b18d54772b16cc76d327719fe",
+          "TAX_FEE": 910
+        }
+      ],
+      "internationalFlag": "1",
+      "ticketInsuranceList": [],
+      "departureAirport": "PEK",
+      "acceptDate": "2017-10-18 11:54:03",
+      "roundTrip": 0,
+      "connectPhone": "18600432553",
+      "openforcheckin": false,
+      "feeList": [
+        {
+          "count": 1,
+          "passengerType": "ADT",
+          "personId": "a863c74b18d54772b16cc76d327719fe",
+          "mileages": "",
+          "spendFee": 0.0,
+          "travelNumber": "5f313568c3184acba09dd66d93a0acd4",
+          "spendType": "YQ",
+          "currency": "CNY"
+        },
+        {
+          "count": 1,
+          "passengerType": "ADT",
+          "personId": "a863c74b18d54772b16cc76d327719fe",
+          "mileages": "0",
+          "spendFee": 910.0,
+          "travelNumber": "5f313568c3184acba09dd66d93a0acd4",
+          "spendType": "WASQ",
+          "currency": "CNY"
+        },
+        {
+          "count": 1,
+          "passengerType": "ADT",
+          "personId": "a863c74b18d54772b16cc76d327719fe",
+          "mileages": "",
+          "spendFee": 50.0,
+          "travelNumber": "5f313568c3184acba09dd66d93a0acd4",
+          "spendType": "CN",
+          "currency": "CNY"
+        }
+      ],
+      "if_display": "0",
+      "connectPerson": "张三",
+      "orderPrices": 960.0,
+      "mileage": 0.0,
+      "error": 0,
+      "ticketList": [
+        {
+          "realflightnum": "1437",
+          "departureCity": "--",
+          "departureDate": "2017-10-19 00:00:00.0",
+          "seatleveldescription": "折扣经济",
+          "departureTime": "07:00:00",
+          "flightNumber": "1437",
+          "seatlevel": "V",
+          "travelNumber": "5f313568c3184acba09dd66d93a0acd4",
+          "arrivalCity": "--",
+          "travelOrder": "F1",
+          "flightCom": "CA",
+          "arrivalTime": "09:55:00",
+          "departureAirport": "PEK",
+          "orgTerminal": "T3",
+          "arrivalAirport": "CKG",
+          "travelerlist": [
+            {
+              "lastName": "樊飞",
+              "travelBounder": "T1",
+              "printTicketDate": "--",
+              "agy": "",
+              "travelType": "ADT",
+              "ticketNumber": "--",
+              "agencyDataIATA": "",
+              "isOpen": "",
+              "oldregisnum": "--",
+              "specialState": "",
+              "travelOrder": "T1",
+              "changeType": "--",
+              "oldticketnum": "--",
+              "couponStatus": "",
+              "travelTicketNumber": "",
+              "personId": "a863c74b18d54772b16cc76d327719fe",
+              "ticketSeat": "--",
+              "identifyId": "C",
+              "identifyNo": "152723198409293018",
+              "firstName": "--",
+              "isInsurance": "",
+              "exchange": false,
+              "revalidationNumber": "",
+              "travelStatus": 1
+            }
+          ],
+          "realflightcom": "CA",
+          "arrivalDate": "2017-10-19 00:00:00.0",
+          "dstTerminal": "T3"
+        }
+      ],
+      "orderType": 1,
+      "ifPnrPay": "0",
+      "stopFlag": "0",
+      "orderStatus": 1,
+      "transitFlg": "0",
+      "ticketNo": 1,
+      "openforrefund": false,
+      "arrivalAirport": "CKG",
+      "orderNumber": "171018115403753229",
+      "openforuse": false
+    },
+    "code": "00000000",
+    "msg": "成功"
+  }
+}

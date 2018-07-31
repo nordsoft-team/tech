@@ -1,0 +1,18 @@
+{
+    "resp": {
+        "resbean": {
+            "passengerlist": [
+                "152723198409293018"
+            ],
+            "cutRate": 0.0,
+            "cutFlag": false,
+            "couponShare": false,
+            "checkCodeKey": "75DE0EA0048D61FC0414F092C99D8889HB213",
+            "couponAmount": "10",
+            "couponStatue": true,
+            "couponcode": "HB213"
+        },
+        "code": "00000000",
+        "msg": "成功"
+    }
+}

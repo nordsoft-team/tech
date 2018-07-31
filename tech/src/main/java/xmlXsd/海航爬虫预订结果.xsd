@@ -1,0 +1,116 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="success"/>
+        <xs:element type="xs:string" name="message"/>
+        <xs:element type="xs:string" name="errorCode"/>
+        <xs:element type="xs:string" name="errorMessage"/>
+        <xs:element type="xs:long" name="systime"/>
+        <xs:element type="xs:string" name="requestIP"/>
+        <xs:element name="data">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="ok"/>
+              <xs:element type="xs:string" name="errorCode"/>
+              <xs:element type="xs:string" name="errorMessage"/>
+              <xs:element type="xs:string" name="controlMsgList"/>
+              <xs:element type="xs:string" name="payType"/>
+              <xs:element name="user">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:int" name="id"/>
+                    <xs:element type="xs:string" name="userCode"/>
+                    <xs:element type="xs:string" name="idType"/>
+                    <xs:element type="xs:string" name="idNo"/>
+                    <xs:element type="xs:string" name="name"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="order">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:int" name="orderId"/>
+                    <xs:element type="xs:long" name="orderNo"/>
+                    <xs:element type="xs:byte" name="orderState"/>
+                    <xs:element type="xs:string" name="bookingTime"/>
+                    <xs:element type="xs:short" name="orderPrice"/>
+                    <xs:element type="xs:string" name="ticketsPrice"/>
+                    <xs:element type="xs:string" name="currency"/>
+                    <xs:element type="xs:byte" name="tripType"/>
+                    <xs:element type="xs:byte" name="orderType"/>
+                    <xs:element type="xs:string" name="orgCode"/>
+                    <xs:element type="xs:string" name="dstCode"/>
+                    <xs:element name="passengerFares" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="passengerType"/>
+                          <xs:element type="xs:short" name="tktAmount"/>
+                          <xs:element type="xs:string" name="originalAmount"/>
+                          <xs:element type="xs:string" name="totalAmount"/>
+                          <xs:element type="xs:string" name="totalOriginalAmount"/>
+                          <xs:element type="xs:byte" name="cnTax"/>
+                          <xs:element type="xs:byte" name="yqTax"/>
+                          <xs:element type="xs:byte" name="otherTax"/>
+                          <xs:element type="xs:byte" name="quantity"/>
+                          <xs:element type="xs:byte" name="yrTax"/>
+                          <xs:element type="xs:byte" name="otherTaxNoYR"/>
+                          <xs:element type="xs:byte" name="yqrTax"/>
+                          <xs:element name="taxFare" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="passengerType"/>
+                                <xs:element type="xs:string" name="taxcode"/>
+                                <xs:element type="xs:float" name="amount"/>
+                                <xs:element type="xs:string" name="currencyCode"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="goDepTime"/>
+                    <xs:element type="xs:string" name="goDepPlace"/>
+                    <xs:element type="xs:string" name="goArrPlace"/>
+                    <xs:element type="xs:string" name="passNames"/>
+                    <xs:element type="xs:string" name="contactName"/>
+                    <xs:element type="xs:long" name="contactPhone"/>
+                    <xs:element type="xs:string" name="sendQuestion"/>
+                    <xs:element type="xs:string" name="free"/>
+                    <xs:element type="xs:string" name="old"/>
+                    <xs:element type="xs:string" name="surance"/>
+                    <xs:element type="xs:string" name="hotel"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="creditCards"/>
+              <xs:element name="fightSegs" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="depTime"/>
+                    <xs:element type="xs:string" name="arrTime"/>
+                    <xs:element type="xs:string" name="depPlace"/>
+                    <xs:element type="xs:string" name="arrPlace"/>
+                    <xs:element type="xs:string" name="seatClass"/>
+                    <xs:element type="xs:string" name="familyName"/>
+                    <xs:element type="xs:date" name="depDate"/>
+                    <xs:element type="xs:date" name="arrDate"/>
+                    <xs:element type="xs:string" name="fltNo"/>
+                    <xs:element type="xs:string" name="orgCode"/>
+                    <xs:element type="xs:string" name="dstCode"/>
+                    <xs:element type="xs:string" name="segType"/>
+                    <xs:element type="xs:byte" name="segIndex"/>
+                    <xs:element type="xs:byte" name="stop"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="asteriskFeeDesc"/>
+              <xs:element type="xs:string" name="isShowTaxInNew"/>
+              <xs:element type="xs:string" name="timeOut"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

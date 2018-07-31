@@ -1,0 +1,38 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="common">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="sname"/>
+              <xs:element type="xs:string" name="sver"/>
+              <xs:element type="xs:string" name="schannel"/>
+              <xs:element type="xs:string" name="slang"/>
+              <xs:element type="xs:string" name="did"/>
+              <xs:element type="xs:long" name="stime"/>
+              <xs:element type="xs:short" name="szone"/>
+              <xs:element type="xs:string" name="aname"/>
+              <xs:element type="xs:string" name="aver"/>
+              <xs:element type="xs:string" name="akey"/>
+              <xs:element type="xs:short" name="abuild"/>
+              <xs:element type="xs:string" name="atarget"/>
+              <xs:element type="xs:string" name="slat"/>
+              <xs:element type="xs:string" name="slng"/>
+              <xs:element type="xs:string" name="gtcid"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="data">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:long" name="number"/>
+              <xs:element type="xs:int" name="pin"/>
+              <xs:element type="xs:string" name="toSave"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

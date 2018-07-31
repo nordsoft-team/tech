@@ -1,0 +1,77 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="orderNo"/>
+        <xs:element type="xs:string" name="status"/>
+        <xs:element type="xs:string" name="createTime"/>
+        <xs:element type="xs:string" name="timeLimit"/>
+        <xs:element type="xs:string" name="ticketType"/>
+        <xs:element type="xs:string" name="bookingType"/>
+        <xs:element type="xs:string" name="userName"/>
+        <xs:element type="xs:string" name="currency"/>
+        <xs:element type="xs:string" name="contactName"/>
+        <xs:element type="xs:string" name="contactTel"/>
+        <xs:element type="xs:string" name="contactMobile"/>
+        <xs:element name="segment">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="airlineCode"/>
+              <xs:element type="xs:string" name="flightNo"/>
+              <xs:element type="xs:string" name="orgCity"/>
+              <xs:element type="xs:string" name="dstCity"/>
+              <xs:element type="xs:string" name="productCode"/>
+              <xs:element type="xs:string" name="cabin"/>
+              <xs:element type="xs:string" name="depTime"/>
+              <xs:element type="xs:string" name="arrTime"/>
+              <xs:element type="xs:string" name="planeType"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="passengerList" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="passengerType"/>
+              <xs:element type="xs:string" name="name"/>
+              <xs:element type="xs:string" name="gender"/>
+              <xs:element type="xs:string" name="birthDay"/>
+              <xs:element type="xs:string" name="certificateType"/>
+              <xs:element type="xs:string" name="certificateNo"/>
+              <xs:element type="xs:string" name="mobilePhone"/>
+              <xs:element type="xs:string" name="ticketStatus"/>
+              <xs:element type="xs:string" name="ticketNo"/>
+              <xs:element name="passengerSegment">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="pnrNo"/>
+                    <xs:element type="xs:string" name="segmentStatus"/>
+                    <xs:element type="xs:string" name="airportTax"/>
+                    <xs:element type="xs:string" name="fuelTax"/>
+                    <xs:element type="xs:string" name="netFare"/>
+                    <xs:element type="xs:string" name="marketFare"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="payments" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="paymentNo"/>
+              <xs:element type="xs:string" name="payMoney"/>
+              <xs:element type="xs:string" name="payTime"/>
+              <xs:element type="xs:string" name="confirmTime"/>
+              <xs:element type="xs:string" name="payType"/>
+              <xs:element type="xs:string" name="payStatus"/>
+              <xs:element type="xs:string" name="payer"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="orderAllMoney"/>
+        <xs:element type="xs:string" name="orderHasPay"/>
+        <xs:element type="xs:string" name="officeNo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

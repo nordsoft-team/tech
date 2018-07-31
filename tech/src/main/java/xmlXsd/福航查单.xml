@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<orderNo>20160713113816425276</orderNo>
+	<status>PF</status>
+	<createTime>2016-07-13 11:38:16</createTime>
+	<timeLimit>2016-07-13 12:03:16</timeLimit>
+	<ticketType>ELECTRONIC_TICKET</ticketType>
+	<bookingType>INDIVIDUAL</bookingType>
+	<userName>FU1860043255316071109543768</userName>
+	<currency>RMB</currency>
+	<contactName>测试樊飞</contactName>
+	<contactTel>18600432553</contactTel>
+	<contactMobile>18600432553</contactMobile>
+	<segment>
+		<airlineCode>FU</airlineCode>
+		<flightNo>FU6531</flightNo>
+		<orgCity>FOC</orgCity>
+		<dstCity>HAK</dstCity>
+		<productCode>OONLY</productCode>
+		<cabin>M</cabin>
+		<depTime>2016-08-08 13:20:00</depTime>
+		<arrTime>2016-08-08 15:20:00</arrTime>
+		<planeType>738</planeType>
+	</segment>
+	<passengerList>
+		<passengerType>ADULT</passengerType>
+		<name>测试樊飞</name>
+		<gender>MALE</gender>
+		<birthDay>1984-09-29</birthDay>
+		<certificateType>NI</certificateType>
+		<certificateNo>152723198409293018</certificateNo>
+		<mobilePhone>18600432553</mobilePhone>
+		<ticketStatus>OPEN_FOR_USE</ticketStatus>
+		<ticketNo>666-2000527695</ticketNo>
+		<passengerSegment>
+			<pnrNo>PDTK0N</pnrNo>
+			<segmentStatus>RR</segmentStatus>
+			<airportTax>50</airportTax>
+			<fuelTax>0</fuelTax>
+			<netFare>891</netFare>
+			<marketFare>891</marketFare>
+		</passengerSegment>
+	</passengerList>
+	<passengerList>
+		<passengerType>ADULT</passengerType>
+		<name>测试樊飞</name>
+		<gender>MALE</gender>
+		<birthDay>1984-09-29</birthDay>
+		<certificateType>NI</certificateType>
+		<certificateNo>152723198409293018</certificateNo>
+		<mobilePhone>18600432553</mobilePhone>
+		<ticketStatus>OPEN_FOR_USE</ticketStatus>
+		<ticketNo>666-2000527695</ticketNo>
+		<passengerSegment>
+			<pnrNo>PDTK0N</pnrNo>
+			<segmentStatus>RR</segmentStatus>
+			<airportTax>50</airportTax>
+			<fuelTax>0</fuelTax>
+			<netFare>891</netFare>
+			<marketFare>891</marketFare>
+		</passengerSegment>
+	</passengerList>
+	<payments>
+		<paymentNo>20160713113816425276</paymentNo>
+		<payMoney>941</payMoney>
+		<payTime>2016-07-13 11:39:39</payTime>
+		<confirmTime>2016-07-13 11:39:39</confirmTime>
+		<payType>ALIPAY</payType>
+		<payStatus>PAID</payStatus>
+		<payer>FUTF011</payer>
+	</payments>
+	<payments>
+		<paymentNo>20160713113816425276</paymentNo>
+		<payMoney>941</payMoney>
+		<payTime>2016-07-13 11:39:39</payTime>
+		<confirmTime>2016-07-13 11:39:39</confirmTime>
+		<payType>ALIPAY</payType>
+		<payStatus>PAID</payStatus>
+		<payer>FUTF011</payer>
+	</payments>
+	<orderAllMoney>941</orderAllMoney>
+	<orderHasPay>941</orderHasPay>
+	<officeNo>PEK001</officeNo>
+</root>

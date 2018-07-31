@@ -1,0 +1,40 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CaOrderReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="dep"/>
+        <xs:element type="xs:string" name="arr"/>
+        <xs:element type="xs:string" name="date"/>
+        <xs:element type="xs:string" name="adt"/>
+        <xs:element type="xs:string" name="cnn"/>
+        <xs:element type="xs:string" name="flightNo"/>
+        <xs:element type="xs:string" name="cabinId"/>
+        <xs:element type="xs:string" name="adtFare"/>
+        <xs:element type="xs:string" name="contactUser"/>
+        <xs:element type="xs:string" name="contactPhone"/>
+        <xs:element name="users" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="surname"/>
+              <xs:element type="xs:string" name="givenName"/>
+              <xs:element type="xs:string" name="docType"/>
+              <xs:element type="xs:string" name="docnumber"/>
+              <xs:element type="xs:string" name="birthday"/>
+              <xs:element type="xs:string" name="telephone"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="journeySheet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="type"/>
+              <xs:element type="xs:string" name="rec"/>
+              <xs:element type="xs:string" name="addr"/>
+              <xs:element type="xs:string" name="phone"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

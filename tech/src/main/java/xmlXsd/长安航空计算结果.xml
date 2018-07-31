@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><root>
+  <TripCalculationRS>
+    <UserSessionId>57d7c164e4b07ab4a33b6c72</UserSessionId>
+    <Trip Uri="57d7c164e4b07ab4a33b6c73">
+      <FlightInformation ID="318e4f49-de19-4f8c-a39b-d8e2838d1892">
+        <Flight TotalTravelDuration="PT1H35M">
+          <FlightSegment ID="77eece03-d3eb-4772-9cb3-e8680818c577" Sequence="0" OriginCode="XIY" OriginLocationName="西安咸阳国际机场" DestinationCode="HZG" DestinationLocationName="汉中西关机场" DepartureDate="2016-12-05T08:00:00.000+08:00" ArrivalDate="2016-12-05T09:35:00.000+08:00" MarketingAirline="9H" FlightNumber="2123" EquipmentCode="738" NumberOfStops="0" TotalFlightDuration="PT1H35M" CabinClass="Business" BookingClass="J"></FlightSegment>
+          <FlightSegment ID="77eece03-d3eb-4772-9cb3-e8680818c577" Sequence="0" OriginCode="XIY" OriginLocationName="西安咸阳国际机场" DestinationCode="HZG" DestinationLocationName="汉中西关机场" DepartureDate="2016-12-05T08:00:00.000+08:00" ArrivalDate="2016-12-05T09:35:00.000+08:00" MarketingAirline="9H" FlightNumber="2123" EquipmentCode="738" NumberOfStops="0" TotalFlightDuration="PT1H35M" CabinClass="Business" BookingClass="J"></FlightSegment>
+        </Flight>
+        <Flight TotalTravelDuration="PT1H35M">
+          <FlightSegment ID="77eece03-d3eb-4772-9cb3-e8680818c577" Sequence="0" OriginCode="XIY" OriginLocationName="西安咸阳国际机场" DestinationCode="HZG" DestinationLocationName="汉中西关机场" DepartureDate="2016-12-05T08:00:00.000+08:00" ArrivalDate="2016-12-05T09:35:00.000+08:00" MarketingAirline="9H" FlightNumber="2123" EquipmentCode="738" NumberOfStops="0" TotalFlightDuration="PT1H35M" CabinClass="Business" BookingClass="J"></FlightSegment>
+        </Flight>
+      </FlightInformation>
+      <TripPricing TotalFareAmount="150" TotalFareCurrency="CNY">
+        <TravelerTripPricing>
+          <GuestType Code="ADT" Quantity="1"></GuestType>
+          <Fare BaseFareAmount="50" BaseFareCurrency="CNY" TotalFareAmount="100" TotalFareCurrency="CNY">
+            <Taxes>
+              <Tax Amount="50" CurrencyCode="CNY" TaxFeeRef="CN"></Tax>
+              <Tax Amount="50" CurrencyCode="CNY" TaxFeeRef="CN"></Tax>
+            </Taxes>
+            <Fees>
+              <Fee Amount="0" CurrencyCode="CNY" TaxFeeRef="YQ"></Fee>
+              <Fee Amount="0" CurrencyCode="CNY" TaxFeeRef="YQ"></Fee>
+            </Fees>
+          </Fare>
+        </TravelerTripPricing>
+        <TravelerTripPricing>
+          <GuestType Code="CNN" Quantity="1"></GuestType>
+          <Fare BaseFareAmount="50" BaseFareCurrency="CNY" TotalFareAmount="50" TotalFareCurrency="CNY">
+            <Fees>
+              <Fee Amount="0" CurrencyCode="CNY" TaxFeeRef="YQ"></Fee>
+              <Fee Amount="0" CurrencyCode="CNY" TaxFeeRef="YQ"></Fee>
+            </Fees>
+          </Fare>
+        </TravelerTripPricing>
+      </TripPricing>
+      <FlightFare FareBasisCode="J/10" FilingAirline="9H" DepartureAirport="XIY" ArrivalAirport="HZG" FareFamilyRef="9HTH" GuestCode="ADT">
+        <FlightSegments>
+          <FlightSegmentRef>77eece03-d3eb-4772-9cb3-e8680818c577</FlightSegmentRef>
+          <FlightSegmentRef>77eece03-d3eb-4772-9cb3-e8680818c577</FlightSegmentRef>
+        </FlightSegments>
+        <Fare BaseFareAmount="50" BaseFareCurrency="CNY"></Fare>
+      </FlightFare>
+      <FlightFare FareBasisCode="J/10" FilingAirline="9H" DepartureAirport="XIY" ArrivalAirport="HZG" FareFamilyRef="9HTH" GuestCode="CNN">
+        <FlightSegments>
+          <FlightSegmentRef>77eece03-d3eb-4772-9cb3-e8680818c577</FlightSegmentRef>
+        </FlightSegments>
+        <Fare BaseFareAmount="50" BaseFareCurrency="CNY"></Fare>
+      </FlightFare>
+      <FareFamilyContent>
+        <FareFamily Sequence="6" ID="9HTH">
+          <Name>
+            <Entry LanguageCode="en" Value="Economy Saver"></Entry>
+            <Entry LanguageCode="zh_CN" Value="特惠经济"></Entry>
+          </Name>
+          <URL>
+            <Entry LanguageCode="en"></Entry>
+            <Entry LanguageCode="zh_CN"></Entry>
+          </URL>
+          <Attribute>
+            <Entry LanguageCode="en" Value="Change Fee: Not allowed."></Entry>
+            <Entry LanguageCode="zh_CN" Value="变更费：不允许."></Entry>
+          </Attribute>
+          <Attribute>
+            <Entry LanguageCode="en" Value="Refund Fee: Not allowed."></Entry>
+            <Entry LanguageCode="zh_CN" Value="退票费：不允许."></Entry>
+          </Attribute>
+          <Attribute>
+            <Entry LanguageCode="en" Value="Endorsement: Not allowed."></Entry>
+            <Entry LanguageCode="zh_CN" Value="签转:不允许."></Entry>
+          </Attribute>
+        </FareFamily>
+      </FareFamilyContent>
+      <PromotionContent></PromotionContent>
+      <TaxFeeContent>
+        <TaxFee ID="CN">
+          <Entry Name="Airport Fee (Domestic)" CountryCode="CN"></Entry>
+          <Entry Name="Airport Fee (Domestic)" CountryCode="CN"></Entry>
+        </TaxFee>
+        <TaxFee ID="YQ">
+          <Entry Name="Service Fee" AirlineCode="9H"></Entry>
+          <Entry Name="Service Fee" AirlineCode="9H"></Entry>
+        </TaxFee>
+      </TaxFeeContent>
+      <MediaContent></MediaContent>
+    </Trip>
+  </TripCalculationRS>
+</root>

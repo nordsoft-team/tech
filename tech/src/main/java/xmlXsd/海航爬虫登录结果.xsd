@@ -1,0 +1,74 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="success"/>
+        <xs:element type="xs:string" name="message"/>
+        <xs:element type="xs:string" name="errorCode"/>
+        <xs:element type="xs:string" name="errorMessage"/>
+        <xs:element type="xs:long" name="systime"/>
+        <xs:element type="xs:string" name="requestIP"/>
+        <xs:element name="data">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="ok"/>
+              <xs:element type="xs:string" name="errorCode"/>
+              <xs:element type="xs:string" name="errorMessage"/>
+              <xs:element name="user">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:long" name="cid"/>
+                    <xs:element type="xs:string" name="name"/>
+                    <xs:element type="xs:string" name="certNo"/>
+                    <xs:element type="xs:long" name="phoneNo"/>
+                    <xs:element type="xs:string" name="grade"/>
+                    <xs:element type="xs:byte" name="point"/>
+                    <xs:element type="xs:int" name="expDate"/>
+                    <xs:element type="xs:string" name="idType"/>
+                    <xs:element type="xs:string" name="encrypt"/>
+                    <xs:element type="xs:string" name="b2cUserId"/>
+                    <xs:element type="xs:string" name="title"/>
+                    <xs:element type="xs:byte" name="accountBalance"/>
+                    <xs:element type="xs:string" name="accountexpireDate"/>
+                    <xs:element type="xs:string" name="hnaRealNameStatus"/>
+                    <xs:element type="xs:string" name="initPwd"/>
+                    <xs:element type="xs:string" name="beneficiaryType"/>
+                    <xs:element type="xs:string" name="uname"/>
+                    <xs:element name="tier">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="tierDisplayName"/>
+                          <xs:element type="xs:string" name="tierEndDate"/>
+                          <xs:element type="xs:string" name="tierStartDate"/>
+                          <xs:element type="xs:string" name="tierName"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="nation"/>
+                    <xs:element type="xs:string" name="idCard"/>
+                    <xs:element type="xs:string" name="pass"/>
+                    <xs:element type="xs:string" name="gender"/>
+                    <xs:element type="xs:byte" name="upgradeSegCurrent"/>
+                    <xs:element type="xs:byte" name="upgradeQpCurrent"/>
+                    <xs:element type="xs:byte" name="qpCurrent"/>
+                    <xs:element type="xs:byte" name="seg"/>
+                    <xs:element type="xs:string" name="email"/>
+                    <xs:element type="xs:string" name="mobileStatus"/>
+                    <xs:element type="xs:string" name="emailStatus"/>
+                    <xs:element type="xs:float" name="surplusLoan"/>
+                    <xs:element type="xs:float" name="sumCurrentLoan"/>
+                    <xs:element type="xs:string" name="loanYn"/>
+                    <xs:element type="xs:string" name="otherCertificates"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="token"/>
+              <xs:element type="xs:string" name="secret"/>
+              <xs:element type="xs:string" name="openid"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,37 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="m">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="req">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="orderId"/>
+                    <xs:element type="xs:string" name="orderAmount"/>
+                    <xs:element type="xs:string" name="paytype"/>
+                    <xs:element type="xs:string" name="banktype"/>
+                    <xs:element type="xs:string" name="bankcode"/>
+                    <xs:element type="xs:string" name="cardHolderName"/>
+                    <xs:element type="xs:string" name="cardHolderIdType"/>
+                    <xs:element type="xs:string" name="cardHolderIdNo"/>
+                    <xs:element type="xs:string" name="cardHolderTel"/>
+                    <xs:element type="xs:string" name="cardHolderCardNo"/>
+                    <xs:element type="xs:string" name="validdate"/>
+                    <xs:element type="xs:string" name="cvv"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="token"/>
+              <xs:element type="xs:string" name="lang"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="a"/>
+        <xs:element type="xs:string" name="p"/>
+        <xs:element type="xs:string" name="rw"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

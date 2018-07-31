@@ -1,0 +1,65 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="m">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="req">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="userId"/>
+                    <xs:element type="xs:string" name="memLevel"/>
+                    <xs:element type="xs:string" name="memCrId"/>
+                    <xs:element type="xs:long" name="memCrNo"/>
+                    <xs:element type="xs:short" name="totalPrice"/>
+                    <xs:element type="xs:byte" name="interFlag"/>
+                    <xs:element type="xs:byte" name="isBack"/>
+                    <xs:element type="xs:byte" name="productType"/>
+                    <xs:element type="xs:byte" name="shareFlag"/>
+                    <xs:element name="flightList" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="flightLine"/>
+                          <xs:element type="xs:string" name="startDate"/>
+                          <xs:element type="xs:string" name="flightNo"/>
+                          <xs:element type="xs:string" name="cabbinId"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="departureCityCode"/>
+                    <xs:element type="xs:string" name="arrivalCityCode"/>
+                    <xs:element name="passengerList" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:long" name="passCrNo"/>
+                          <xs:element type="xs:byte" name="passType"/>
+                          <xs:element type="xs:string" name="passCrId"/>
+                          <xs:element type="xs:string" name="passFirstName"/>
+                          <xs:element type="xs:string" name="passLastName"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="pccode"/>
+                    <xs:element type="xs:string" name="mid"/>
+                    <xs:element type="xs:byte" name="openJawFlag"/>
+                    <xs:element type="xs:string" name="openJawList"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="token"/>
+              <xs:element type="xs:string" name="lang"/>
+              <xs:element type="xs:int" name="userInfo1"/>
+              <xs:element type="xs:string" name="infoID"/>
+              <xs:element type="xs:string" name="userID"/>
+              <xs:element type="xs:string" name="deviceType"/>
+              <xs:element type="xs:int" name="ziYinNo"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:byte" name="a"/>
+        <xs:element type="xs:byte" name="p"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

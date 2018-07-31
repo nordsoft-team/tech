@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<result>SUCCESS</result>
+	<sheets>
+		<netFare>891</netFare>
+		<orderNo>20160714170555586564</orderNo>
+		<arrCode>HAK</arrCode>
+		<depTime>1468538700000</depTime>
+		<source>TF</source>
+		<depCode>FOC</depCode>
+		<refundType>UNCONSTRAINT</refundType>
+		<flightNo>FU6609</flightNo>
+		<refundNo>20160714192140818656</refundNo>
+		<ticketNo>666-2000531123</ticketNo>
+		<actualRefundAmout>0</actualRefundAmout>
+		<status>PASS</status>
+		<refundAmount>762.8</refundAmount>
+	</sheets>
+	<sheets>
+		<netFare>891</netFare>
+		<orderNo>20160714170555586564</orderNo>
+		<arrCode>HAK</arrCode>
+		<depTime>1468538700000</depTime>
+		<source>TF</source>
+		<depCode>FOC</depCode>
+		<refundType>UNCONSTRAINT</refundType>
+		<flightNo>FU6609</flightNo>
+		<refundNo>20160714192140818656</refundNo>
+		<ticketNo>666-2000531123</ticketNo>
+		<actualRefundAmout>0</actualRefundAmout>
+		<status>PASS</status>
+		<refundAmount>762.8</refundAmount>
+	</sheets>
+</root>

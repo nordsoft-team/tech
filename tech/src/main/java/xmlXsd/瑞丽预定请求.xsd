@@ -1,0 +1,71 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="BookingSegmentInfo" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="QueryResultId"/>
+              <xs:element type="xs:string" name="FlightNo"/>
+              <xs:element type="xs:string" name="Departure"/>
+              <xs:element type="xs:string" name="Arrival"/>
+              <xs:element type="xs:string" name="SeatCode"/>
+              <xs:element type="xs:string" name="RouteIndex"/>
+              <xs:element type="xs:string" name="ProductCode"/>
+              <xs:element type="xs:string" name="ProductType"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BookingPassengerList" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BookingPassenger_InsuranceList" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="InsuranceCode"/>
+                    <xs:element type="xs:string" name="Price"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="CertificateType"/>
+              <xs:element type="xs:string" name="PassengerType"/>
+              <xs:element type="xs:string" name="PassengerName"/>
+              <xs:element type="xs:string" name="CertificateNo"/>
+              <xs:element type="xs:string" name="MobilePhone"/>
+              <xs:element type="xs:string" name="BirthDay"/>
+              <xs:element type="xs:string" name="PassengerIndex"/>
+              <xs:element type="xs:string" name="InfantAdultBind"/>
+              <xs:element type="xs:string" name="AddToCommonUser"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BookingContactInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="ContactName"/>
+              <xs:element type="xs:string" name="MobilePhone"/>
+              <xs:element type="xs:string" name="Email"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BookingExpressInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="ExpressType"/>
+              <xs:element type="xs:string" name="PackageContentType"/>
+              <xs:element type="xs:string" name="ReceiveName"/>
+              <xs:element type="xs:string" name="CompanyName"/>
+              <xs:element type="xs:string" name="ReceivePhone"/>
+              <xs:element type="xs:string" name="ReceiveAddress"/>
+              <xs:element type="xs:string" name="ReceivePostCode"/>
+              <xs:element type="xs:string" name="Price"/>
+              <xs:element type="xs:string" name="PayType"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="MpsPoint"/>
+        <xs:element type="xs:string" name="ChildFollowType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

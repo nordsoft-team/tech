@@ -1,0 +1,19 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="resp">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="code"/>
+              <xs:element type="xs:string" name="msg"/>
+              <xs:element type="xs:string" name="ticketBookDate"/>
+              <xs:element type="xs:string" name="success"/>
+              <xs:element type="xs:string" name="orderId"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

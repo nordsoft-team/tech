@@ -1,0 +1,402 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.opentravel.org/OTA/2003/05" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="POS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Source">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="RequestorID">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="CompanyName">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="Code"/>
+                                  <xs:attribute type="xs:string" name="CompanyShortName"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="ID"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="ISOCountry"/>
+                  <xs:attribute type="xs:string" name="ISOCurrency"/>
+                  <xs:attribute type="xs:string" name="PseudoCityCode"/>
+                  <xs:attribute type="xs:string" name="Channel"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AirItinerary">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OriginDestinationOptions">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="OriginDestinationOption" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="FlightSegment">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="DepartureAirport">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="CodeContext" use="prohibited"/>
+                                        <xs:attribute type="xs:string" name="LocationCode" use="prohibited"/>
+                                        <xs:attribute type="xs:string" name="Terminal" use="prohibited"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="ArrivalAirport">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="CodeContext" use="prohibited"/>
+                                        <xs:attribute type="xs:string" name="LocationCode" use="prohibited"/>
+                                        <xs:attribute type="xs:string" name="Terminal" use="prohibited"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="OperatingAirline">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="Code" use="prohibited"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Equipment">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="AirEquipType" use="prohibited"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="MarketingAirline">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="Code" use="prohibited"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="BookingClassAvails">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="BookingClassAvail" maxOccurs="unbounded" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="RPH" use="prohibited"/>
+                                              <xs:attribute type="xs:string" name="ResBookDesigCode" use="prohibited"/>
+                                              <xs:attribute type="xs:string" name="ResBookDesigQuantity" use="prohibited"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Comment" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="CharSet"/>
+                                        <xs:attribute type="xs:string" name="Language"/>
+                                        <xs:attribute type="xs:string" name="Type"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="ArrivalDateTime" use="prohibited"/>
+                              <xs:attribute type="xs:string" name="CabinCode" use="prohibited"/>
+                              <xs:attribute type="xs:string" name="DepartureDateTime" use="prohibited"/>
+                              <xs:attribute type="xs:string" name="DepartureDay" use="prohibited"/>
+                              <xs:attribute type="xs:string" name="Duration" use="prohibited"/>
+                              <xs:attribute type="xs:string" name="E_TicketEligibility" use="prohibited"/>
+                              <xs:attribute type="xs:string" name="FlightNumber" use="prohibited"/>
+                              <xs:attribute type="xs:string" name="InfoSource" use="prohibited"/>
+                              <xs:attribute type="xs:string" name="Mileage" use="prohibited"/>
+                              <xs:attribute type="xs:string" name="OnlineCheckin" use="prohibited"/>
+                              <xs:attribute type="xs:string" name="RPH" use="prohibited"/>
+                              <xs:attribute type="xs:string" name="ResBookDesigCode" use="prohibited"/>
+                              <xs:attribute type="xs:string" name="SegmentType" use="prohibited"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="BookingChannel" use="prohibited"/>
+                        <xs:attribute type="xs:string" name="RPH" use="prohibited"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PlatingCarriers">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="PlatingCarrier">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="Code"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TravelerInfoSummary">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AirTravelerAvail">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="PassengerTypeQuantity" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="Code" use="prohibited"/>
+                            <xs:attribute type="xs:string" name="Quantity" use="prohibited"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AirItineraryPricingInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItinTotalFare">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="BaseFare">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="Amount"/>
+                            <xs:attribute type="xs:string" name="CurrencyCode"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Taxes">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Tax">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="Amount"/>
+                                  <xs:attribute type="xs:string" name="CurrencyCode"/>
+                                  <xs:attribute type="xs:string" name="TaxCode"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="TotalFare">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="Adjusted"/>
+                            <xs:attribute type="xs:string" name="Amount"/>
+                            <xs:attribute type="xs:string" name="CurrencyCode"/>
+                            <xs:attribute type="xs:string" name="OriginalAmount"/>
+                            <xs:attribute type="xs:string" name="OriginalCurrencyCode"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PTC_FareBreakdowns">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="PTC_FareBreakdown" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="PassengerTypeQuantity">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="Code" use="prohibited"/>
+                                  <xs:attribute type="xs:string" name="Quantity" use="prohibited"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="FareBasisCodes">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="FareBasisCode" maxOccurs="unbounded" minOccurs="0"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="PassengerFare">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="BaseFare">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="Adjusted" use="prohibited"/>
+                                        <xs:attribute type="xs:string" name="Amount" use="prohibited"/>
+                                        <xs:attribute type="xs:string" name="CurrencyCode" use="prohibited"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Taxes">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Tax" maxOccurs="unbounded" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="Amount" use="prohibited"/>
+                                              <xs:attribute type="xs:string" name="CurrencyCode" use="prohibited"/>
+                                              <xs:attribute type="xs:string" name="TaxCode" use="prohibited"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="TotalFare">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="Adjusted" use="prohibited"/>
+                                        <xs:attribute type="xs:string" name="Amount" use="prohibited"/>
+                                        <xs:attribute type="xs:string" name="CurrencyCode" use="prohibited"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="PricingSource" use="prohibited"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="FareInfos">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="FareInfo" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="FareReference"/>
+                          <xs:element name="FilingAirline">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="Code" use="prohibited"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="DepartureAirport">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="CodeContext" use="prohibited"/>
+                                  <xs:attribute type="xs:string" name="LocationCode" use="prohibited"/>
+                                  <xs:attribute type="xs:string" name="TS_CityCode" use="prohibited"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="ArrivalAirport">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="CodeContext" use="prohibited"/>
+                                  <xs:attribute type="xs:string" name="LocationCode" use="prohibited"/>
+                                  <xs:attribute type="xs:string" name="TS_CityCode" use="prohibited"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="FareInfo" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Fare">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="BaseAmount" use="prohibited"/>
+                                        <xs:attribute type="xs:string" name="TaxAmount" use="prohibited"/>
+                                        <xs:attribute type="xs:string" name="TotalFare" use="prohibited"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="PTC">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="PassengerTypeCode" use="prohibited"/>
+                                        <xs:attribute type="xs:string" name="Quantity" use="prohibited"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="FareBasisCode" use="prohibited"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="FlightSegmentRPH" use="prohibited"/>
+                        <xs:attribute type="xs:string" name="NegotiatedFare" use="prohibited"/>
+                        <xs:attribute type="xs:string" name="OriginDestinationRPH" use="prohibited"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="BookingChannel"/>
+      <xs:attribute type="xs:string" name="PackageType"/>
+      <xs:attribute type="xs:string" name="PrimaryLangID"/>
+      <xs:attribute type="xs:string" name="SequenceNmbr"/>
+      <xs:attribute type="xs:string" name="TransactionIdentifier"/>
+      <xs:attribute type="xs:string" name="Version"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

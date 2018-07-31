@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><root>
+  <ReservationRetrieveRS>
+    <UserSessionId></UserSessionId>
+    <Reservation Description="XIY-HZG [Wed, 07 Dec 2016]" Status="TICKETED" Source="CHANGAN_558" Code="0000977000">
+      <ReservationElement InventorySystem="TRAVELSKY" Sequence="1" Status="BOOKED" ID="1_2_3">
+        <Air>
+          <AirTrip>
+            <FlightInformation>
+              <Flight ID="89999405-1f98-4a35-a439-65f058e80824" TotalTravelDuration="PT1H35M">
+                <FlightSegment BookingClass="Y" CabinClass="Economy" TotalFlightDuration="PT1H35M" Miles="138" NumberOfStops="0" EquipmentCode="738" FlightNumber="2123" MarketingAirline="9H" ArrivalDate="2016-12-07T09:35:00.000" DepartureDate="2016-12-07T08:00:00.000" DestinationCode="HZG" OriginCode="XIY" Sequence="0" ID="9c2c7653-aded-4c90-97a0-f1550fbc986a"></FlightSegment>
+              </Flight>
+            </FlightInformation>
+            <TripPricing>
+              <TravelerTripPricing>
+                <GuestType Quantity="2" Code="ADT"></GuestType>
+                <Fare TotalFareCurrency="CNY" TotalFareAmount="550" BaseFareCurrency="CNY" BaseFareAmount="500">
+                  <Taxes>
+                    <Tax TaxFeeRef="CN" CurrencyCode="CNY" Amount="50"></Tax>
+                  </Taxes>
+                  <Fees>
+                    <Fee TaxFeeRef="YQ" CurrencyCode="CNY" Amount="0"></Fee>
+                  </Fees>
+                </Fare>
+              </TravelerTripPricing>
+              <TravelerTripPricing>
+                <GuestType Quantity="1" Code="CNN"></GuestType>
+                <Fare TotalFareCurrency="CNY" TotalFareAmount="250" BaseFareCurrency="CNY" BaseFareAmount="250">
+                  <Fees>
+                    <Fee TaxFeeRef="YQ" CurrencyCode="CNY" Amount="0"></Fee>
+                  </Fees>
+                </Fare>
+              </TravelerTripPricing>
+            </TripPricing>
+            <FlightFare GuestCode="ADT" FareFamilyRef="9HQJ" ArrivalAirport="HZG" DepartureAirport="XIY" FilingAirline="9H" FareBasisCode="Y/100">
+              <FlightSegments>
+                <FlightSegmentRef>9c2c7653-aded-4c90-97a0-f1550fbc986a</FlightSegmentRef>
+              </FlightSegments>
+              <Fare BaseFareCurrency="CNY" BaseFareAmount="500"></Fare>
+            </FlightFare>
+            <FlightFare GuestCode="CNN" FareFamilyRef="9HQJ" ArrivalAirport="HZG" DepartureAirport="XIY" FilingAirline="9H" FareBasisCode="YCH50">
+              <FlightSegments>
+                <FlightSegmentRef>9c2c7653-aded-4c90-97a0-f1550fbc986a</FlightSegmentRef>
+              </FlightSegments>
+              <Fare BaseFareCurrency="CNY" BaseFareAmount="250"></Fare>
+            </FlightFare>
+            <FareFamilyContent>
+              <FareFamily ID="9HQJ">
+                <Name>
+                  <Entry Value="全价经济"></Entry>
+                </Name>
+                <Attribute>
+                  <Entry Value="变更费：航班计划离站时间48小时前（含）: 5%; 
+ 航班计划离站时间48小时内: 10%; 
+ 航班离站后：15%."></Entry>
+                </Attribute>
+                <Attribute>
+                  <Entry Value="退票费：航班计划离站时间48小时前（含）: 10%; 
+ 航班计划离站时间48小时内: 20%; 
+ 航班离站后：30%."></Entry>
+                </Attribute>
+                <Attribute>
+                  <Entry Value="签转:允许."></Entry>
+                </Attribute>
+              </FareFamily>
+            </FareFamilyContent>
+            <PromotionContent></PromotionContent>
+            <TaxFeeContent>
+              <TaxFee ID="CN">
+                <Entry IsServiceFee="false" Name="Airport Fee (Domestic)"></Entry>
+              </TaxFee>
+              <TaxFee ID="YQ">
+                <Entry IsServiceFee="true" Name="Service Fee"></Entry>
+              </TaxFee>
+            </TaxFeeContent>
+            <PaymentPolicy PolicyTypeCode="CANCELLATION" PolicyCode="Y/100">
+              <PolicyText></PolicyText>
+            </PaymentPolicy>
+            <PaymentPolicy Deadine="2010-12-31T00:00:00.000" PolicyTypeCode="BOOKINGCHANGE" PolicyCode="CHANGE_5_PERCENT">
+              <PolicyText LongDescription="5% Change Fee" LanguageCode="zh_CN"></PolicyText>
+            </PaymentPolicy>
+            <PaymentPolicy Deadine="2010-12-31T00:00:00.000" PolicyTypeCode="BOOKINGCHANGE" PolicyCode="CHANGE_10_PERCENT">
+              <PolicyText LongDescription="10% Change Fee" LanguageCode="zh_CN"></PolicyText>
+            </PaymentPolicy>
+            <PaymentPolicy Deadine="2010-12-31T00:00:00.000" PolicyTypeCode="CANCELLATION" PolicyCode="REFUND_20_PERCENT">
+              <PolicyText LongDescription="Refund Fee of 20 %" LanguageCode="zh_CN"></PolicyText>
+            </PaymentPolicy>
+            <PaymentPolicy PolicyTypeCode="CANCELLATION" PolicyCode="YCH50">
+              <PolicyText></PolicyText>
+            </PaymentPolicy>
+            <PaymentPolicy Deadine="2010-12-31T00:00:00.000" PolicyTypeCode="CANCELLATION" PolicyCode="REFUND_10_PERCENT">
+              <PolicyText LongDescription="Refund Fee of 10 %" LanguageCode="zh_CN"></PolicyText>
+            </PaymentPolicy>
+            <PaymentPolicy Deadine="2010-12-31T00:00:00.000" PolicyTypeCode="CANCELLATION" PolicyCode="REFUND_30_PERCENT">
+              <PolicyText LongDescription="Refund Fee of 30 %" LanguageCode="zh_CN"></PolicyText>
+            </PaymentPolicy>
+          </AirTrip>
+        </Air>
+        <TravelerReference>98f16e36-0d2d-4c79-9f8b-3c19e7538c0d</TravelerReference>
+        <TravelerReference>145ad3c7-4a73-446e-96cb-03c25413f866</TravelerReference>
+        <TravelerReference>64476967-22c2-446d-a12c-254c2b8e612a</TravelerReference>
+        <BookingReference System="TRAVELSKY" Value="ND0KHY" Type="GDS_PNR_REF"></BookingReference>
+        <Document Status="OPEN" Number="856-2110039536" Type="ETICKET">
+          <TravelerReference>98f16e36-0d2d-4c79-9f8b-3c19e7538c0d</TravelerReference>
+        </Document>
+        <Document Status="OPEN" Number="856-2110039538" Type="ETICKET">
+          <TravelerReference>145ad3c7-4a73-446e-96cb-03c25413f866</TravelerReference>
+        </Document>
+        <Document Status="OPEN" Number="856-2110039537" Type="ETICKET">
+          <TravelerReference>64476967-22c2-446d-a12c-254c2b8e612a</TravelerReference>
+        </Document>
+      </ReservationElement>
+      <Traveler ID="98f16e36-0d2d-4c79-9f8b-3c19e7538c0d" GuestTypeCode="ADT" DateOfBirth="1984-09-29" LastName="测" FirstName="试樊飞">
+        <Phone Default="true" PhoneNumber="18600432553" PhoneType="MOBILE"></Phone>
+        <FormOfIdentification IssuingLocation="CN" ExpiryDate="" FormOfIdentificationNumber="152723198409293018" FormOfIdentificationType="ID_CARD"></FormOfIdentification>
+      </Traveler>
+      <Traveler ID="145ad3c7-4a73-446e-96cb-03c25413f866" GuestTypeCode="ADT" DateOfBirth="1989-09-11" LastName="测" FirstName="试张三">
+        <Phone Default="true" PhoneNumber="18600432553" PhoneType="MOBILE"></Phone>
+        <FormOfIdentification IssuingLocation="CN" ExpiryDate="" FormOfIdentificationNumber="21018119890911582X" FormOfIdentificationType="ID_CARD"></FormOfIdentification>
+      </Traveler>
+      <Traveler ID="64476967-22c2-446d-a12c-254c2b8e612a" GuestTypeCode="CNN" DateOfBirth="2010-03-30" LastName="测" FirstName="试王五">
+        <Phone Default="true" PhoneNumber="18600432553" PhoneType="MOBILE"></Phone>
+        <FormOfIdentification IssuingLocation="CN" ExpiryDate="" FormOfIdentificationNumber="500107201003305715" FormOfIdentificationType="ID_CARD"></FormOfIdentification>
+      </Traveler>
+      <Customer ID="2d9dfbeb-7550-4fa5-9f1a-99d68e75f3bd" LastName="测" FirstName="试樊飞">
+        <Phone Default="true" PhoneNumber="18600432553" PhoneType="MOBILE"></Phone>
+        <Email Default="true" PreferredFormat="HTML" EmailAddress="lishuigen@panatrip.net" EmailType="EMAIL"></Email>
+      </Customer>
+      <Purchase PurchaseCurrency="CNY" PurchaseAmount="1350.00" PaymentCardTypeCode="yue" FormOfPayment="VIRTUALBANK">
+        <PurchaserReference>f56d9229-57c9-4c3f-97ae-d8f42a5a6336</PurchaserReference>
+      </Purchase>
+    </Reservation>
+  </ReservationRetrieveRS>
+</root>

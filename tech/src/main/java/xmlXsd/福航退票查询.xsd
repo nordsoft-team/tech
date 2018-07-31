@@ -1,0 +1,30 @@
+<xs:schema attributeFormDefault="unqualified"
+	elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="root">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element type="xs:string" name="result" />
+				<xs:element name="sheets" maxOccurs="unbounded"
+					minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:string" name="netFare" />
+							<xs:element type="xs:string" name="orderNo" />
+							<xs:element type="xs:string" name="arrCode" />
+							<xs:element type="xs:string" name="depTime" />
+							<xs:element type="xs:string" name="source" />
+							<xs:element type="xs:string" name="depCode" />
+							<xs:element type="xs:string" name="refundType" />
+							<xs:element type="xs:string" name="flightNo" />
+							<xs:element type="xs:string" name="refundNo" />
+							<xs:element type="xs:string" name="ticketNo" />
+							<xs:element type="xs:string" name="actualRefundAmout" />
+							<xs:element type="xs:string" name="status" />
+							<xs:element type="xs:string" name="refundAmount" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

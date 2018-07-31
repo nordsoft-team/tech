@@ -1,0 +1,10 @@
+{
+    "m": {
+        "req": "{\"orderId\":\"171024095754843001\",\"orderAmount\":\"1360\",\"paytype\":\"0\",\"banktype\":\"MPAY\",\"bankcode\":\"CMBC\",\"cardHolderName\":\"樊飞\",\"cardHolderIdType\":\"C\",\"cardHolderIdNo\":\"152723198409293018\",\"cardHolderTel\":\"18600432553\",\"cardHolderCardNo\":\"3568891132061318\",\"validdate\":\"201811\",\"cvv\":\"123\"}",
+        "token": "h5001",
+        "lang": "zh_CN"
+    },
+    "a": "18",
+    "p": "34",
+    "rw": "17"
+}

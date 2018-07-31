@@ -1,0 +1,52 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="cabinName"/>
+        <xs:element type="xs:string" name="eur_zjprice"/>
+        <xs:element type="xs:string" name="cabinLevel"/>
+        <xs:element type="xs:string" name="refundPrice"/>
+        <xs:element type="xs:string" name="freeBaggageAllow"/>
+        <xs:element type="xs:string" name="voluntaryText"/>
+        <xs:element type="xs:string" name="refounText"/>
+        <xs:element type="xs:string" name="zjNumber"/>
+        <xs:element type="xs:string" name="usd_zjprice"/>
+        <xs:element type="xs:string" name="zj_mileageNum"/>
+        <xs:element type="xs:string" name="reservedSeatsText"/>
+        <xs:element type="xs:string" name="ffcabinId"/>
+        <xs:element type="xs:string" name="iszj"/>
+        <xs:element type="xs:string" name="krw_zjprice"/>
+        <xs:element type="xs:string" name="usd_price"/>
+        <xs:element type="xs:string" name="surplusTicket"/>
+        <xs:element type="xs:string" name="gbp_zjprice"/>
+        <xs:element type="xs:string" name="sek_price"/>
+        <xs:element type="xs:string" name="isMileageUp"/>
+        <xs:element type="xs:string" name="cabinClass"/>
+        <xs:element type="xs:string" name="index"/>
+        <xs:element type="xs:string" name="pcName"/>
+        <xs:element type="xs:string" name="changeText"/>
+        <xs:element type="xs:string" name="mileage"/>
+        <xs:element type="xs:string" name="nextCabinName"/>
+        <xs:element type="xs:string" name="gbp_price"/>
+        <xs:element type="xs:string" name="krw_price"/>
+        <xs:element type="xs:string" name="vip_price"/>
+        <xs:element type="xs:string" name="priceCurrency"/>
+        <xs:element type="xs:string" name="mileageNum"/>
+        <xs:element type="xs:string" name="sek_zjprice"/>
+        <xs:element type="xs:string" name="jpy_zjprice"/>
+        <xs:element type="xs:string" name="nextPrice"/>
+        <xs:element type="xs:string" name="gapBaseFareAmount"/>
+        <xs:element type="xs:string" name="ffcabin"/>
+        <xs:element type="xs:string" name="jpy_price"/>
+        <xs:element type="xs:string" name="price"/>
+        <xs:element type="xs:string" name="eur_price"/>
+        <xs:element type="xs:string" name="extraText"/>
+        <xs:element type="xs:string" name="combinationText"/>
+        <xs:element type="xs:string" name="nextCabin"/>
+        <xs:element type="xs:string" name="mileageAccrualText"/>
+        <xs:element type="xs:string" name="seatMileage"/>
+        <xs:element type="xs:string" name="isCombination"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

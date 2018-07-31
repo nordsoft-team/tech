@@ -1,0 +1,208 @@
+<xs:schema attributeFormDefault="unqualified"
+	elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="root">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element type="xs:string" name="id" />
+				<xs:element type="xs:string" name="app" />
+				<xs:element type="xs:string" name="service" />
+				<xs:element type="xs:string" name="version" />
+				<xs:element type="xs:string" name="sign" />
+				<xs:element type="xs:string" name="replyId" />
+				<xs:element type="xs:string" name="result" />
+				<xs:element type="xs:string" name="appId" />
+				<xs:element type="xs:string" name="flag" />
+				<xs:element type="xs:string" name="errorCode" />
+				<xs:element type="xs:string" name="errorMsg" />
+				<xs:element type="xs:string" name="airlineCode" />
+				<xs:element name="dtoFltRefund">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:string" name="id" />
+							<xs:element type="xs:string" name="orderId" />
+							<xs:element type="xs:string" name="refundNo" />
+							<xs:element type="xs:string" name="userName" />
+							<xs:element type="xs:string" name="createTime" />
+							<xs:element type="xs:string" name="status" />
+							<xs:element type="xs:string" name="remark" />
+							<xs:element type="xs:string" name="payMode" />
+							<xs:element type="xs:string" name="payTime" />
+							<xs:element type="xs:string" name="airlineCode" />
+							<xs:element type="xs:string" name="refundType" />
+							<xs:element type="xs:string" name="officeNo" />
+							<xs:element type="xs:string" name="rejected" />
+							<xs:element type="xs:string" name="passFirstAudit" />
+							<xs:element name="fltRefundPaxSegList" maxOccurs="unbounded"
+								minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="id" />
+										<xs:element type="xs:string" name="refundId" />
+										<xs:element name="paxSegment">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element type="xs:string" name="id" />
+													<xs:element type="xs:string" name="depCode" />
+													<xs:element type="xs:string" name="arrCode" />
+													<xs:element type="xs:string" name="airlineCode" />
+													<xs:element type="xs:string" name="flightNo" />
+													<xs:element type="xs:string" name="cabinClass" />
+													<xs:element type="xs:string" name="depTime" />
+													<xs:element type="xs:string" name="depTimeforTQ" />
+													<xs:element type="xs:string" name="arrTime" />
+													<xs:element type="xs:string" name="planeType" />
+													<xs:element type="xs:string" name="inventory" />
+													<xs:element type="xs:string" name="cabinState" />
+													<xs:element type="xs:string" name="tripType" />
+													<xs:element type="xs:string" name="cabinPrice" />
+													<xs:element type="xs:string" name="baseFare" />
+													<xs:element type="xs:string" name="mileage" />
+													<xs:element type="xs:string" name="point" />
+													<xs:element type="xs:string" name="referenceCabin" />
+													<xs:element type="xs:string" name="referenceFare" />
+													<xs:element type="xs:string" name="timeLimit" />
+													<xs:element type="xs:string" name="lowstCabin" />
+													<xs:element type="xs:string" name="ticketRule" />
+													<xs:element type="xs:string" name="mealProductList" />
+													<xs:element type="xs:string" name="yktProductList" />
+													<xs:element type="xs:string" name="luggageProductList" />
+													<xs:element type="xs:string" name="fc" />
+													<xs:element type="xs:string" name="passengerId" />
+													<xs:element type="xs:string" name="segmentId" />
+													<xs:element name="ticketIssued">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element type="xs:string" name="id" />
+																<xs:element type="xs:string" name="issCode" />
+																<xs:element type="xs:string" name="ticketNo" />
+																<xs:element type="xs:string" name="serialNo" />
+																<xs:element type="xs:string" name="serialNoCk" />
+																<xs:element type="xs:string" name="printed" />
+																<xs:element type="xs:string" name="bspType" />
+																<xs:element type="xs:string" name="endorsement" />
+																<xs:element type="xs:string" name="ck" />
+																<xs:element type="xs:string" name="conjunctionTkt" />
+																<xs:element type="xs:string" name="agentCode" />
+																<xs:element type="xs:string" name="issuedBy" />
+																<xs:element type="xs:string" name="issuedDate" />
+																<xs:element type="xs:string" name="bookTime" />
+																<xs:element type="xs:string" name="passengerSegmentList" />
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="productApplied">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element type="xs:string" name="id" />
+																<xs:element type="xs:string" name="code" />
+																<xs:element type="xs:string" name="name" />
+																<xs:element type="xs:string" name="description" />
+																<xs:element type="xs:string" name="airlineCode" />
+																<xs:element type="xs:string" name="createDate" />
+																<xs:element type="xs:string" name="createId" />
+																<xs:element type="xs:string" name="status" />
+																<xs:element type="xs:string" name="ei" />
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element type="xs:string" name="marketFare" />
+													<xs:element type="xs:string" name="netFare" />
+													<xs:element type="xs:string" name="airportTax" />
+													<xs:element type="xs:string" name="fuelTax" />
+													<xs:element type="xs:string" name="otherTaxes" />
+													<xs:element type="xs:string" name="insurance" />
+													<xs:element type="xs:string" name="agentFee" />
+													<xs:element type="xs:string" name="spFee" />
+													<xs:element type="xs:string" name="fareBasis" />
+													<xs:element type="xs:string" name="notValidBefore" />
+													<xs:element type="xs:string" name="notValidAfter" />
+													<xs:element type="xs:string" name="allow" />
+													<xs:element type="xs:string" name="status" />
+													<xs:element type="xs:string" name="ticketStatus" />
+													<xs:element type="xs:string" name="currency" />
+													<xs:element type="xs:string" name="agentFeeRate" />
+													<xs:element type="xs:string" name="spFeeRate" />
+													<xs:element type="xs:string" name="insuDiscount" />
+													<xs:element type="xs:string" name="hasFreeTicket" />
+													<xs:element type="xs:string" name="usedFreeTicket" />
+													<xs:element type="xs:string" name="usrdFlow" />
+													<xs:element type="xs:string" name="payFreeTicket" />
+													<xs:element type="xs:string" name="sequence" />
+													<xs:element type="xs:string" name="dayAndMoth" />
+													<xs:element type="xs:string" name="hourAndmin" />
+													<xs:element type="xs:string" name="serviceList" />
+													<xs:element type="xs:string" name="insuranceList" />
+													<xs:element type="xs:string" name="paxsegTaxList" />
+													<xs:element type="xs:string" name="couponPrice" />
+													<xs:element type="xs:string" name="oldNetFare" />
+													<xs:element type="xs:string" name="orderId" />
+													<xs:element type="xs:string" name="pointPrice" />
+													<xs:element type="xs:string" name="realRebate" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element type="xs:string" name="fareRefundAmount" />
+										<xs:element type="xs:string" name="airportTaxRefundAmount" />
+										<xs:element type="xs:string" name="fuelSurchargeRefundAmount" />
+										<xs:element type="xs:string" name="otherTaxesRefundAmount" />
+										<xs:element type="xs:string" name="actualRefundAmount" />
+										<xs:element type="xs:string" name="fareRefundRate" />
+										<xs:element type="xs:string" name="processFeeRate" />
+										<xs:element type="xs:string" name="processFee" />
+										<xs:element type="xs:string" name="sxyprocessFeeRate" />
+										<xs:element type="xs:string" name="sxyprocessFee" />
+										<xs:element type="xs:string" name="remark" />
+										<xs:element type="xs:string" name="baseAmountForFee" />
+										<xs:element type="xs:string" name="applyAmount" />
+										<xs:element type="xs:string" name="refundPoint" />
+										<xs:element type="xs:string" name="serviceOrderAmount" />
+										<xs:element type="xs:string" name="amsRefundPoint" />
+										<xs:element type="xs:string" name="mealFee" />
+										<xs:element type="xs:string" name="luggageFee" />
+										<xs:element type="xs:string" name="itinerary" />
+										<xs:element type="xs:string" name="realRebate" />
+										<xs:element type="xs:string" name="applyAmsRefundPoint" />
+										<xs:element type="xs:string" name="changeFlag" />
+										<xs:element type="xs:string" name="refundStatus" />
+										<xs:element type="xs:string" name="refundAmount" />
+										<xs:element type="xs:string" name="totalTax" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element type="xs:string" name="payments" />
+							<xs:element type="xs:string" name="dtoFreeTickets" />
+							<xs:element type="xs:string" name="dtoPoints" />
+							<xs:element type="xs:string" name="refundFT" />
+							<xs:element type="xs:string" name="refundPoint" />
+							<xs:element type="xs:string" name="refundUser" />
+							<xs:element type="xs:string" name="refundTime" />
+							<xs:element type="xs:string" name="userType" />
+							<xs:element type="xs:string" name="orderSource" />
+							<xs:element type="xs:string" name="fareRefundAmount" />
+							<xs:element type="xs:string" name="airportTaxRefundAmount" />
+							<xs:element type="xs:string" name="cabinRefund" />
+							<xs:element type="xs:string" name="productType" />
+							<xs:element type="xs:string" name="ticketSaleAmount" />
+							<xs:element type="xs:string" name="actualSaleAmount" />
+							<xs:element type="xs:string" name="applyRefundAmount" />
+							<xs:element type="xs:string" name="actualRefundAmount" />
+							<xs:element type="xs:string" name="processFeeAmount" />
+							<xs:element type="xs:string" name="morePeople" />
+							<xs:element type="xs:string" name="retrieveTime" />
+							<xs:element type="xs:string" name="changeId" />
+							<xs:element type="xs:string" name="retrieveTimeFlag" />
+							<xs:element type="xs:string" name="supplyCount" />
+							<xs:element type="xs:string" name="couponNo" />
+							<xs:element type="xs:string" name="couponType" />
+							<xs:element type="xs:string" name="refundALL" />
+							<xs:element type="xs:string" name="attachmentList" />
+							<xs:element type="xs:string" name="orgRefundNo" />
+							<xs:element type="xs:string" name="totalRefundAmount" />
+							<xs:element type="xs:string" name="totalActualRefundAmount" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,328 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="success"/>
+        <xs:element type="xs:string" name="message"/>
+        <xs:element type="xs:string" name="errorCode"/>
+        <xs:element type="xs:string" name="errorMessage"/>
+        <xs:element type="xs:string" name="systime"/>
+        <xs:element type="xs:string" name="requestIP"/>
+        <xs:element name="data">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="contact">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="contactTel"/>
+                    <xs:element type="xs:string" name="contactName"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="itinerary">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="address"/>
+                    <xs:element type="xs:string" name="addresseePhone"/>
+                    <xs:element type="xs:string" name="hoToGet"/>
+                    <xs:element type="xs:string" name="name"/>
+                    <xs:element type="xs:string" name="postcode"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="ok"/>
+              <xs:element name="order">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="bookingTime"/>
+                    <xs:element type="xs:string" name="changeId"/>
+                    <xs:element type="xs:string" name="changeItems"/>
+                    <xs:element type="xs:string" name="idType"/>
+                    <xs:element type="xs:string" name="identityNo"/>
+                    <xs:element type="xs:string" name="isChangeNeedPay"/>
+                    <xs:element type="xs:string" name="isChangeOrder"/>
+                    <xs:element type="xs:string" name="isMyOrder"/>
+                    <xs:element type="xs:string" name="nameCn"/>
+                    <xs:element type="xs:string" name="newOrderNo"/>
+                    <xs:element type="xs:string" name="orderNo"/>
+                    <xs:element type="xs:string" name="orderType"/>
+                    <xs:element name="passengerFares" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="yqTax"/>
+                          <xs:element type="xs:string" name="yrTax"/>
+                          <xs:element type="xs:string" name="otherTaxNoYR"/>
+                          <xs:element type="xs:string" name="yqrTax"/>
+                          <xs:element type="xs:string" name="passengerType"/>
+                          <xs:element type="xs:string" name="cnTax"/>
+                          <xs:element type="xs:string" name="otherTax"/>
+                          <xs:element name="taxFare" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="amount"/>
+                                <xs:element type="xs:string" name="taxcode"/>
+                                <xs:element type="xs:string" name="currencyCode"/>
+                                <xs:element type="xs:string" name="passengerType"/>
+                                <xs:element type="xs:string" name="quantity"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="totalAmount"/>
+                          <xs:element type="xs:string" name="changeAmt"/>
+                          <xs:element type="xs:string" name="changeFare"/>
+                          <xs:element type="xs:string" name="changeFee"/>
+                          <xs:element type="xs:string" name="quantity"/>
+                          <xs:element type="xs:string" name="refFee"/>
+                          <xs:element type="xs:string" name="tktAmount"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="payState"/>
+                    <xs:element type="xs:string" name="payTime"/>
+                    <xs:element type="xs:string" name="reimburse"/>
+                    <xs:element type="xs:string" name="state"/>
+                    <xs:element type="xs:string" name="tripType"/>
+                    <xs:element type="xs:string" name="asteriskFeeDesc"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="passengers">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="dtoes"/>
+                    <xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="airportTax"/>
+                          <xs:element type="xs:string" name="fuelTax"/>
+                          <xs:element name="goTrip">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="flightInfos" maxOccurs="unbounded" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="airplaneStyle"/>
+                                      <xs:element type="xs:string" name="airportTax"/>
+                                      <xs:element type="xs:string" name="arrPlace"/>
+                                      <xs:element type="xs:string" name="baggage"/>
+                                      <xs:element type="xs:string" name="baggageDescribe"/>
+                                      <xs:element type="xs:string" name="baggageUnit"/>
+                                      <xs:element type="xs:string" name="brandName"/>
+                                      <xs:element type="xs:string" name="cabinCode"/>
+                                      <xs:element type="xs:string" name="canChange"/>
+                                      <xs:element type="xs:string" name="changeAmt"/>
+                                      <xs:element type="xs:string" name="changeFare"/>
+                                      <xs:element type="xs:string" name="changeFee"/>
+                                      <xs:element type="xs:string" name="changeInfo"/>
+                                      <xs:element type="xs:string" name="changeTicketSeg"/>
+                                      <xs:element type="xs:string" name="depPlace"/>
+                                      <xs:element type="xs:string" name="dstAirport"/>
+                                      <xs:element name="dstAirportDTO">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="nameEn"/>
+                                            <xs:element type="xs:string" name="name"/>
+                                            <xs:element type="xs:string" name="city"/>
+                                            <xs:element type="xs:string" name="cityEn"/>
+                                            <xs:element type="xs:string" name="shortCut"/>
+                                            <xs:element type="xs:string" name="code"/>
+                                            <xs:element type="xs:string" name="pinyin"/>
+                                            <xs:element type="xs:string" name="headLetter"/>
+                                            <xs:element type="xs:string" name="cityImageUrl"/>
+                                            <xs:element type="xs:string" name="displayName"/>
+                                            <xs:element type="xs:string" name="countryCode"/>
+                                            <xs:element type="xs:string" name="inter"/>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element type="xs:string" name="dstDate"/>
+                                      <xs:element type="xs:string" name="dstTerminal"/>
+                                      <xs:element type="xs:string" name="dstTime"/>
+                                      <xs:element type="xs:string" name="durTime"/>
+                                      <xs:element name="fareFamilyDTO">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="additional"/>
+                                            <xs:element type="xs:string" name="cabinName"/>
+                                            <xs:element type="xs:string" name="changeToOpen"/>
+                                            <xs:element type="xs:string" name="chgAfterDeparture"/>
+                                            <xs:element type="xs:string" name="chgAfterDepartureRate"/>
+                                            <xs:element type="xs:string" name="chgBeforeDeparture"/>
+                                            <xs:element type="xs:string" name="chgBeforeDepartureRate"/>
+                                            <xs:element type="xs:string" name="chgLimit"/>
+                                            <xs:element type="xs:string" name="chgTimeThreshold"/>
+                                            <xs:element type="xs:string" name="chgType"/>
+                                            <xs:element type="xs:string" name="description"/>
+                                            <xs:element type="xs:string" name="domesticSelfCheckin"/>
+                                            <xs:element type="xs:string" name="drawTable"/>
+                                            <xs:element type="xs:string" name="fareBasis"/>
+                                            <xs:element type="xs:string" name="fareFamilyCode"/>
+                                            <xs:element type="xs:string" name="fareFamilyName"/>
+                                            <xs:element type="xs:string" name="internationalSelfCheckin"/>
+                                            <xs:element type="xs:string" name="productCkin"/>
+                                            <xs:element type="xs:string" name="productEi"/>
+                                            <xs:element type="xs:string" name="productName"/>
+                                            <xs:element type="xs:string" name="productType"/>
+                                            <xs:element type="xs:string" name="refAfterDeparture"/>
+                                            <xs:element type="xs:string" name="refAfterDepartureRate"/>
+                                            <xs:element type="xs:string" name="refBeforeDeparture"/>
+                                            <xs:element type="xs:string" name="refBeforeDepartureRate"/>
+                                            <xs:element type="xs:string" name="refEligible"/>
+                                            <xs:element type="xs:string" name="refTimeThreshold"/>
+                                            <xs:element type="xs:string" name="refVoluntary"/>
+                                            <xs:element type="xs:string" name="upgradable"/>
+                                            <xs:element type="xs:string" name="userType"/>
+                                            <xs:element type="xs:string" name="username"/>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element type="xs:string" name="flightNo"/>
+                                      <xs:element type="xs:string" name="flightType"/>
+                                      <xs:element type="xs:string" name="fuelTax"/>
+                                      <xs:element type="xs:string" name="meal"/>
+                                      <xs:element type="xs:string" name="operatingAirline"/>
+                                      <xs:element type="xs:string" name="orgAirport"/>
+                                      <xs:element name="orgAirportDTO">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="nameEn"/>
+                                            <xs:element type="xs:string" name="name"/>
+                                            <xs:element type="xs:string" name="city"/>
+                                            <xs:element type="xs:string" name="cityEn"/>
+                                            <xs:element type="xs:string" name="shortCut"/>
+                                            <xs:element type="xs:string" name="code"/>
+                                            <xs:element type="xs:string" name="pinyin"/>
+                                            <xs:element type="xs:string" name="headLetter"/>
+                                            <xs:element type="xs:string" name="cityImageUrl"/>
+                                            <xs:element type="xs:string" name="displayName"/>
+                                            <xs:element type="xs:string" name="countryCode"/>
+                                            <xs:element type="xs:string" name="inter"/>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element type="xs:string" name="orgDate"/>
+                                      <xs:element type="xs:string" name="orgTerminal"/>
+                                      <xs:element type="xs:string" name="orgTime"/>
+                                      <xs:element type="xs:string" name="otherTax"/>
+                                      <xs:element type="xs:string" name="passengerFares"/>
+                                      <xs:element type="xs:string" name="passengerType"/>
+                                      <xs:element type="xs:string" name="price"/>
+                                      <xs:element type="xs:string" name="psgNum"/>
+                                      <xs:element type="xs:string" name="quantity"/>
+                                      <xs:element type="xs:string" name="refFee"/>
+                                      <xs:element type="xs:string" name="refVal"/>
+                                      <xs:element type="xs:string" name="segIndex"/>
+                                      <xs:element type="xs:string" name="segType"/>
+                                      <xs:element type="xs:string" name="share"/>
+                                      <xs:element type="xs:string" name="stop"/>
+                                      <xs:element type="xs:string" name="stopOver"/>
+                                      <xs:element type="xs:string" name="stopAirportDTOs"/>
+                                      <xs:element name="taxFare" maxOccurs="unbounded" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="amount"/>
+                                            <xs:element type="xs:string" name="taxcode"/>
+                                            <xs:element type="xs:string" name="currencyCode"/>
+                                            <xs:element type="xs:string" name="passengerType"/>
+                                            <xs:element type="xs:string" name="quantity"/>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element type="xs:string" name="ticketNo"/>
+                                      <xs:element type="xs:string" name="ticketOutTime"/>
+                                      <xs:element type="xs:string" name="ticketState"/>
+                                      <xs:element type="xs:string" name="transit"/>
+                                      <xs:element type="xs:string" name="upgrade"/>
+                                      <xs:element type="xs:string" name="weekDay"/>
+                                      <xs:element type="xs:string" name="wideBody"/>
+                                      <xs:element type="xs:string" name="refundState"/>
+                                      <xs:element type="xs:string" name="consumePoint"/>
+                                      <xs:element type="xs:string" name="isOpenForUse"/>
+                                      <xs:element type="xs:string" name="yrTax"/>
+                                      <xs:element type="xs:string" name="otherTaxNoYR"/>
+                                      <xs:element type="xs:string" name="yqrTax"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:string" name="lc"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="idNo"/>
+                          <xs:element type="xs:string" name="idType"/>
+                          <xs:element type="xs:string" name="insureCount"/>
+                          <xs:element type="xs:string" name="insureFee"/>
+                          <xs:element type="xs:string" name="insured"/>
+                          <xs:element type="xs:string" name="isChange"/>
+                          <xs:element type="xs:string" name="isSelf"/>
+                          <xs:element type="xs:string" name="nameCn"/>
+                          <xs:element type="xs:string" name="nameG"/>
+                          <xs:element type="xs:string" name="price"/>
+                          <xs:element type="xs:string" name="psgId"/>
+                          <xs:element type="xs:string" name="psgType"/>
+                          <xs:element name="rtTrip">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="flightInfos"/>
+                                <xs:element type="xs:string" name="lc"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="state"/>
+                          <xs:element type="xs:string" name="tktNo"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="pays"  maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="bankID"/>
+                    <xs:element type="xs:string" name="billNo"/>
+                    <xs:element type="xs:string" name="paymentID"/>
+                    <xs:element type="xs:string" name="paymentDateTime"/>
+                    <xs:element type="xs:string" name="amount"/>
+                    <xs:element type="xs:string" name="currencyCode"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="totalPrice">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="airportTaxTotal"/>
+                    <xs:element type="xs:string" name="changePrice"/>
+                    <xs:element type="xs:string" name="currentChangePrice"/>
+                    <xs:element type="xs:string" name="fuelTaxTotal"/>
+                    <xs:element type="xs:string" name="insureTotal"/>
+                    <xs:element type="xs:string" name="otherTaxTotal"/>
+                    <xs:element type="xs:string" name="ticketsPrice"/>
+                    <xs:element type="xs:string" name="total"/>
+                    <xs:element type="xs:string" name="consumePoint"/>
+                    <xs:element type="xs:string" name="yrTax"/>
+                    <xs:element type="xs:string" name="otherTaxTotalNoYR"/>
+                    <xs:element type="xs:string" name="yqrTax"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="tripCanChange">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="data"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="withInsurence"/>
+              <xs:element type="xs:string" name="paidTime"/>
+              <xs:element type="xs:string" name="phoneNo"/>
+              <xs:element type="xs:string" name="isShowTaxInNew"/>
+              <xs:element type="xs:string" name="coupons"/>
+              <xs:element type="xs:string" name="totalCouponPrice"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
