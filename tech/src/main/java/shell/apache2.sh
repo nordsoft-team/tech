@@ -1,4 +1,4 @@
 #!/bin/bash
 
 apt update
-apt install apache2
+echo y| apt install apache2
