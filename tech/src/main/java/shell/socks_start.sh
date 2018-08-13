@@ -1,7 +1,7 @@
 #!/bin/bash
 networksetup -setsocksfirewallproxystate 'Wi-Fi' off;
 
-txt=`http https://my.ishadowx.net/ | egrep 'IP Address:|Port:|Password:|Method:'|awk -Fspan '{print $2}'|awk -F\> '{print $2}'|awk -F\< '{print $1}'`
+txt=`http https://us.ishadowx.net/ | egrep 'IP Address:|Port:|Password:|Method:'|awk -Fspan '{print $2}'|awk -F\> '{print $2}'|awk -F\< '{print $1}'`
 echo $txt > abcd.txt
 
 if [[ $1 != "" && $1 -ge "0" && $1 -lt "9" ]]
