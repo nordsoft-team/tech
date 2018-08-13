@@ -4,12 +4,20 @@ networksetup -setsocksfirewallproxystate 'Wi-Fi' off;
 txt=`http https://us.ishadowx.net/ | egrep 'IP Address:|Port:|Password:|Method:'|awk -Fspan '{print $2}'|awk -F\> '{print $2}'|awk -F\< '{print $1}'`
 echo $txt > abcd.txt
 
-if [[ $1 != "" && $1 -ge "0" && $1 -lt "9" ]]
+
+if [[ $1 != "" ]]
 then
-	let a=$1
+	if [[ $1 -lt "0" || $1 -gt "8" ]]
+	then
+		echo 'PLEASE INPUT PARAMETER FROM 0 TO 8 OR DO NTO INPUT'
+		exit
+	else
+		let a=$1
+	fi
 else
 	let a=$RANDOM%9
 fi
+
 
 let a=3*a+1
 let b=a+1
@@ -19,9 +27,9 @@ server=`awk '{print $"'"$a"'"}' abcd.txt`
 port=`awk '{print $"'"$b"'"}' abcd.txt`
 password=`awk '{print $"'"$c"'"}' abcd.txt`
 
-# echo $server
-# echo $port
-# echo $password
+ echo $server
+ echo $port
+ echo $password
 # echo $a
 # echo $b
 # echo $c
