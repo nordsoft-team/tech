@@ -8,5 +8,6 @@ echo y| apt install mysql-server
 # flush privileges;
  
 # cd /etc/mysql/mysql.conf.d/
+# cp mysqld.cnf mysqld.cnf.default
 # sed -i "s;bind-address;#bind-address;" mysqld.cnf
 # /etc/init.d/mysql restart
