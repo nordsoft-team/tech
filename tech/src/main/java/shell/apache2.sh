@@ -8,4 +8,3 @@ echo y| apt install apache2
 # /etc/php/7.0/apache2/php.ini
 # display_errors = On
 # /etc/init.d/apache2 restart
-
