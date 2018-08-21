@@ -18,5 +18,6 @@ cp nginx.conf nginx.conf.default
 #        }
 #}
 
+/etc/init.d/nginx restart
 
 # /var/www/html
