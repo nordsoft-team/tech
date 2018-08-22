@@ -8,8 +8,9 @@ cp nginx.conf nginx.conf.default
 
 
 #server {
-#        listen			80;
+#        listen				80;
 #        server_name		www.fanfei.tech;
+#        charset			utf-8;
 #
 #        location / {
 #            root		/srv/ftp;
