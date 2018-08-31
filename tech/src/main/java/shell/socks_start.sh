@@ -9,7 +9,7 @@ if [[ $1 != "" ]]
 then
 	if [[ $1 -lt "0" || $1 -gt "8" ]]
 	then
-		echo 'PLEASE INPUT PARAMETER FROM 0 TO 8 OR DO NTO INPUT'
+		echo 'PLEASE INPUT PARAMETER FROM 0 TO 8 OR DO NOT INPUT'
 		exit
 	else
 		let a=$1
