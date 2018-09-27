@@ -109,8 +109,8 @@ public class Supplicant {
      */
     public int retryMax = 5;
     private static int index = 0x01000000;
-    private static byte[] block = { 0x2a, 0x06, 0, 0, 0, 0, 0x2b, 0x06, 0, 0, 0, 0, 0x2c, 0x06, 0, 0, 0, 0, 0x2d, 0x06,
-            0, 0, 0, 0, 0x2e, 0x06, 0, 0, 0, 0, 0x2f, 0x06, 0, 0, 0, 0 };
+    private static byte[] block = { 0x2a, 0x06, 0, 0, 0, 0, 0x2b, 0x06, 0, 0, 0, 0, 0x2c, 0x06, 0, 0, 0, 0, 0x2d, 0x06, 0, 0, 0,
+            0, 0x2e, 0x06, 0, 0, 0, 0, 0x2f, 0x06, 0, 0, 0, 0 };
     private DatagramSocket udpSocket;
 
     private enum Status {
@@ -150,8 +150,7 @@ public class Supplicant {
 
     private Supplicant() {
         try {
-            configFile = URLDecoder.decode(System.getProperty("user.dir"), "utf-8") + File.separator
-                    + "config.properties";
+            configFile = URLDecoder.decode(System.getProperty("user.dir"), "utf-8") + File.separator + "config.properties";
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
@@ -273,8 +272,7 @@ public class Supplicant {
     /**
      * 从控制台读取配置信息
      * 
-     * @throws Exception
-     *             e.getMessage();获取错误提示信息
+     * @throws Exception e.getMessage();获取错误提示信息
      */
     private void readDataFromConsole() throws Exception {
         Scanner in = new Scanner(System.in);
@@ -327,8 +325,7 @@ public class Supplicant {
     /**
      * 从配置文件读取配置信息，若配置文件中未读到用户名和密码，则提示通过控制台输入
      * 
-     * @throws Exception
-     *             e.getMessage();获取错误提示信息
+     * @throws Exception e.getMessage();获取错误提示信息
      */
     private void readDataFromProperties() throws Exception {
         Properties properties = new Properties();
@@ -466,8 +463,7 @@ public class Supplicant {
     /**
      * 单例模式创建udp套接字
      * 
-     * @throws Exception
-     *             e.getMessage();获取错误提示信息
+     * @throws Exception e.getMessage();获取错误提示信息
      */
     private void initUdpSocket() throws Exception {
         if (udpSocket == null || udpSocket.isClosed()) {
@@ -476,8 +472,7 @@ public class Supplicant {
             }
             try {
                 /**
-                 * 这里不绑定端口一样能够进行拨号。 绑定端口是为了防止多个拨号软件同时进行拨号。
-                 * 但不绑定端口貌似可以实现多个客户端同时拨不同账号？
+                 * 这里不绑定端口一样能够进行拨号。 绑定端口是为了防止多个拨号软件同时进行拨号。 但不绑定端口貌似可以实现多个客户端同时拨不同账号？
                  */
                 // udpSocket = new DatagramSocket();
                 udpSocket = new DatagramSocket(3848);
@@ -527,8 +522,7 @@ public class Supplicant {
     /**
      * 进行连接认证。认证成功返回session,同时置status=1;不成功返回null,连接出错置status=-1,超时或md5校验出错置status=0
      * 
-     * @param packet
-     *            通过generateUpnetPacket();创建得到
+     * @param packet 通过generateUpnetPacket();创建得到
      * @return session 认证成功后，返回byte[]；认证失败，返回null
      */
     private byte[] login(byte[] packet) {
@@ -599,8 +593,7 @@ public class Supplicant {
     /**
      * 请求下线。
      * 
-     * @param session
-     *            通过login(byte[] packet);创建得到
+     * @param session 通过login(byte[] packet);创建得到
      */
     private void logout(byte[] session) {
         index += 3;
@@ -627,8 +620,7 @@ public class Supplicant {
     /**
      * 创建请求下线的packet
      * 
-     * @param session
-     *            通过login(byte[] packet);创建得到
+     * @param session 通过login(byte[] packet);创建得到
      * @return byte[] 请求下线的packet
      */
     private byte[] generateDownnetPacket(byte[] session) {
@@ -682,8 +674,7 @@ public class Supplicant {
     /**
      * 保持连接在线。会阻塞线程，保持连接状态status=1，当保持连接失败时，status为0或-1
      * 
-     * @param session
-     *            通过login(byte[] packet);创建得到
+     * @param session 通过login(byte[] packet);创建得到
      * @return
      * @throws InterruptedException
      */
@@ -747,8 +738,7 @@ public class Supplicant {
     /**
      * 创建保持连接的packet
      * 
-     * @param session
-     *            通过login(byte[] packet);创建得到
+     * @param session 通过login(byte[] packet);创建得到
      * @return byte[] 保持连接的packet
      */
     private byte[] generateBreathePacket(byte[] session) {
@@ -785,12 +775,11 @@ public class Supplicant {
         /*
          * String indexStr = String.format("%x", index); int indexLen =
          * indexStr.length(); packet[++i] = (byte)
-         * Integer.parseInt(indexStr.substring(0, indexLen - 6), 16);
-         * packet[++i] = (byte) Integer.parseInt(indexStr.substring(indexLen -
-         * 6, indexLen - 4), 16); packet[++i] = (byte)
-         * Integer.parseInt(indexStr.substring(indexLen - 4, indexLen - 2), 16);
-         * packet[++i] = (byte) Integer.parseInt(indexStr.substring(indexLen -
-         * 2, indexLen - 0), 16);
+         * Integer.parseInt(indexStr.substring(0, indexLen - 6), 16); packet[++i] =
+         * (byte) Integer.parseInt(indexStr.substring(indexLen - 6, indexLen - 4), 16);
+         * packet[++i] = (byte) Integer.parseInt(indexStr.substring(indexLen - 4,
+         * indexLen - 2), 16); packet[++i] = (byte)
+         * Integer.parseInt(indexStr.substring(indexLen - 2, indexLen - 0), 16);
          */
         packet[++i] = (byte) (index >> 24 & 0xff);
         packet[++i] = (byte) (index >> 16 & 0xff);
@@ -1050,10 +1039,8 @@ public class Supplicant {
     /**
      * MD5校验，比较两个MD5数据报是否一致
      * 
-     * @param arg0
-     *            第一个MD5数据报 16字节
-     * @param arg1
-     *            第二个MD5数据报 16字节
+     * @param arg0 第一个MD5数据报 16字节
+     * @param arg1 第二个MD5数据报 16字节
      * @return 一致返回true，不一致返回false
      */
     private boolean checkMD5(byte[] arg0, byte[] arg1) {
@@ -1120,8 +1107,8 @@ public class Supplicant {
             byte[] bytes = ni.getHardwareAddress();
             if (ni.isUp() && ni != null && bytes != null && bytes.length == 6) {
                 String displayName = ni.getDisplayName();
-                if (displayName.contains("Wireless") || displayName.contains("wireless")
-                        || displayName.contains("Virtual") || displayName.contains("virtual"))
+                if (displayName.contains("Wireless") || displayName.contains("wireless") || displayName.contains("Virtual")
+                        || displayName.contains("virtual"))
                     continue;
                 // System.out.println(displayName);
                 StringBuffer sb = new StringBuffer();
@@ -1158,8 +1145,7 @@ public class Supplicant {
     /**
      * 对byte数组直接进行摘要计算，返回加密后的byte数组
      * 
-     * @param byteArray
-     *            需要进行MD5运算的原始字节数组
+     * @param byteArray 需要进行MD5运算的原始字节数组
      * @return MD5摘要计算后的字节数组
      */
     private byte[] getMD5Bytes(byte[] byteArray) {
@@ -1178,16 +1164,15 @@ public class Supplicant {
     /**
      * packet加密
      * 
-     * @param packet
-     *            未加密packet字节数组
+     * @param packet 未加密packet字节数组
      * @return 加密后的packet字节数组
      */
     private byte[] encrypt(byte[] packet) {
         byte[] encrypt_packet = new byte[packet.length];
         int i = 0;
         for (byte b : packet) {
-            encrypt_packet[i++] = (byte) ((b & 0x80) >> 6 | (b & 0x40) >> 4 | (b & 0x20) >> 2 | (b & 0x10) << 2
-                    | (b & 0x08) << 2 | (b & 0x04) << 2 | (b & 0x02) >> 1 | (b & 0x01) << 7);
+            encrypt_packet[i++] = (byte) ((b & 0x80) >> 6 | (b & 0x40) >> 4 | (b & 0x20) >> 2 | (b & 0x10) << 2 | (b & 0x08) << 2
+                    | (b & 0x04) << 2 | (b & 0x02) >> 1 | (b & 0x01) << 7);
         }
         return encrypt_packet;
     }
@@ -1195,16 +1180,15 @@ public class Supplicant {
     /**
      * packet解密
      * 
-     * @param packet
-     *            加密后的packet字节数组
+     * @param packet 加密后的packet字节数组
      * @return 解密后的packet字节数组
      */
     private byte[] decrypt(byte[] packet) {
         byte[] decrypt_packet = new byte[packet.length];
         int i = 0;
         for (byte b : packet) {
-            decrypt_packet[i++] = (byte) ((b & 0x80) >> 7 | (b & 0x40) >> 2 | (b & 0x20) >> 2 | (b & 0x10) >> 2
-                    | (b & 0x08) << 2 | (b & 0x04) << 4 | (b & 0x02) << 6 | (b & 0x01) << 1);
+            decrypt_packet[i++] = (byte) ((b & 0x80) >> 7 | (b & 0x40) >> 2 | (b & 0x20) >> 2 | (b & 0x10) >> 2 | (b & 0x08) << 2
+                    | (b & 0x04) << 4 | (b & 0x02) << 6 | (b & 0x01) << 1);
         }
         return decrypt_packet;
     }
