@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# SERVER USAGE
 apt update
 echo y| apt install git
 cd ~
