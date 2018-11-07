@@ -3,10 +3,13 @@
 # SERVER USAGE
 apt update
 echo y| apt install git
-adduser git
-sed -i "s;git:x:1000:1000:,,,:/home/git:/bin/bash;git:x:1000:1000:,,,:/home/git:/bin/git-shell;" /etc/passwd
+sudo adduser git
+mkdir /home/git/.ssh
+touch /home/git/.ssh/authorized_keys
+sed -i "s;git:x:1000:1000:,,,:/home/git:/bin/bash;git:x:1000:1000:,,,:/home/git:/usr/bin/git-shell;" /etc/passwd
 cd /home/git
-git init --bare yue-demo.git
+sudo git init --bare yue-demo.git
+chown -R git:git yue-demo.git
 
 # CLIENT USAGE
 cd ~
