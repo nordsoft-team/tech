@@ -18,12 +18,13 @@ do
  #ADD WATERMARK
  #ffmpeg –i ${url:12}_MARK_DELETED.mp4 -acodec copy-vcodec copy -vf "movie=test.png[watermark];[in][watermark]overlay=10:10:1[out]" ${url:12}.mp4
  
+ echo "${url:12}.mp4 FINESHED."
+
  sleep 10
 
  #DELETE OLD VIDEO
  #rm ${url:12}_OLD.mp4
  #rm ${url:12}_MARK_DELETED.mp4
  
- echo "${url:12}.mp4 FINESHED."
  
 done
