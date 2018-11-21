@@ -16,7 +16,10 @@ do
  #ffmpeg -i ${url:12}_OLD.mp4 -vf delogo=x=1410:y=5:w=500:h=100 ${url:12}_MARK_DELETED.mp4
  
  #ADD WATERMARK
- #ffmpeg -i ${url:12}_MARK_DELETED.mp4 -acodec copy-vcodec copy -vf "movie=test.png[watermark];[in][watermark]overlay=10:10:1[out]" ${url:12}.mp4
+ #ffmpeg -i ${url:12}_MARK_DELETED.mp4 -acodec copy-vcodec copy -vf "movie=test.png[watermark];[in][watermark]overlay=10:10:1[out]" ${url:12}_MARK_ADDED.mp4
+ 
+ #CUT VIDEO
+ #ffmpeg  -i ${url:12}_MARK_ADDED.mp4 -vcodec copy -acodec copy -ss 00:00:10 -to 00:00:15 ./${url:12}_VIDEO_CUT.mp4 -y
  
  echo "${url:12}.mp4 FINESHED."
 
