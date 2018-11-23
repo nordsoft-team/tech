@@ -27,13 +27,18 @@ cp nginx.conf nginx.conf.default
 #        ssl_certificate           /etc/nginx/conf.d/www.fanfei.tech.pem;
 #        ssl_certificate_key       /etc/nginx/conf.d/www.fanfei.tech.key;
 #        server_name               www.fanfei.tech;
+
+#        location ~* \.html$ {
+#            root                  /var/www/html/;
+#        }
+
 #        location / {
 #            proxy_redirect        off;
 #            proxy_read_timeout    600;
 #            proxy_pass            http://localhost:8080/;
 #            proxy_set_header      Upgrade $http_upgrade;
 #            proxy_set_header      Connection "upgrade";
-#        }        
+#        }
 #}
 
 /etc/init.d/nginx restart
