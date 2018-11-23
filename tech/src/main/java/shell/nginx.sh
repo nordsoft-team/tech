@@ -29,6 +29,7 @@ cp nginx.conf nginx.conf.default
 #        server_name               www.fanfei.tech;
 #        location / {
 #            proxy_redirect        off;
+#            proxy_read_timeout    600;
 #            proxy_pass            http://localhost:8080/;
 #            proxy_set_header      Upgrade $http_upgrade;
 #            proxy_set_header      Connection "upgrade";
