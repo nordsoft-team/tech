@@ -8,6 +8,8 @@ for url in $mainUrl
 do 
  innerUrl=`http http://www.chinaelt.cn/index.php/home/Play/play/v/${url:12}| egrep -o 'http.*m3u8' | sort| uniq |awk '{print $1}'`
  
+ #PLAY VIDEO
+ #ffplay -i np001.mp4 -vf delogo=x=40:y=30:w=300:h=50:show=1
  
  #GENERATE VIDEO
  ffmpeg -i $innerUrl -c copy ${url:12}_OLD.mp4
