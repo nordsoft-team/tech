@@ -5,17 +5,12 @@ txt=`http https://a.ishadowx.net/ | egrep 'IP Address:|Port:|Password:|Method:'|
 echo $txt > abcd.txt
 
 
-if [[ $1 != "" ]]
+if [[ $1 == "" || $1 -lt "0" || $1 -gt "8" || ($1 -gt "2" && $1 -lt "6")]]
 then
-	if [[ $1 -lt "0" || $1 -gt "8" || ($1 -gt "2" && $1 -lt "6")]]
-	then
-		echo 'PLEASE INPUT PARAMETER FROM 0 TO 2 OR 6 TO 8 OR DO NOT INPUT'
-		exit
-	else
-		let a=$1
-	fi
+	echo 'PLEASE INPUT PARAMETER FROM 0 TO 2 OR 6 TO 8 OR DO NOT INPUT'
+	exit
 else
-	let a=$RANDOM%9
+	let a=$1
 fi
 
 
