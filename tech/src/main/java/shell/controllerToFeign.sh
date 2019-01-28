@@ -6,10 +6,10 @@ then
 fi
 cat $1 > abcd.txt
 
-paste -s -d '\0\ ' abcd.txt > efgh.txt
+paste -s -d ' ' abcd.txt > efgh.txt
 cat efgh.txt > abcd.txt ; rm efgh.txt
 
-cat abcd.txt |  perl -pe 's/(public BaseResponse.*?){.*?;     }/\1;/g' > efgh.txt
+cat abcd.txt |  perl -pe 's/(public BaseResponse.*?)\{.*?;     \}/\1;/g' > efgh.txt
 cat efgh.txt > abcd.txt ; rm efgh.txt
 
 cat abcd.txt |  perl -pe 's/public class/public interface/g' > efgh.txt
@@ -18,7 +18,7 @@ cat efgh.txt > abcd.txt ; rm efgh.txt
 cat abcd.txt |  perl -pe 's/extends ExceptionHandlerController//g' > efgh.txt
 cat efgh.txt > abcd.txt ; rm efgh.txt
 
-cat abcd.txt |  perl -pe 's/\@ApiOperation\(.*?\)//g' > efgh.txt
+cat abcd.txt |  perl -pe 's/\@ApiOperation\(.*?\"\)//g' > efgh.txt
 cat efgh.txt > abcd.txt ; rm efgh.txt
 
 cat abcd.txt |  perl -pe 's/\@ApiImplicitParams\({.*?}\)//g' > efgh.txt
@@ -29,6 +29,7 @@ cat efgh.txt > abcd.txt ; rm efgh.txt
 
 cat abcd.txt |  perl -pe 's/\@Slf4j//g' > efgh.txt
 cat efgh.txt > abcd.txt ; rm efgh.txt
+
 
 cat abcd.txt |  perl -pe 's/\@RestController/\@FeignClient/g' > efgh.txt
 cat efgh.txt > abcd.txt ; rm efgh.txt
