@@ -12,10 +12,9 @@ cat efgh.txt > abcd.txt ; rm efgh.txt
 cat abcd.txt |  perl -pe 's/(public BaseResponse.*? )(.*?)(\(.*? )\{(.*?;     )\}/\1\2\3\{return feign.\2;\}/g' > efgh.txt
 cat efgh.txt > abcd.txt ; rm efgh.txt
 
-cat abcd.txt |  perl -pe 's/\@.*?Mapping\(.*?\)//g' > efgh.txt
+cat abcd.txt |  perl -pe 's/\@.{3,7}?Mapping\(.*?\)//g' > efgh.txt
 cat efgh.txt > abcd.txt ; rm efgh.txt
 
-cat abcd.txt
 cat abcd.txt |  perl -pe 's/extends ExceptionHandlerController//g' > efgh.txt
 cat efgh.txt > abcd.txt ; rm efgh.txt
 
@@ -33,6 +32,9 @@ cat efgh.txt > abcd.txt ; rm efgh.txt
 
 
 cat abcd.txt |  perl -pe 's/\@RestController/\@Service/g' > efgh.txt
+cat efgh.txt > abcd.txt ; rm efgh.txt
+
+cat abcd.txt |  perl -pe 's/\public class (.*?)Controller/\public class \1Service/g' > efgh.txt
 cat efgh.txt > abcd.txt ; rm efgh.txt
 
 cat abcd.txt ; rm abcd.txt
