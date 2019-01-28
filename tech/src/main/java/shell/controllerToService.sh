@@ -15,6 +15,7 @@ cat efgh.txt > abcd.txt ; rm efgh.txt
 cat abcd.txt |  perl -pe 's/\@.*?Mapping\(.*?\)//g' > efgh.txt
 cat efgh.txt > abcd.txt ; rm efgh.txt
 
+cat abcd.txt
 cat abcd.txt |  perl -pe 's/extends ExceptionHandlerController//g' > efgh.txt
 cat efgh.txt > abcd.txt ; rm efgh.txt
 
