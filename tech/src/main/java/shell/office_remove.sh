@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function removeFile(){
-    if [[ $1 == *microsoft* ]] || [[ $1 == *Microsoft* ]] || [[ $1 == *OneDrive* ] || [[ $1 == *UBF8T346G9* ]]
+    if [[ $1 == *microsoft* ]] || [[ $1 == *Microsoft* ]] || [[ $1 == *OneDrive* ]] || [[ $1 == *UBF8T346G9* ]]
     then
     	echo "$1"
     	rm -rf "$1"
