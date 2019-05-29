@@ -33,3 +33,5 @@
 {"label":"图片上传并识别","method":"POST","module":"公共模块","name":"图片上传并识别","path":"/app/reception/recept/pics","plat":7}
 {"label":"接待及预约人数信息查询","method":"GET","module":"服务单模块","name":"接待及预约人数信息查询","path":"/app/reception/svcs/reception/reservation/count","plat":7}
 {"label":"账户登出","method":"GET","module":"认证模块","name":"账户登出","path":"/app/reception/logout","plat":7}
+
+{"label":"取消服务单","method":"PUT","module":"服务单模块","name":"取消服务单","path":"/app/reception/svc/cancel/*","plat":7}
