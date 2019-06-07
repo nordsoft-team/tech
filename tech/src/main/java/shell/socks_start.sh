@@ -5,7 +5,7 @@
 
 networksetup -setsocksfirewallproxystate 'Wi-Fi' off;
 
-txt=`http https://get.ishadowx.org/ | egrep 'IP Address:|Port:|Password:|Method:'|awk -Fspan '{print $2}'|awk -F\> '{print $2}'|awk -F\< '{print $1}'`
+txt=`http https://free.ishadowx.org/ | egrep 'IP Address:|Port:|Password:|Method:'|awk -Fspan '{print $2}'|awk -F\> '{print $2}'|awk -F\< '{print $1}'`
 echo $txt > abcd.txt
 
 
