@@ -2,6 +2,7 @@
 
 #brew install httpie
 #brew install shadowsocks-libev
+#brew install polipo
 
 networksetup -setsocksfirewallproxystate 'Wi-Fi' off;
 
@@ -29,9 +30,17 @@ server=`awk '{print $"'"$a"'"}' abcd.txt`
 port=`awk '{print $"'"$b"'"}' abcd.txt`
 password=`awk '{print $"'"$c"'"}' abcd.txt`
 
- echo $server
- echo $port
- echo $password
+echo
+echo '==> SOCKS INFO:'
+echo SERVER:$server
+echo PORT:$port
+echo PASSWORD:$password
+echo
+echo '==> PROXY INFO:'
+echo SERVER:`ifconfig | grep "inet " | grep -v 127.0.0.1 | awk '{print $2}'`
+echo PORT:8123
+echo
+
 # echo $a
 # echo $b
 # echo $c
@@ -44,5 +53,14 @@ sed -i "" 's/"method".*$/"method":"aes-256-cfb"/g' /usr/local/etc/shadowsocks-li
 rm abcd.txt
 
 
-brew services restart shadowsocks-libev; 
+brew services restart shadowsocks-libev;
 networksetup -setsocksfirewallproxy 'Wi-Fi' 'localhost' '1080';
+
+cd /usr/local/opt/polipo
+plutil -replace ProgramArguments -json "[]" homebrew.mxcl.polipo.plist
+plutil -insert ProgramArguments.0 -string "/usr/local/opt/polipo/bin/polipo" homebrew.mxcl.polipo.plist
+plutil -insert ProgramArguments.1 -string "proxyAddress=0.0.0.0" homebrew.mxcl.polipo.plist
+plutil -insert ProgramArguments.2 -string "socksParentProxy=localhost:1080" homebrew.mxcl.polipo.plist
+
+brew services restart polipo;
+cd ~
