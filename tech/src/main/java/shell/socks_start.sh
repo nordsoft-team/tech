@@ -9,9 +9,12 @@ txt=`http https://free.ishadowx.org/ | egrep 'IP Address:|Port:|Password:|Method
 echo $txt > abcd.txt
 
 
-if [[ $1 == "" || $1 -lt "0" || $1 -gt "8" || ($1 -gt "2" && $1 -lt "6")]]
+if [[ $1 == "" ]]
+then 
+	let a=0
+elif [[ $1 -lt "0" || $1 -gt "8" || ($1 -gt "2" && $1 -lt "6")]]
 then
-	echo 'PLEASE INPUT PARAMETER FROM 0 TO 2 OR 6 TO 8'
+	echo 'PLEASE DO NOT INPUT PARAMETER OR INPUT PARAMETER FROM 0 TO 2 OR 6 TO 8'
 	exit
 else
 	let a=$1
