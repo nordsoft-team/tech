@@ -14,9 +14,9 @@ echo $txt > abcd.txt
 if [[ $1 == "" ]]
 then 
 	let a=0
-elif [[ $1 -lt "0" || $1 -gt "8" || ($1 -gt "2" && $1 -lt "6")]]
+elif [[ $1 -lt "0" || $1 -gt "5" ]]
 then
-	echo 'PLEASE INPUT CORRECT PARAMETER (0-2, 6-8) OR JUST DO NOT INPUT PARAMETER'
+	echo 'PLEASE INPUT CORRECT PARAMETER (0-5) OR JUST DO NOT INPUT PARAMETER'
 	exit
 else
 	let a=$1
@@ -51,7 +51,6 @@ sed -i "" 's/"server_port".*$/"server_port":'"$port"',/g' /usr/local/etc/shadows
 sed -i "" 's/"password".*$/"password":"'"$password"'",/g' /usr/local/etc/shadowsocks-libev.json
 sed -i "" 's/"method".*$/"method":"aes-256-cfb"/g' /usr/local/etc/shadowsocks-libev.json
 
-rm abcd.txt
 
 
 brew services restart shadowsocks-libev;
