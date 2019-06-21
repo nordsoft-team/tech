@@ -6,20 +6,20 @@ CREATE TABLE `login_info`  (
 
 SELECT
 	k.user_id,
-	CASE WHEN k.hastoday = 1 THEN DATEDIFF( '2019-01-07', max_login_date ) + 1 ELSE 0 END AS count 
+	CASE WHEN k.has_today = 1 THEN DATEDIFF( '2019-01-07', max_login_date ) + 1 ELSE 0 END AS count 
 FROM
 	(
 	SELECT
 		c.user_id,
-		max( c.login_date ) max_login_date,
-		e.hastoday 
+		max( c.login_date ) AS max_login_date,
+		e.has_today 
 	FROM
 		login_info c
 		LEFT JOIN login_info d ON c.user_id = d.user_id  AND c.login_date = d.login_date + 1
 		INNER JOIN (
 			SELECT
 			user_id,
-			max(CASE WHEN login_date = '2019-01-07' THEN 1 ELSE 0 END) AS hastoday 
+			max(CASE WHEN login_date = '2019-01-07' THEN 1 ELSE 0 END) AS has_today 
 			FROM
 				login_info a 
 			GROUP BY user_id 
