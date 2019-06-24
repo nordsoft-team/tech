@@ -1,4 +1,7 @@
 #!/bin/bash
+# https://helpx.adobe.com/cn/download-install/kb/creative-cloud-apps-download.html
+# http://prdl-download.adobe.com/Photoshop/55E8FC8663C847F08BFBCD8DFE336AE8/1546595985332/AdobePhotoshop20-mul.dmg
+# https://waitsun.ctfile.com/fs/160721-383953169
 cd /Applications/
 sudo rm -rf *Adobe*
 sudo rm -rf *adobe*
