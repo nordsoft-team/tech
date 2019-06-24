@@ -2,20 +2,38 @@
   <xs:element name="root">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="data" maxOccurs="unbounded" minOccurs="0">
+        <xs:element type="xs:string" name="validateMessagesShowId"/>
+        <xs:element type="xs:string" name="status"/>
+        <xs:element type="xs:short" name="httpstatus"/>
+        <xs:element name="data1">
           <xs:complexType>
             <xs:sequence>
-              <xs:element type="xs:int" name="date"/>
-              <xs:element type="xs:string" name="from_station"/>
-              <xs:element type="xs:string" name="station_train_code"/>
-              <xs:element type="xs:string" name="to_station"/>
-              <xs:element type="xs:byte" name="total_num"/>
-              <xs:element type="xs:string" name="train_no"/>
+              <xs:element name="data2" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="arrive_day_str"/>
+                    <xs:element type="xs:string" name="station_name"/>
+                    <xs:element type="xs:string" name="train_class_name"/>
+                    <xs:element type="xs:string" name="is_start"/>
+                    <xs:element type="xs:byte" name="service_type"/>
+                    <xs:element type="xs:string" name="end_station_name"/>
+                    <xs:element type="xs:string" name="arrive_time"/>
+                    <xs:element type="xs:string" name="start_station_name"/>
+                    <xs:element type="xs:string" name="station_train_code"/>
+                    <xs:element type="xs:byte" name="arrive_day_diff"/>
+                    <xs:element type="xs:string" name="start_time"/>
+                    <xs:element type="xs:byte" name="station_no"/>
+                    <xs:element type="xs:string" name="wz_num"/>
+                    <xs:element type="xs:string" name="running_time"/>
+                    <xs:element type="xs:string" name="OT"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element type="xs:string" name="status"/>
-        <xs:element type="xs:string" name="errorMsg"/>
+        <xs:element type="xs:string" name="messages"/>
+        <xs:element type="xs:string" name="validateMessages"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
