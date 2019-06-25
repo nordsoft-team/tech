@@ -21,8 +21,11 @@ sids = ["703", "704", "705", "706", "707", "708", "751", "753", "756", "758", "7
 for sid in sids:
     res = urllib.urlopen('http://s.visitbeijing.com.cn/index.php?m=content&c=flow&catid=26&sid=' + sid)
     body = res.read()
-    body = body[1:-1] if body else '{}'
     
+    key = 'SPOTS:FLOW:LEVEL:' + sid
+    body = body[1:-1]
+    print (key)
+    print (body)
     r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
-    r.set('SPOTS:FLOW:LEVEL:' + sid, body);
+    r.set('SPOTS:FLOW:LEVEL:' + sid, body)
     time.sleep(1)
