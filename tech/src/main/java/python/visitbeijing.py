@@ -1,23 +1,25 @@
 # -*- coding: utf-8 -*-
-import flask, json
+import flask
+import json
+import redis
 from flask import request
+
+# INTRANET
+redisHost = '192.168.10.16'
+redisPort = '6379'
+redisPass = 'db490430abb8e9b38bf7dceff1de7e6950ba903f'
+redisDb = '12'
 
 server = flask.Flask(__name__)
 server.config['JSON_AS_ASCII'] = False
-@server.route('/login', methods=['get', 'post'])
-def login():
-    username = request.values.get('name')
-    pwd = request.values.get('pwd')
-    if username and pwd:
-        if username=='xiaoming' and pwd=='111':
-            resu = {'code': 200, 'message': '登录成功'}
-            return json.dumps(resu, ensure_ascii=False)
-        else:
-            resu = {'code': -1, 'message': '账号密码错误'}
-            return json.dumps(resu, ensure_ascii=False)
-    else:
-        resu = {'code': 10001, 'message': '参数不能为空！'}
-        return json.dumps(resu, ensure_ascii=False)
+
+
+@server.route('/spots', methods=['get'])
+def get_spots():
+    r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
+    result = r.get('SPOTS:FLOW:LEVEL:' + request.values.get('sid'));
+    return result
+    
 
 if __name__ == '__main__':
-    server.run(debug=False, port=8888, host='0.0.0.0')
+    server.run(host='0.0.0.0', port=8888)
