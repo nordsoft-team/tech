@@ -4,7 +4,11 @@ import json
 import redis
 from flask import request
 
-# INTRANET
+# SERVER CONFIG
+host = '0.0.0.0'
+port = 8888
+
+# INTRANET REDIS
 redisHost = '192.168.10.16'
 redisPort = '6379'
 redisPass = 'db490430abb8e9b38bf7dceff1de7e6950ba903f'
@@ -18,8 +22,8 @@ server.config['JSON_AS_ASCII'] = False
 def get_spots():
     r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
     result = r.get('SPOTS:FLOW:LEVEL:' + request.values.get('sid'));
-    return result
+    return  result if result else '{}'
     
 
 if __name__ == '__main__':
-    server.run(host='0.0.0.0', port=8888)
+    server.run(host=host, port=port)
