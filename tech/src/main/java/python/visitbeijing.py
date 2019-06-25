@@ -14,6 +14,12 @@ redisPort = '6379'
 redisPass = 'db490430abb8e9b38bf7dceff1de7e6950ba903f'
 redisDb = '12'
 
+# INTERNET REDIS
+# redisHost='172.21.0.16'
+# redisPort='6379'
+# redisPass='112e670833c8736c'
+# redisDb='2'
+
 server = flask.Flask(__name__)
 server.config['JSON_AS_ASCII'] = False
 
