@@ -3,6 +3,7 @@ import flask
 import json
 import redis
 from flask import request
+from flask import make_response
 
 # SERVER CONFIG
 host = '0.0.0.0'
@@ -28,7 +29,10 @@ server.config['JSON_AS_ASCII'] = False
 def get_spots_info():
     r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
     result = r.get('SPOTS:FLOW:SIDS:INFO:' + request.values.get('sid'));
-    return  result if (result and result != '') else '{}'
+    result = result if (result and result != '') else '{}'
+    response = make_response(result)
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    return  response
 
     
 @server.route('/spots/level', methods=['get'])
@@ -44,7 +48,10 @@ def get_spots_level():
         infoResult = r.get('SPOTS:FLOW:SIDS:INFO:' + sid);
         level = json.loads(infoResult)["ll"] if (infoResult and infoResult != '') else '' 
         sidInfo["count"] = json.loads(heatMap)[level] if (level != '') else '50' 
-    return  heatResult
+
+    response = make_response(heatResult)
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    return  response
 
 
 if __name__ == '__main__':
