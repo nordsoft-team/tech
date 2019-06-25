@@ -44,7 +44,7 @@ def get_spots_level():
         infoResult = r.get('SPOTS:FLOW:SIDS:INFO:' + sid);
         level = json.loads(infoResult)["ll"] if (infoResult and infoResult != '') else '' 
         sidInfo["count"] = json.loads(heatMap)[level] if (level != '') else '50' 
-    return  json.dumps(sidInfos)
+    return  heatResult
 
 
 if __name__ == '__main__':
