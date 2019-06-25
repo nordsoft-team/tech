@@ -23,12 +23,28 @@ server = flask.Flask(__name__)
 server.config['JSON_AS_ASCII'] = False
 
 
-@server.route('/spots', methods=['get'])
-def get_spots():
+@server.route('/spots/info', methods=['get'])
+def get_spots_info():
     r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
-    result = r.get('SPOTS:FLOW:LEVEL:' + request.values.get('sid'));
-    return  result if result else '{}'
+    result = r.get('SPOTS:FLOW:SIDS:INFO:' + request.values.get('sid'));
+    return  result if (result and result != '') else '{}'
+
     
+@server.route('/spots/level', methods=['get'])
+def get_spots_level():
+    r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
+    heatResult = r.get("SPOTS:FLOW:SIDS:HEAT");
+    heatMap = r.get('SPOTS:FLOW:SIDS:HEAT:MAP')
+    sidInfos = json.loads(heatResult)
+    for sidInfo in sidInfos:
+        sid = sidInfo["sid"]
+        print sid
+        r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
+        infoResult = r.get('SPOTS:FLOW:SIDS:INFO:' + sid);
+        level = json.loads(infoResult)["ll"] if (infoResult and infoResult != '') else '' 
+        sidInfo["count"] = json.loads(heatMap)[level] if (level != '') else '50' 
+    return  json.dumps(sidInfos)
+
 
 if __name__ == '__main__':
     server.run(host=host, port=port)

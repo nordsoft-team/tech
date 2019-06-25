@@ -17,7 +17,9 @@ redisDb = '12'
 # redisPass='112e670833c8736c'
 # redisDb='2'
 
-sids = ["703", "704", "705", "706", "707", "708", "751", "753", "756", "758", "760", "761", "762", "763", "764", "766", "767", "769", "770", "773", "777", "778", "779", "780", "783", "805", "806", "807", "808", "809", "810", "815", "816", "817", "818", "819", "820", "821", "822", "823"]
+#SADD SPOTS:FLOW:SIDS 703 704 705 706 707 708 751 753 756 758 760 761 762 763 764 766 767 769 770 773 777 778 779 780 783 805 806 807 808 809 810 815 816 817 818 819 820 821 822 823
+r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
+sids = r.smembers("SPOTS:FLOW:SIDS");
 for sid in sids:
     body = ''
     try: 
@@ -26,10 +28,9 @@ for sid in sids:
         print (ex)
         continue
     
-    key = 'SPOTS:FLOW:LEVEL:' + sid
+    key = 'SPOTS:FLOW:SIDS:INFO:' + sid
     body = body[1:-1]
     print (key)
     print (body)
-    r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
-    r.set('SPOTS:FLOW:LEVEL:' + sid, body)
+    r.set('SPOTS:FLOW:SIDS:INFO:' + sid, body)
     time.sleep(1)
