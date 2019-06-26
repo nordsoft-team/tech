@@ -35,18 +35,17 @@ for sid in sids:
     
     key = 'SPOTS:FLOW:SIDS:INFO:' + sid
     body = body[1:-1]
-    body = json.loads(body)
+    body_obj = json.loads(body)
     
-    if(body["sid"] != ''):
+    if(body_obj["sid"] != ''):
         sid_infos = json.loads(heat_result)
         for sid_info in sid_infos:
-            if(body["sid"] == sid_info["sid"]):
-                body["rank"] = sid_info["rank"]
-                body["open"] = sid_info["open"]
-                body["region"] = sid_info["region"]
+            if(body_obj["sid"] == sid_info["sid"]):
+                body_obj["rank"] = sid_info["rank"]
+                body_obj["open"] = sid_info["open"]
+                body_obj["region"] = sid_info["region"]
     
-    body = json.dumps(body, ensure_ascii=False)
-    print (key)
-    print (body)
+    body = json.dumps(body_obj, ensure_ascii=False)
+    print(key)
     r.set('SPOTS:FLOW:SIDS:INFO:' + sid, body)
     time.sleep(1)
