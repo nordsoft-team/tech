@@ -46,11 +46,15 @@ def get_spots_level():
         r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
         info_result = r.get('SPOTS:FLOW:SIDS:INFO:' + sid);
         level = json.loads(info_result)["ll"] if (info_result and info_result != '') else ''
-        sid_info["ll"] = int(level) if (level != '') else 1
-        print sid_info["ll"] 
-        sid_info["count"] = json.loads(heat_map)[level] if (level != '') else 60 
+        sid_info["ll"] = int(level) if (level != '') else -1
+        sid_info["count"] = json.loads(heat_map)[level] if (level != '') else 60
+    
+    for i in range(len(sid_infos)):
+        if i >= len(sid_infos):
+            break
+        if sid_infos[i]["ll"] == -1:
+            sid_infos.pop(i)
 
-    print heat_result
     response = make_response(json.dumps(sid_infos, ensure_ascii=False))
     response.headers['Access-Control-Allow-Origin'] = '*'
     return  response
