@@ -35,7 +35,7 @@ def get_spots_info():
     return  response
 
     
-@server.route('/spots/level', methods=['get'])
+@server.route('/spots/list', methods=['get'])
 def get_spots_level():
     r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
     heat_result = r.get("SPOTS:FLOW:SIDS:HEAT");

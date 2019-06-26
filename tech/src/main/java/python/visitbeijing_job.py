@@ -24,6 +24,7 @@ redisDb = '12'
 
 r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
 sids = r.smembers("SPOTS:FLOW:SIDS");
+heat_result = r.get("SPOTS:FLOW:SIDS:HEAT");
 for sid in sids:
     body = ''
     try: 
@@ -34,6 +35,17 @@ for sid in sids:
     
     key = 'SPOTS:FLOW:SIDS:INFO:' + sid
     body = body[1:-1]
+    body = json.loads(body)
+    
+    if(body["sid"] != ''):
+        sid_infos = json.loads(heat_result)
+        for sid_info in sid_infos:
+            if(body["sid"] == sid_info["sid"]):
+                body["rank"] = sid_info["rank"]
+                body["open"] = sid_info["open"]
+                body["region"] = sid_info["region"]
+    
+    body = json.dumps(body, ensure_ascii=False)
     print (key)
     print (body)
     r.set('SPOTS:FLOW:SIDS:INFO:' + sid, body)
