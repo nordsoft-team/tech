@@ -7,7 +7,7 @@ from flask import make_response
 
 # SERVER CONFIG
 host = '0.0.0.0'
-port = 8888
+port = 18888
 
 # INTRANET REDIS
 redisHost = '192.168.10.16'
