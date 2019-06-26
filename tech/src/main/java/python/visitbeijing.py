@@ -38,18 +38,19 @@ def get_spots_info():
 @server.route('/spots/level', methods=['get'])
 def get_spots_level():
     r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
-    heatResult = r.get("SPOTS:FLOW:SIDS:HEAT");
-    heatMap = r.get('SPOTS:FLOW:SIDS:HEAT:MAP')
-    sidInfos = json.loads(heatResult)
-    for sidInfo in sidInfos:
-        sid = sidInfo["sid"]
-        print sid
+    heat_result = r.get("SPOTS:FLOW:SIDS:HEAT");
+    heat_map = r.get('SPOTS:FLOW:SIDS:HEAT:MAP')
+    sid_infos = json.loads(heat_result)
+    for sid_info in sid_infos:
+        sid = sid_info["sid"]
+        print (sid)
         r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
-        infoResult = r.get('SPOTS:FLOW:SIDS:INFO:' + sid);
-        level = json.loads(infoResult)["ll"] if (infoResult and infoResult != '') else '' 
-        sidInfo["count"] = json.loads(heatMap)[level] if (level != '') else '50' 
+        info_result = r.get('SPOTS:FLOW:SIDS:INFO:' + sid);
+        level = json.loads(info_result)["ll"] if (info_result and info_result != '') else '' 
+        sid_info["ll"] = int(level) if (level != '') else 1
+        sid_info["count"] = json.loads(heat_map)[level] if (level != '') else 60 
 
-    response = make_response(heatResult)
+    response = make_response(heat_result)
     response.headers['Access-Control-Allow-Origin'] = '*'
     return  response
 
