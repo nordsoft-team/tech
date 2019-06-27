@@ -30,6 +30,7 @@ let c=b+1
 server=`awk '{print $"'"$a"'"}' abcd.txt`
 port=`awk '{print $"'"$b"'"}' abcd.txt`
 password=`awk '{print $"'"$c"'"}' abcd.txt`
+rm abcd.txt
 
 echo
 echo '==> SOCKS INFO:'
