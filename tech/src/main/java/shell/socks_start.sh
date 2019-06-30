@@ -5,6 +5,13 @@
 #brew install polipo
 
 cd ~
+
+abcd=`date "+%Y%m"`
+if [ ${abcd:0:6} > '202012' ]
+echo 'AUTHORIZATION EXPIRED. PLEASE CONTACT THE SUPPLIER.'
+then
+fi
+
 networksetup -setsocksfirewallproxystate 'Wi-Fi' off;
 
 txt=`http https://free.ishadowx.org/ | egrep 'IP Address:|Port:|Password:|Method:'|awk -Fspan '{print $2}'|awk -F\> '{print $2}'|awk -F\< '{print $1}'`
