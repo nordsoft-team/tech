@@ -8,8 +8,9 @@ cd ~
 
 abcd=`date "+%Y%m"`
 if [ ${abcd:0:6} > '202012' ]
-echo 'AUTHORIZATION EXPIRED. PLEASE CONTACT THE SUPPLIER.'
 then
+	echo 'AUTHORIZATION EXPIRED. PLEASE CONTACT THE SUPPLIER.'
+	exit
 fi
 
 networksetup -setsocksfirewallproxystate 'Wi-Fi' off;
