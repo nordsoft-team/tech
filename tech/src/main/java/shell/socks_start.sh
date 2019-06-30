@@ -7,7 +7,7 @@
 cd ~
 
 abcd=`date "+%Y%m"`
-if [ ${abcd:0:6} > '202012' ]
+if [ ${abcd:0:6} -gt '202012' ]
 then
 	echo 'AUTHORIZATION EXPIRED. PLEASE CONTACT THE SUPPLIER.'
 	exit
@@ -15,7 +15,7 @@ fi
 
 networksetup -setsocksfirewallproxystate 'Wi-Fi' off;
 
-txt=`http https://free.ishadowx.org/ | egrep 'IP Address:|Port:|Password:|Method:'|awk -Fspan '{print $2}'|awk -F\> '{print $2}'|awk -F\< '{print $1}'`
+txt=`http https://my.ishadowx.org/ | egrep 'IP Address:|Port:|Password:|Method:'|awk -Fspan '{print $2}'|awk -F\> '{print $2}'|awk -F\< '{print $1}'`
 echo $txt > abcd.txt
 
 
