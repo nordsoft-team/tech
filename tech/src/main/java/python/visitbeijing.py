@@ -49,10 +49,12 @@ def get_spots_level():
         sid_info["ll"] = int(level) if (level != '') else -1
         sid_info["count"] = json.loads(heat_map)[level] if (level != '') else 60
     
-    sid_infos_new = []
+    sid_infos_new = {"s5":[], "other":[]}
     for i in range(len(sid_infos)):
-        if sid_infos[i]["ll"] != -1:
-            sid_infos_new.append(sid_infos[i])
+        if sid_infos[i]["ll"] != -1 and sid_infos[i]["type"] == "S5":
+            sid_infos_new["s5"].append(sid_infos[i])
+        if sid_infos[i]["ll"] != -1 and sid_infos[i]["type"] == "OTHER":
+            sid_infos_new["other"].append(sid_infos[i])
 
     response = make_response(json.dumps(sid_infos_new, ensure_ascii=False))
     response.headers['Access-Control-Allow-Origin'] = '*'
