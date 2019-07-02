@@ -88,11 +88,11 @@ def get_spots_info():
             if suplplement_obj["sid"] == request.values.get('sid'):
                 result_obj["rank"] = suplplement_obj["rank"]
                 result_obj["open"] = suplplement_obj["open"]
-                tempRegion = []
+                temp_region = []
                 for region_obj in region_objs:
                     if region_obj["id"] in suplplement_obj["regionIds"]:
-                        tempRegion.append(region_obj["name"])
-                result_obj["region"] = tempRegion
+                        temp_region.append(region_obj["name"])
+                result_obj["region"] = temp_region
     else:
         result = "{}"
     response = make_response(json.dumps(result_obj, ensure_ascii=False))
