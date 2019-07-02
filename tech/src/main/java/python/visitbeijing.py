@@ -30,7 +30,7 @@ server = flask.Flask(__name__)
 server.config['JSON_AS_ASCII'] = False
 
 
-@server.route('/heat/list', methods=['get'])
+@server.route('/spots/heat/list', methods=['get'])
 def get_heat_list():
     r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
     heat_result = r.get("RAILWAY.JOURNEY.SPOTS:SIDS:HEATS");
@@ -48,7 +48,7 @@ def get_heat_list():
     return  response
 
 
-@server.route('/region/list', methods=['get'])
+@server.route('/spots/region/list', methods=['get'])
 def get_region_list():
     r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
     result = r.get("RAILWAY.JOURNEY.SPOTS:SIDS:REGION");
@@ -64,7 +64,7 @@ def get_region_list():
     return  response
 
 
-@server.route('/spots/list', methods=['get'])
+@server.route('/spots/region/sights/list', methods=['get'])
 def get_spots_list():
     r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
     region_id = request.values.get('regionId')
@@ -81,7 +81,7 @@ def get_spots_list():
     return  response
 
 
-@server.route('/spots/info', methods=['get'])
+@server.route('/spots/region/sights/info', methods=['get'])
 def get_spots_info():
     r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
     result = r.get('RAILWAY.JOURNEY.SPOTS:SIDS:' + request.values.get('sid'));
