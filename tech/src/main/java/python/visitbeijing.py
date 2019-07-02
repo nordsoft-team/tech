@@ -28,51 +28,72 @@ server = flask.Flask(__name__)
 server.config['JSON_AS_ASCII'] = False
 
 
-@server.route('/spots/info', methods=['get'])
-def get_spots_info():
+@server.route('/heat/list', methods=['get'])
+def get_heat_list():
     r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
-    result = r.get('SPOTS:FLOW:SIDS:INFO:' + request.values.get('sid'));
-    result = result if (result and result != '') else '{}'
-    response = make_response(result)
-    response.headers['Access-Control-Allow-Origin'] = '*'
-    return  response
-
-    
-@server.route('/spots/list', methods=['get'])
-def get_spots_level():
-    r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
-    heat_result = r.get("SPOTS:FLOW:SIDS:HEAT");
-    heat_map = r.get('SPOTS:FLOW:SIDS:HEAT:MAP')
+    heat_result = r.get("RAILWAY.JOURNEY.SPOTS:SIDS:HEATS");
+    heat_map = r.get('RAILWAY.JOURNEY.SPOTS:SIDS:HEATS:RELATION')
     sid_infos = json.loads(heat_result)
     for sid_info in sid_infos:
         sid = sid_info["sid"]
         r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
         info_result = r.get('SPOTS:FLOW:SIDS:INFO:' + sid);
         level = json.loads(info_result)["ll"] if (info_result and info_result != '') else ''
-        sid_info["ll"] = int(level) if (level != '') else -1
         sid_info["count"] = json.loads(heat_map)[level] if (level != '') else 60
-    
-    sid_infos_new = {"heatInfo":[], "spotInfo":{"s5":[], "s2":[], "urban":[], "suburban":[]}}
-    for i in range(len(sid_infos)):
-        if sid_infos[i]["ll"] != -1:
-            obj={}
-            obj["sid"]=(sid_infos[i]["sid"])
-            obj["lng"]=(sid_infos[i]["lng"])
-            obj["lat"]=(sid_infos[i]["lat"])
-            obj["count"]=(sid_infos[i]["count"])
-            sid_infos_new["heatInfo"].append(obj)
-            
-    for i in range(len(sid_infos)):
-        if sid_infos[i]["ll"] != -1 and "s5" in sid_infos[i]["type"]:
-            sid_infos_new["spotInfo"]["s5"].append(sid_infos[i])
-        if sid_infos[i]["ll"] != -1 and "s2" in sid_infos[i]["type"]:
-            sid_infos_new["spotInfo"]["s2"].append(sid_infos[i])
-        if sid_infos[i]["ll"] != -1 and "urban" in sid_infos[i]["type"] :
-            sid_infos_new["spotInfo"]["urban"].append(sid_infos[i])
-        if sid_infos[i]["ll"] != -1 and "suburban" in sid_infos[i]["type"] :
-            sid_infos_new["spotInfo"]["suburban"].append(sid_infos[i])
 
-    response = make_response(json.dumps(sid_infos_new, sort_keys=True, ensure_ascii=False))
+    response = make_response(json.dumps(sid_infos, sort_keys=True, ensure_ascii=False))
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    return  response
+
+
+@server.route('/region/list', methods=['get'])
+def get_region_list():
+    r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
+    result = r.get("RAILWAY.JOURNEY.SPOTS:SIDS:REGION");
+    response = make_response(result)
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    return  response
+
+
+@server.route('/spots/list', methods=['get'])
+def get_spots_list():
+    r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
+    regionId = request.values.get('regionId')
+    result = r.get('RAILWAY.JOURNEY.SPOTS:SIDS:SUPPLEMENT');
+    result_objs = json.loads(result)
+    spot_infos = []
+    for suplplement_obj in result_objs:
+        if int(regionId) in suplplement_obj["regionIds"]:
+            spot_info = r.get('RAILWAY.JOURNEY.SPOTS:SIDS:' + suplplement_obj["sid"]);
+            spot_infos.append(json.loads(spot_info))
+    
+    response = make_response(json.dumps(spot_infos, ensure_ascii=False))
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    return  response
+
+
+@server.route('/spots/info', methods=['get'])
+def get_spots_info():
+    r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
+    result = r.get('RAILWAY.JOURNEY.SPOTS:SIDS:' + request.values.get('sid'));
+    result_obj = json.loads(result)
+    if (result and result != ''):
+        supplement = r.get('RAILWAY.JOURNEY.SPOTS:SIDS:SUPPLEMENT');
+        region = r.get('RAILWAY.JOURNEY.SPOTS:SIDS:REGION');
+        suplplement_objs = json.loads(supplement)
+        region_objs = json.loads(region)
+        for suplplement_obj in suplplement_objs:
+            if suplplement_obj["sid"] == request.values.get('sid'):
+                result_obj["rank"] = suplplement_obj["rank"]
+                result_obj["open"] = suplplement_obj["open"]
+                tempRegion = []
+                for region_obj in region_objs:
+                    if region_obj["id"] in suplplement_obj["regionIds"]:
+                        tempRegion.append(region_obj["name"])
+                result_obj["region"] = tempRegion
+    else:
+        result = "{}"
+    response = make_response(json.dumps(result_obj, ensure_ascii=False))
     response.headers['Access-Control-Allow-Origin'] = '*'
     return  response
 
