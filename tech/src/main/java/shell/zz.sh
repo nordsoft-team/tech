@@ -1,0 +1,1 @@
+curl --request POST --url http://192.168.10.16:7100/endpoints --header 'Version: 1.0' --header 'Content-Type: application/json' --data '{"label":"根据手机号或者卡号查询会员可用权益","method":"GET","module":"预约模块","name":"根据手机号或者卡号查询会员可用权益","path":"/desk/admin/appointments/member","plat":2}'
