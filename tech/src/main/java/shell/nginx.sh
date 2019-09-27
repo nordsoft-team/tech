@@ -21,12 +21,20 @@ cp nginx.conf nginx.conf.default
 #}
 
 #HTTPS CONFIGURATION
+
+#server{
+#        listen                    80;
+#        server_name               fanfei.tech www.fanfei.tech;
+#        rewrite ^(.*)$            https://$host$1 permanent;
+#}
+
 #server{
 #        listen                    443 default ssl;
+#        server_name               fanfei.tech www.fanfei.tech;
 #        ssl                       on;
 #        ssl_certificate           /etc/nginx/conf.d/www.fanfei.tech.pem;
 #        ssl_certificate_key       /etc/nginx/conf.d/www.fanfei.tech.key;
-#        server_name               www.fanfei.tech;
+
 
 #        location ~* \.html$ {
 #            root                  /var/www/html/;
@@ -42,5 +50,3 @@ cp nginx.conf nginx.conf.default
 #}
 
 /etc/init.d/nginx restart
-
-# /var/www/html
