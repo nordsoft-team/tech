@@ -6,6 +6,8 @@ echo y| apt install nginx
 cd /etc/nginx/
 cp nginx.conf nginx.conf.default
 
+# NEED TO COMMENT INCLUDE CONFIGURATION OR JUST USE INCLUDE SYNTAX
+
 
 #FTP SERVER CONFIGURATION
 #server {
