@@ -10,3 +10,6 @@ curl --request POST --url http://192.168.10.16:7100/endpoints --header 'Version:
 curl --request POST --url http://192.168.10.16:7100/endpoints --header 'Version: 1.0' --header 'Content-Type: application/json' --data '{"label":"预约详情查询","method":"GET","module":"预约模块","name":"预约详情查询","path":"/desk/admin/appointments/*","plat":2}'
 curl --request POST --url http://192.168.10.16:7100/endpoints --header 'Version: 1.0' --header 'Content-Type: application/json' --data '{"label":"预约单取消","method":"PATCH","module":"预约模块","name":"预约单取消","path":"/desk/admin/appointments/*","plat":2}'
 curl --request POST --url http://192.168.10.16:7100/endpoints --header 'Version: 1.0' --header 'Content-Type: application/json' --data '{"label":"预约单操作日志查询","method":"GET","module":"预约模块","name":"预约单操作日志查询","path":"/desk/admin/appointments/logs/*","plat":2}'
+
+curl --request POST --url http://192.168.10.16:7100/endpoints --header 'Version: 1.0' --header 'Content-Type: application/json' --data '{"label":"合作商商品查询","method":"GET","module":"购物模块","name":"合作商商品查询","path":"/customer/partner/commodities","plat":5}'
+curl --request POST --url http://192.168.10.16:7100/endpoints --header 'Version: 1.0' --header 'Content-Type: application/json' --data '{"label":"合作商购物","method":"POST","module":"购物模块","name":"合作商购物","path":"/customer/partner/shopping","plat":5}'
