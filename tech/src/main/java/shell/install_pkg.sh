@@ -1,0 +1,1 @@
+find . -name '*.pkg' | xargs -I{} sudo installer -pkg {} -target /
