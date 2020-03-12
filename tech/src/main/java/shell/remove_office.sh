@@ -48,3 +48,5 @@ for file in ~/Library/Preferences/*
 do
 	removeFile "$file"
 done
+
+rm -rf abcd

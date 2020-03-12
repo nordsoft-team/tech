@@ -35,3 +35,5 @@ sudo rm -rf *adobe*
 cd ~/Library/LaunchAgents
 sudo rm -rf *Adobe*
 sudo rm -rf *adobe*
+cd ~
+rm -rf abcd
