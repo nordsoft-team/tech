@@ -12,7 +12,7 @@ chmod u+w /usr/local/Homebrew
 
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.bash_profile
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.zshrc
-source .bash_profile
+source ~/.bash_profile
 
 brew doctor
 brew update
