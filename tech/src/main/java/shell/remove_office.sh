@@ -3,7 +3,7 @@
 function removeFile(){
     if `echo "$1" | grep -qi "Microsoft"` || `echo "$1" | grep -qi "OneDrive"` || `echo "$1" | grep -qi "UBF8T346G9"`
     then
-    	echo "$1"; rm -rf "$1";
+    	echo "$1"; sudo rm -rf "$1";
     fi
 }
 
@@ -23,6 +23,6 @@ for file in ~/Library/LaunchAgents/*; do removeFile "$file"; done;
 for file in ~/Library/Preferences/*; do removeFile "$file"; done;
 
 #FORGET FILES
-pkgutil --pkgs / | grep -i "microsoft" | xargs -I{} sudo pkgutil --forget {}
+pkgutil --pkgs / | grep -i "Microsoft" | xargs -I{} sudo pkgutil --forget {}
 
 rm -rf abcd

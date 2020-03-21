@@ -3,7 +3,7 @@
 function removeFile(){
     if `echo "$1" | grep -qi "Adobe"`
     then
-    	echo "$1"; rm -rf "$1";
+    	echo "$1"; sudo rm -rf "$1";
     fi
 }
 
