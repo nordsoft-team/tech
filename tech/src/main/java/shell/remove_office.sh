@@ -1,12 +1,13 @@
 #!/bin/bash
 
 function removeFile(){
-    if [[ $1 == *microsoft* ]] || [[ $1 == *Microsoft* ]] || [[ $1 == *OneDrive* ]] || [[ $1 == *UBF8T346G9* ]]
+    if `echo "$1" | grep -qi "microsoft"` || `echo "$1" | grep -qi "OneDrive"` || `echo "$1" | grep -qi "UBF8T346G9"`
     then
-    	echo "$1"; rm -rf "$1"
+    	echo "$1"; rm -rf "$1";
     fi
 }
 
+#REMOVE FILES
 for file in /Applications/*; do removeFile "$file"; done;
 for file in /Applications/Utilities/*; do removeFile "$file"; done;
 for file in /Library/Application\ Support/*; do removeFile "$file"; done;
@@ -20,5 +21,8 @@ for file in ~/Library/Containers/*; do removeFile "$file"; done;
 for file in ~/Library/Group\ Containers/*; do removeFile "$file"; done;
 for file in ~/Library/LaunchAgents/*; do removeFile "$file"; done;
 for file in ~/Library/Preferences/*; do removeFile "$file"; done;
+
+#FORGET FILES
+pkgutil --pkgs / | grep -i "microsoft" | xargs -I{} sudo pkgutil --forget {}
 
 rm -rf abcd
