@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function removeFile(){
-    if `echo "$1" | grep -qi "microsoft"` || `echo "$1" | grep -qi "OneDrive"` || `echo "$1" | grep -qi "UBF8T346G9"`
+    if `echo "$1" | grep -qi "Microsoft"` || `echo "$1" | grep -qi "OneDrive"` || `echo "$1" | grep -qi "UBF8T346G9"`
     then
     	echo "$1"; rm -rf "$1";
     fi
