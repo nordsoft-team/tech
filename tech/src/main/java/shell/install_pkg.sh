@@ -6,5 +6,6 @@ productbuild --synthesize --package ~/Downloads/myPkgs/package.pkg ~/Downloads/m
 #<background file="background"/>
 #<welcome file="welcome"/>
 #<license file="license"/>
+#<conclusion file="conclusion"/>
 
 productbuild --distribution ~/Downloads/myPkgs/dist --resources ~/Downloads/myPkgs/resources/ ~/Downloads/myPkgs/product.pkg
