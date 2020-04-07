@@ -15,7 +15,9 @@ echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 source ~/.bash_profile
 source ~/.zshrc
 
+echo "brew doctor"
 brew doctor
+echo "brew update"
 brew update
 
 
