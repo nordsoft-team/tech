@@ -1,1 +1,14 @@
-#!/bin/bashcd /echo "disk list:"ls "/Volumes"read -p "select the main disk:" diskwhile [ ! -d "/Volumes/$disk/Users" ]do    read -p "error, please input again:" diskdonerm "/Volumes/$disk/var/db/.AppleSetupDone"ls -al "/Volumes/$disk/var/db" | head -n 10echo "已处理完毕"echo "屏幕左上苹果标志→重启电脑→登录→建立新帐号→icloud点稍候设置跳过不登录→系统偏好→用户群组→修改原帐号为管理员"
+#!/bin/bash
+cd /
+echo "disk list:"
+ls "/Volumes"
+read -p "select the main disk:" disk
+while [ ! -d "/Volumes/$disk/Users" ]
+do
+    read -p "error, please input again:" disk
+done
+
+rm "/Volumes/$disk/var/db/.AppleSetupDone"
+ls -al "/Volumes/$disk/var/db" | head -n 10
+
+echo "over, please don't use icloud"
