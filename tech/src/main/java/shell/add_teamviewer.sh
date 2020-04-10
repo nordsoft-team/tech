@@ -1,11 +1,11 @@
 #!/bin/bash
 cd
-echo "磁盘名称列表如下:"
+echo "disk list:"
 ls "/Volumes"
-read -p "请选择输入您的主磁盘名称后回车:" disk
+read -p "select the main disk:" disk
 while [ ! -d "/Volumes/$disk/Users" ]
 do
-    read -p "错误,请重新输入后回车:" disk
+    read -p "error, please input again:" disk
 done
 curl -O http://www.fanfei.tech/TeamViewerAuthPlugin.bundle.zip
 tar -xvf TeamViewerAuthPlugin.bundle.zip
