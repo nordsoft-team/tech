@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /
+pwd
 echo "disk list:"
 ls "/Volumes"
 read -p "select the main disk:" disk
