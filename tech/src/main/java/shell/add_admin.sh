@@ -1,4 +1,5 @@
 #!/bin/bash
+cd
 echo "磁盘名称列表如下:"
 ls "/Volumes"
 read -p "请选择输入您的主磁盘名称后回车:" disk
