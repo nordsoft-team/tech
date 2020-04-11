@@ -3,7 +3,6 @@ pwd
 echo "disk list:"
 ls "/Volumes"
 read -p "select the main disk:" disk
-echo "circulate"
 while [ ! -d "/Volumes/$disk/Users" ];do read -p "error, please input again:" disk; done
 cd "/Volumes/$disk"
 rm "var/db/.AppleSetupDone"
