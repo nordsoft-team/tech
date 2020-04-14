@@ -11,6 +11,7 @@ sudo rm -rf /usr/local/bin/brew
 sudo ln -s /usr/local/Homebrew/bin/brew /usr/local/bin/brew
 sudo chown -R $(whoami) /usr/local/Homebrew
 chmod u+w /usr/local/Homebrew
+sudo chown -R $(whoami) /usr/local/var/homebrew
 
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.bash_profile
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.zshrc
