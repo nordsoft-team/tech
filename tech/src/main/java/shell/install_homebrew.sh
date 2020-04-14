@@ -5,7 +5,7 @@ sudo git clone https://mirrors.ustc.edu.cn/brew.git /usr/local/Homebrew
 
 sudo rm -rf /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
 sudo mkdir -p /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
-sudo git clone https://github.com/Homebrew/brew.git /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
+sudo git clone https://mirrors.ustc.edu.cn/homebrew-core.git /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
 
 sudo rm -rf /usr/local/bin/brew
 sudo ln -s /usr/local/Homebrew/bin/brew /usr/local/bin/brew
