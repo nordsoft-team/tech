@@ -33,13 +33,13 @@ server.config['JSON_AS_ASCII'] = False
 @server.route('/spots/heat/list', methods=['get'])
 def get_heat_list():
     r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
-    heat_result = r.get("RAILWAY.JOURNEY.SPOTS:SIDS:HEATS");
+    heat_result = r.get("RAILWAY.JOURNEY.SPOTS:SIDS:HEATS")
     heat_map = r.get('RAILWAY.JOURNEY.SPOTS:SIDS:HEATS:RELATION')
     sid_infos = json.loads(heat_result)
     for sid_info in sid_infos:
         sid = sid_info["sid"]
         r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
-        info_result = r.get('RAILWAY.JOURNEY.SPOTS:SIDS:' + sid);
+        info_result = r.get('RAILWAY.JOURNEY.SPOTS:SIDS:' + sid)
         level = json.loads(info_result)["ll"] if (info_result and info_result != '') else ''
         sid_info["count"] = json.loads(heat_map)[level] if (level != '') else 60
 
@@ -51,7 +51,7 @@ def get_heat_list():
 @server.route('/spots/region/list', methods=['get'])
 def get_region_list():
     r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
-    result = r.get("RAILWAY.JOURNEY.SPOTS:SIDS:REGION");
+    result = r.get("RAILWAY.JOURNEY.SPOTS:SIDS:REGION")
     result_objs = json.loads(result)
     result_objs_new = []
     for obj in result_objs:
@@ -68,12 +68,12 @@ def get_region_list():
 def get_spots_list():
     r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
     region_id = request.values.get('regionId')
-    result = r.get('RAILWAY.JOURNEY.SPOTS:SIDS:SUPPLEMENT');
+    result = r.get('RAILWAY.JOURNEY.SPOTS:SIDS:SUPPLEMENT')
     result_objs = json.loads(result)
     spot_infos = []
     for suplplement_obj in result_objs:
         if int(region_id) in suplplement_obj["regionIds"]:
-            spot_info = r.get('RAILWAY.JOURNEY.SPOTS:SIDS:' + suplplement_obj["sid"]);
+            spot_info = r.get('RAILWAY.JOURNEY.SPOTS:SIDS:' + suplplement_obj["sid"])
             spot_infos.append(json.loads(spot_info))
     
     response = make_response(json.dumps(spot_infos, ensure_ascii=False))
@@ -84,11 +84,11 @@ def get_spots_list():
 @server.route('/spots/region/sights/info', methods=['get'])
 def get_spots_info():
     r = redis.Redis(host=redisHost, port=redisPort, db=redisDb, password=redisPass)
-    result = r.get('RAILWAY.JOURNEY.SPOTS:SIDS:' + request.values.get('sid'));
+    result = r.get('RAILWAY.JOURNEY.SPOTS:SIDS:' + request.values.get('sid'))
     result_obj = json.loads(result)
     if (result and result != ''):
-        supplement = r.get('RAILWAY.JOURNEY.SPOTS:SIDS:SUPPLEMENT');
-        region = r.get('RAILWAY.JOURNEY.SPOTS:SIDS:REGION');
+        supplement = r.get('RAILWAY.JOURNEY.SPOTS:SIDS:SUPPLEMENT')
+        region = r.get('RAILWAY.JOURNEY.SPOTS:SIDS:REGION')
         suplplement_objs = json.loads(supplement)
         region_objs = json.loads(region)
         for suplplement_obj in suplplement_objs:
