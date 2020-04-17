@@ -19,15 +19,6 @@ while [ ! -d "/Volumes/$disk/Users/$user" ];do read -p "error, please input agai
 mkdir -p "/Volumes/$usb/QuickBackup"
 
 echo "copying Desktop..."
-cp -R "/Volumes/$disk/Users/$user/Desktop" "/Volumes/$usb/QuickBackup"
-
-echo "copying Downloads..."
-cp -R "/Volumes/$disk/Users/$user/Downloads" "/Volumes/$usb/QuickBackup"
-
-echo "copying Downloads..."
-cp -R "/Volumes/$disk/Users/$user/Documents" "/Volumes/$usb/QuickBackup"
-
-echo "copying ..."
-cp -R "/Volumes/$disk/Users/$user/Pictures" "/Volumes/$usb/QuickBackup"
+cp -R "/Volumes/$disk/Users/$user" "/Volumes/$usb/QuickBackup"
 
 echo "done"
