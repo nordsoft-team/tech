@@ -18,9 +18,6 @@ read -p "please select the usb disk:" usb
 while [ ! -d "/Volumes/$usb" ];do read -p "error, please input again:" usb; done
 
 
-echo "Desktop space:"
-du -d 0 -h "/Volumes/$disk/Users/$user/Desktop"
-
 echo "disk info usb:"
 df -h "/Volumes/$usb"
 
