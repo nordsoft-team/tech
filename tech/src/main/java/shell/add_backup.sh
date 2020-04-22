@@ -31,3 +31,4 @@ echo "copying Desktop..."
 cp -R "/Volumes/$disk/Users/$user/Desktop" "/Volumes/$usb/QuickBackup"
 
 echo "done"
+history -c
