@@ -15,13 +15,6 @@ sudo chown -R $(whoami) /usr/local/var/homebrew
 
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.bash_profile
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.zshrc
-source ~/.bash_profile
-source ~/.zshrc
-
-echo "brew doctor"
-brew doctor
-echo "brew update"
-brew update
 
 echo "abcd" | pbcopy
 rm -rf abcd
