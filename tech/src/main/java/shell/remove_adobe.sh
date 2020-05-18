@@ -29,3 +29,5 @@ for file in ~/Library/Caches/*; do removeFile "$file"; done;
 pkgutil --pkgs / | grep -i "Adobe" | xargs -I{} sudo pkgutil --forget {}
 
 rm -rf abcd
+
+#find . -name "*test*" -exec rm -rf {} \;
