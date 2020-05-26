@@ -27,8 +27,8 @@ if `echo "$yesno" | grep -qi "no"`; then exit; fi
 
 mkdir -p "/Volumes/$usb/QuickBackup"
 
-echo "copying Desktop..."
-cp -R "/Volumes/$disk/Users/$user/Desktop" "/Volumes/$usb/QuickBackup"
+echo "copying data..."
+cp -R "/Volumes/$disk/Users/$user" "/Volumes/$usb/QuickBackup"
 
 echo "done"
 history -c
