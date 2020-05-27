@@ -21,12 +21,13 @@ while [ ! -d "/Volumes/$usb" ];do read -p "error, please input again:" usb; done
 echo "disk info usb:"
 df -h "/Volumes/$usb"
 
+
 read -p "if continue(yes/no):" yesno
 while ! `echo "$yesno" | grep -qi "yes"` && ! `echo "$yesno" | grep -qi "no"`;do read -p "if continue(yes/no):" yesno; done
 if `echo "$yesno" | grep -qi "no"`; then exit; fi
 
-mkdir -p "/Volumes/$usb/QuickBackup"
 
+mkdir -p "/Volumes/$usb/QuickBackup"
 echo "copying data..."
 cp -R "/Volumes/$disk/Users/$user" "/Volumes/$usb/QuickBackup"
 echo "done"
