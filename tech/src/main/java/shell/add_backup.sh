@@ -29,6 +29,6 @@ mkdir -p "/Volumes/$usb/QuickBackup"
 
 echo "copying data..."
 cp -R "/Volumes/$disk/Users/$user" "/Volumes/$usb/QuickBackup"
-
 echo "done"
+
 history -c
