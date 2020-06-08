@@ -28,7 +28,7 @@ for file in ~/Library/Caches/*; do removeFile "$file"; done;
 #FORGET FILES
 pkgutil --pkgs / | grep -i "Adobe" | xargs -I{} sudo pkgutil --forget {}
 
-ps aux |grep -i 'adobe' |grep -v 'grep' |awk '{print $2}' |xargs -I{} sudo kill {}
+ps aux |grep -i 'Adobe' |grep -v 'grep' |awk '{print $2}' |xargs -I{} sudo kill {}
 rm -rf abcd
 
 #find . -name "*test*" -exec rm -rf {} \;
