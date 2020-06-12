@@ -1,11 +1,6 @@
-find . -name '*.pkg' | xargs -I{} sudo installer -pkg {} -target /
-
-pkgbuild --identifier com.abcd --root ~/Downloads/myPkgs/src/ --install-location ~/Downloads/myPkgs/dst/ --scripts ~/Downloads/myPkgs/scripts/ ~/Downloads/myPkgs/package.pkg
-
-productbuild --synthesize --package ~/Downloads/myPkgs/package.pkg ~/Downloads/myPkgs/dist
-#<background file="background"/>
-#<welcome file="welcome"/>
-#<license file="license"/>
-#<conclusion file="conclusion"/>
-
-productbuild --distribution ~/Downloads/myPkgs/dist --resources ~/Downloads/myPkgs/resources/ ~/Downloads/myPkgs/product.pkg
+mkdir -p myPkg/scripts
+rm -rf myPkg/scripts/postinstall
+echo "#!/bin/sh" >> myPkg/scripts/postinstall
+echo "date >> /tmp/myPkg" >> myPkg/scripts/postinstall
+chmod u+x myPkg/scripts/postinstall
+pkgbuild --nopayload --scripts myPkg/scripts --identifier com.apple.pkg myPkg.pkg
