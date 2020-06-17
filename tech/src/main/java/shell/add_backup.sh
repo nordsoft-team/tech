@@ -36,6 +36,11 @@ echo "copying Pictures..."
 cp -R "/Volumes/$disk/Users/$user/Pictures" "/Volumes/$usb/QuickBackup"
 echo "copying Downloads..."
 cp -R "/Volumes/$disk/Users/$user/Downloads" "/Volumes/$usb/QuickBackup"
-echo "done"
+
+
+echo "disk info usb:"
+df -h "/Volumes/$usb"
+
+echo "copy finished"
 
 history -c
