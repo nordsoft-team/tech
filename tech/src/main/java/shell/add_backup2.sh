@@ -1,19 +1,19 @@
 #!/bin/bash
 pwd
 echo "disk list:"
-ls "/Volumes"
+ls -al "/Volumes"
 read -p "Please select the main disk:" disk
-while [ ! -d "/Volumes/$disk/Users" ];do read -p "error, please input again:" disk; done
+while [ ! -d "/Volumes/$disk" ];do read -p "error, please input again:" disk; done
 
 
 echo "user list:"
-ls "/Volumes/$disk/Users"
+ls -al "/Volumes/$disk/Users"
 read -p "Please select your user:" user
 while [ ! -d "/Volumes/$disk/Users/$user" ];do read -p "error, please input again:" user; done
 
 
 echo "disk list:"
-ls "/Volumes"
+ls -al "/Volumes"
 read -p "Please select the usb disk:" usb
 while [ ! -d "/Volumes/$usb" ];do read -p "error, please input again:" usb; done
 
