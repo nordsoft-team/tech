@@ -6,5 +6,6 @@
     $row = $result->fetch_assoc();
     echo $row["now()"];
     $con->close();
+
     phpinfo();
 ?>
