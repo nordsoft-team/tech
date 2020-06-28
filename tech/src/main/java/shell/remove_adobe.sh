@@ -31,5 +31,5 @@ pkgutil --pkgs / | grep -i "Adobe" | xargs -I{} sudo pkgutil --forget {}
 ps aux |grep -i 'Adobe' |grep -v 'grep' |awk '{print $2}' |xargs -I{} sudo kill {}
 rm -rf abcd
 
-#ls -al | grep -i test | awk '{print $9}' |xargs -I{} sudo  rm -rf {}
-#find . -name "*test*" -exec rm -rf {} \;
+#find . -maxdepth 1 -name "*test*" -exec rm -rf {} \;
+#find .             -name "*test*" -exec rm -rf {} \;
