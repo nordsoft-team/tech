@@ -7,8 +7,8 @@
         fi
     }
 
-        #REMOVE FILES
-        for file in /Applications/*; do removeFile "$file"; done;
+  #REMOVE FILES
+  for file in /Applications/*; do removeFile "$file"; done;
   for file in /Applications/Utilities/*; do removeFile "$file"; done;
   for file in /Library/Application\ Support/*; do removeFile "$file"; done;
   for file in /Library/Internet\ Plug-Ins/*; do removeFile "$file"; done;
