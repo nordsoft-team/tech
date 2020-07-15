@@ -579,8 +579,12 @@ chmod u+w /usr/local/var/homebrew
 #sudo chown -R "$(whoami)" /usr/local/Caskroom
 #chmod u+w /usr/local/Caskroom
 
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.bash_profile
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.zshrc
 
+ohai "Homebrew version information:"
+brew --version
+ohai "Installation successful!"
 echo "abcd" | pbcopy
 rm -rf abcd
