@@ -582,8 +582,6 @@ chmod u+w /usr/local/var/homebrew
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.bash_profile
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.zshrc
 
-ohai "Homebrew version information:"
-brew --version
 ohai "Installation successful! Open a new terminal window to use!"
 echo "abcd" | pbcopy
 rm -rf abcd
