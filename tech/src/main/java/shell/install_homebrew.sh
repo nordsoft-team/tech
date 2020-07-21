@@ -554,6 +554,7 @@ fi
 
 ohai "Downloading and installing Homebrew..."
 
+cd
 sudo rm -rf /usr/local/Homebrew
 sudo mkdir -p /usr/local/Homebrew
 sudo git clone https://mirrors.ustc.edu.cn/brew.git /usr/local/Homebrew
