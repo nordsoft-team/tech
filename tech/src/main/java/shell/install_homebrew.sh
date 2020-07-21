@@ -584,4 +584,4 @@ echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebre
 
 ohai "Installation successful! Open a new terminal window to use!"
 echo "abcd" | pbcopy
-rm -rf abcd
+rm -rf ~/abcd
