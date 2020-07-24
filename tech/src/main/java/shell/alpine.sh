@@ -1,7 +1,9 @@
 #!/usr/bin/expect
 
-rm -rf ~/.ssh/known_hosts
-cd
+if {[file exists ~/.ssh/known_hosts]} {
+    file delete [glob ~/.ssh/known_hosts]
+}
+
 set timeout 5
 set pwd "alpine\r"
 
