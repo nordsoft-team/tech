@@ -8,4 +8,5 @@ ls -al "var/db" | head -n 10
 rm "var/db/.AppleSetupDone"
 ls -al "var/db" | head -n 10
 
-echo "done, restart and don't use icloud"
+#OK for Mojave
+echo "Done, restart and skip the Apple ID"
