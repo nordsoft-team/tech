@@ -29,4 +29,5 @@ for file in ~/Library/Caches/*; do removeFile "$file"; done;
 pkgutil --pkgs / | grep -i "AutoCAD" | xargs -I{} sudo pkgutil --forget {}
 pkgutil --pkgs / | grep -i "Autodesk" | xargs -I{} sudo pkgutil --forget {}
 
-rm -rf abcd
+echo "abcd" | pbcopy
+rm -rf ~/abcd

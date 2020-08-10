@@ -28,4 +28,5 @@ for file in ~/Library/Caches/*; do removeFile "$file"; done;
 #FORGET FILES
 pkgutil --pkgs / | grep -i "BaiduNetdisk" | xargs -I{} sudo pkgutil --forget {}
 
-rm -rf abcd
+echo "abcd" | pbcopy
+rm -rf ~/abcd
