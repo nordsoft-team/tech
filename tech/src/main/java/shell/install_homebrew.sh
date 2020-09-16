@@ -580,8 +580,8 @@ chmod u+w /usr/local/var/homebrew
 #sudo chown -R "$(whoami)" /usr/local/Caskroom
 #chmod u+w /usr/local/Caskroom
 
-echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.bash_profile
-echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.zshrc
+echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.bash_profile
+echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.zshrc
 
 ohai "Installation successful! Open a new terminal window to use!"
 echo "abcd" | pbcopy
