@@ -554,19 +554,28 @@ fi
 
 ohai "Downloading and installing Homebrew..."
 
+brew-mirror=https://mirrors.ustc.edu.cn/brew.git
+brew-core-mirror=https://mirrors.ustc.edu.cn/homebrew-core.git
+brew-cask-mirror=https://mirrors.ustc.edu.cn/homebrew-cask.git
+brew-bottles=https://mirrors.ustc.edu.cn/homebrew-bottles
+
 cd
 sudo rm -rf /usr/local/Homebrew
 sudo mkdir -p /usr/local/Homebrew
-sudo git clone https://mirrors.ustc.edu.cn/brew.git /usr/local/Homebrew
+sudo git clone $brew-mirror /usr/local/Homebrew
 
 sudo rm -rf /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
 sudo mkdir -p /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
-sudo git clone https://mirrors.ustc.edu.cn/homebrew-core.git /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
+sudo git clone $brew-core-mirror /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
 
 
 #sudo rm -rf /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask
 #sudo mkdir -p /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask
-#sudo git clone https://mirrors.ustc.edu.cn/homebrew-cask.git /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask
+#sudo git clone $brew-cask-mirror /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask
+
+#sudo mkdir -p /usr/local/Caskroom
+#sudo chown -R "$(whoami)" /usr/local/Caskroom
+#chmod u+w /usr/local/Caskroom
 
 sudo rm -rf /usr/local/bin/brew
 sudo ln -s /usr/local/Homebrew/bin/brew /usr/local/bin/brew
@@ -576,12 +585,9 @@ chmod u+w /usr/local/Homebrew
 sudo chown -R $(whoami) /usr/local/var/homebrew
 chmod u+w /usr/local/var/homebrew
 
-#sudo mkdir -p /usr/local/Caskroom
-#sudo chown -R "$(whoami)" /usr/local/Caskroom
-#chmod u+w /usr/local/Caskroom
 
-echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.bash_profile
-echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.zshrc
+echo "export HOMEBREW_BOTTLE_DOMAIN=$brew-bottles" >> ~/.bash_profile
+echo "export HOMEBREW_BOTTLE_DOMAIN=$brew-bottles" >> ~/.zshrc
 
 ohai "Installation successful! Open a new terminal window to use!"
 echo "abcd" | pbcopy
