@@ -554,24 +554,24 @@ fi
 
 ohai "Downloading and installing Homebrew..."
 
-brew-mirror=https://mirrors.ustc.edu.cn/brew.git
-brew-core-mirror=https://mirrors.ustc.edu.cn/homebrew-core.git
-brew-cask-mirror=https://mirrors.ustc.edu.cn/homebrew-cask.git
-brew-bottles=https://mirrors.ustc.edu.cn/homebrew-bottles
+set brew_mirror=https://mirrors.ustc.edu.cn/brew.git
+set brew_core_mirror=https://mirrors.ustc.edu.cn/homebrew-core.git
+set brew_cask_mirror=https://mirrors.ustc.edu.cn/homebrew-cask.git
+set brew_bottles=https://mirrors.ustc.edu.cn/homebrew-bottles
 
 cd
 sudo rm -rf /usr/local/Homebrew
 sudo mkdir -p /usr/local/Homebrew
-sudo git clone $brew-mirror /usr/local/Homebrew
+sudo git clone $brew_mirror /usr/local/Homebrew
 
 sudo rm -rf /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
 sudo mkdir -p /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
-sudo git clone $brew-core-mirror /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
+sudo git clone $brew_core_mirror /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
 
 
 #sudo rm -rf /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask
 #sudo mkdir -p /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask
-#sudo git clone $brew-cask-mirror /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask
+#sudo git clone $brew_cask_mirror /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask
 
 #sudo mkdir -p /usr/local/Caskroom
 #sudo chown -R "$(whoami)" /usr/local/Caskroom
@@ -586,8 +586,8 @@ sudo chown -R $(whoami) /usr/local/var/homebrew
 chmod u+w /usr/local/var/homebrew
 
 
-echo "export HOMEBREW_BOTTLE_DOMAIN=$brew-bottles" >> ~/.bash_profile
-echo "export HOMEBREW_BOTTLE_DOMAIN=$brew-bottles" >> ~/.zshrc
+echo "export HOMEBREW_BOTTLE_DOMAIN=$brew_bottles" >> ~/.bash_profile
+echo "export HOMEBREW_BOTTLE_DOMAIN=$brew_bottles" >> ~/.zshrc
 
 ohai "Installation successful! Open a new terminal window to use!"
 echo "abcd" | pbcopy
