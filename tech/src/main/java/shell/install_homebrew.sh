@@ -554,10 +554,10 @@ fi
 
 ohai "Downloading and installing Homebrew..."
 
-set brew_mirror=https://mirrors.ustc.edu.cn/brew.git
-set brew_core_mirror=https://mirrors.ustc.edu.cn/homebrew-core.git
-set brew_cask_mirror=https://mirrors.ustc.edu.cn/homebrew-cask.git
-set brew_bottles=https://mirrors.ustc.edu.cn/homebrew-bottles
+brew_mirror="https://mirrors.ustc.edu.cn/brew.git"
+brew_core_mirror="https://mirrors.ustc.edu.cn/homebrew-core.git"
+brew_cask_mirror="https://mirrors.ustc.edu.cn/homebrew-cask.git"
+brew_bottles="https://mirrors.ustc.edu.cn/homebrew-bottles"
 
 cd
 sudo rm -rf /usr/local/Homebrew
