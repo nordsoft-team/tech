@@ -554,10 +554,17 @@ fi
 
 ohai "Downloading and installing Homebrew..."
 
-brew_mirror="https://mirrors.ustc.edu.cn/brew.git"
-brew_core_mirror="https://mirrors.ustc.edu.cn/homebrew-core.git"
-brew_cask_mirror="https://mirrors.ustc.edu.cn/homebrew-cask.git"
-brew_bottles="https://mirrors.ustc.edu.cn/homebrew-bottles"
+if [[ $1 == '1' ]]
+  brew_mirror="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
+  brew_core_mirror="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
+  brew_cask_mirror="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git"
+  brew_bottles="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
+else
+  brew_mirror="https://mirrors.ustc.edu.cn/brew.git"
+  brew_core_mirror="https://mirrors.ustc.edu.cn/homebrew-core.git"
+  brew_cask_mirror="https://mirrors.ustc.edu.cn/homebrew-cask.git"
+  brew_bottles="https://mirrors.ustc.edu.cn/homebrew-bottles"
+fi
 
 cd
 sudo rm -rf /usr/local/Homebrew
