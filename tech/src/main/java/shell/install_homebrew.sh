@@ -555,6 +555,7 @@ fi
 ohai "Downloading and installing Homebrew..."
 
 if [[ $1 == '1' ]]
+then
   brew_mirror="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
   brew_core_mirror="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
   brew_cask_mirror="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git"
