@@ -1,8 +1,12 @@
 #!/bin/bash
 
-ls -al /Applications |grep "Python 3" |awk '{print $9}' |xargs -I{} rm -rf {}
-ls -al /usr/local/bin |grep "/Library/Frameworks/Python.framework" |awk '{print $9}' |xargs -I{} rm -rf {}
-rm -rf /Library/Frameworks/Python.framework
+cd /Applications
+find . -maxdepth 1 -name "*Python*" -exec rm -rf {} \;
+
+cd /usr/local/bin
+ls -al |grep "/Library/Frameworks/Python.framework" |awk '{print $9}' |xargs -I{} sudo rm -rf {}
+
+sudo rm -rf /Library/Frameworks/Python.framework
 
 echo "abcd" | pbcopy
 rm -rf ~/abcd
