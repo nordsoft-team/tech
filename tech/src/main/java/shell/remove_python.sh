@@ -8,5 +8,6 @@ ls -al |grep "/Library/Frameworks/Python.framework" |awk '{print $9}' |xargs -I{
 
 sudo rm -rf /Library/Frameworks/Python.framework
 
+cd
 echo "abcd" | pbcopy
 rm -rf ~/abcd
