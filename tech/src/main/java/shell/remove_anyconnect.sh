@@ -29,5 +29,8 @@ for file in ~/Library/Caches/*; do removeFile "$file"; done;
 pkgutil --pkgs / | grep -i "anyconnect" | xargs -I{} sudo pkgutil --forget {}
 pkgutil --pkgs / | grep -i "cisco" | xargs -I{} sudo pkgutil --forget {}
 
+ps aux |grep -i 'anyconnect' |grep -v 'grep' |awk '{print $2}' |xargs -I{} sudo kill {}
+ps aux |grep -i 'cisco' |grep -v 'grep' |awk '{print $2}' |xargs -I{} sudo kill {}
+
 echo "abcd" | pbcopy
 rm -rf ~/abcd
