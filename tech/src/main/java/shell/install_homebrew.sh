@@ -6,11 +6,6 @@ if [[ "$(uname)" = "Linux" ]]; then
   HOMEBREW_ON_LINUX=1
 fi
 
-# Check if macOS is ARM
-if [[ "$(uname)" = "Darwin" ]] && [[ "$(sysctl -n hw.optional.arm64 2>/dev/null || echo '0')" = "1" ]]; then
-  HOMEBREW_APPLE_SILICON=1
-fi
-
 # On macOS, this script installs to /usr/local only.
 # On Linux, it installs to /home/linuxbrew/.linuxbrew if you have sudo access
 # and ~/.linuxbrew otherwise.
@@ -171,19 +166,9 @@ version_lt() {
   [[ "${1%.*}" -lt "${2%.*}" ]] || [[ "${1%.*}" -eq "${2%.*}" && "${1#*.}" -lt "${2#*.}" ]]
 }
 
-should_install_git() {
-  if [[ $(command -v git) ]]; then
-    return 1
-  fi
-}
-
 should_install_command_line_tools() {
   if [[ -n "${HOMEBREW_ON_LINUX-}" ]]; then
     return 1
-  fi
-
-  if [[ -n "${HOMEBREW_APPLE_SILICON-}" ]]; then
-    return 1;
   fi
 
   if version_gt "$macos_version" "10.13"; then
@@ -239,6 +224,7 @@ no_usable_ruby() {
   IFS=$'\n' # Do word splitting on new lines only
   for ruby_exec in $(which -a ruby); do
     if test_ruby "$ruby_exec"; then
+      IFS=$' \t\n' # Restore IFS to its default value
       return 1
     fi
   done
@@ -280,9 +266,17 @@ fi
 cd "/usr" || exit 1
 
 ####################################################################### script
-if should_install_git; then
+if ! command -v git >/dev/null; then
     abort "$(cat <<EOABORT
 You must install Git before installing Homebrew. See:
+  ${tty_underline}https://docs.brew.sh/Installation${tty_reset}
+EOABORT
+)"
+fi
+
+if ! command -v curl >/dev/null; then
+    abort "$(cat <<EOABORT
+You must install cURL before installing Homebrew. See:
   ${tty_underline}https://docs.brew.sh/Installation${tty_reset}
 EOABORT
 )"
@@ -330,7 +324,7 @@ Your Mac OS X version is too old. See:
   ${tty_underline}https://github.com/mistydemeo/tigerbrew${tty_reset}
 EOABORT
 )"
-  elif version_lt "$macos_version" "10.9"; then
+  elif version_lt "$macos_version" "10.10"; then
     abort "Your OS X version is too old"
   elif version_gt "$macos_version" "$MACOS_LATEST_SUPPORTED" || \
     version_lt "$macos_version" "$MACOS_OLDEST_SUPPORTED"; then
