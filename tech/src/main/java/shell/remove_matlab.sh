@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function removeFile(){
-    if `echo "$1" | grep -qi "Polyspace"` || `echo "$1" | grep -qi "Matlab"`
+    if `echo "$1" | grep -qi "Polyspace"` || `echo "$1" | grep -qi "MathWorks"` || `echo "$1" | grep -qi "Matlab"`
     then
       echo "$1"; sudo rm -rf "$1";
     fi
@@ -28,10 +28,13 @@ for file in ~/Library/Logs/*; do removeFile "$file"; done;
 
 #FORGET FILES
 pkgutil --pkgs / | grep -i "Polyspace" | xargs -I{} sudo pkgutil --forget {}
+pkgutil --pkgs / | grep -i "MathWorks" | xargs -I{} sudo pkgutil --forget {}
 pkgutil --pkgs / | grep -i "Matlab" | xargs -I{} sudo pkgutil --forget {}
 
 ps aux |grep -i 'Polyspace' |grep -v 'grep' |awk '{print $2}' |xargs -I{} sudo kill {}
+ps aux |grep -i 'MathWorks' |grep -v 'grep' |awk '{print $2}' |xargs -I{} sudo kill {}
 ps aux |grep -i 'Matlab' |grep -v 'grep' |awk '{print $2}' |xargs -I{} sudo kill {}
+
 
 echo "abcd" | pbcopy
 rm -rf ~/abcd
