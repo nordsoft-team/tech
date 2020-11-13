@@ -2,13 +2,13 @@
 
 PRODUCT=myprodocut
 
-log_info "pkgbuild ..."
+echo "pkgbuild ..."
 pkgbuild  --identifier com.taobao.nordsorft \
           --scripts ./scripts \
           --root ./root \
           ./package/${PRODUCT}.pkg
 
-log_info "productbuild ..."
+echo "productbuild ..."
 productbuild  --distribution ./Distribution \
               --resources ./Resources \
               --package-path ./package \
