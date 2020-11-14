@@ -7,7 +7,11 @@ pkgbuild  --identifier com.taobao.nordsorft.myPkg \
           ./myPkg.pkg
 
 echo "productbuild ..."
-productbuild  --distribution ./distribution.xml \
+productbuild  --distribution ./Distribution \
               --resources ./Resources \
               --package-path ./ \
               ./myProduct.pkg
+
+
+echo "productbuild synthesize ..."
+productbuild --synthesize --package ./myPkg.pkg abcd
