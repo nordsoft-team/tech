@@ -1,19 +1,13 @@
 #!/bin/bash
 
-PRODUCT=myproduct
-
-chmod -R 755 ./root
-
 echo "pkgbuild ..."
-pkgbuild  --identifier com.taobao.nordsorft \
-          --scripts ./darwin/scripts \
+pkgbuild  --identifier com.taobao.nordsorft.myPkg \
+          --scripts ./scripts \
           --root ./root \
-          ./package/${PRODUCT}.pkg
-
-chmod -R 755 ./package
+          ./myPkg.pkg
 
 echo "productbuild ..."
-productbuild  --distribution ./darwin/Distribution \
-              --resources ./darwin/Resources \
-              --package-path ./package \
-              ./pkg/${PRODUCT}_installer.pkg
+productbuild  --distribution ./distribution.xml \
+              --resources ./Resources \
+              --package-path ./ \
+              ./myProduct.pkg
