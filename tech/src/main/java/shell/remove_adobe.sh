@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function removeFile(){
-    if `echo "$1" | grep -qi "Adobe"`
+    if `echo "$1" | grep -qi "adobe"`
     then
     	echo "$1"; sudo rm -rf "$1";
     fi
@@ -26,9 +26,9 @@ for file in ~/Library/PreferencePanes/*; do removeFile "$file"; done;
 for file in ~/Library/Caches/*; do removeFile "$file"; done;
 
 #FORGET FILES
-pkgutil --pkgs / | grep -i "Adobe" | xargs -I{} sudo pkgutil --forget {}
+pkgutil --pkgs / | grep -i "adobe" | xargs -I{} sudo pkgutil --forget {}
 
-ps aux |grep -i 'Adobe' |grep -v 'grep' |awk '{print $2}' |xargs -I{} sudo kill {}
+ps aux |grep -i 'adobe' |grep -v 'grep' |awk '{print $2}' |xargs -I{} sudo kill {}
 
 echo "abcd" | pbcopy
 rm -rf ~/abcd
