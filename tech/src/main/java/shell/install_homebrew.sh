@@ -1,6 +1,12 @@
 #!/bin/bash
 set -u
 
+# Check if script is run non-interactively (e.g. CI)
+# If it is run non-interactively we should not prompt for passwords.
+if [[ ! -t 0 || -n "${CI-}" ]]; then
+  NONINTERACTIVE=1
+fi
+
 # First check if the OS is Linux.
 if [[ "$(uname)" = "Linux" ]]; then
   HOMEBREW_ON_LINUX=1
@@ -34,10 +40,10 @@ else
 fi
 BREW_REPO="https://github.com/Homebrew/brew"
 
+# TODO: bump version when new macOS is released or announced
+MACOS_NEWEST_UNSUPPORTED="12.0"
 # TODO: bump version when new macOS is released
-MACOS_LATEST_SUPPORTED="10.15"
-# TODO: bump version when new macOS is released
-MACOS_OLDEST_SUPPORTED="10.13"
+MACOS_OLDEST_SUPPORTED="10.14"
 
 # For Homebrew on Linux
 REQUIRED_RUBY_VERSION=2.6  # https://github.com/Homebrew/brew/pull/6556
@@ -64,13 +70,20 @@ have_sudo_access() {
   local -a args
   if [[ -n "${SUDO_ASKPASS-}" ]]; then
     args=("-A")
+  elif [[ -n "${NONINTERACTIVE-}" ]]; then
+    args=("-n")
   fi
 
   if [[ -z "${HAVE_SUDO_ACCESS-}" ]]; then
     if [[ -n "${args[*]-}" ]]; then
-      /usr/bin/sudo "${args[@]}" -l mkdir &>/dev/null
+      SUDO="/usr/bin/sudo ${args[*]}"
     else
-      /usr/bin/sudo -l mkdir &>/dev/null
+      SUDO="/usr/bin/sudo"
+    fi
+    if [[ -n "${NONINTERACTIVE-}" ]]; then
+      ${SUDO} -l mkdir &>/dev/null
+    else
+      ${SUDO} -v && ${SUDO} -l mkdir &>/dev/null
     fi
     HAVE_SUDO_ACCESS="$?"
   fi
@@ -117,10 +130,10 @@ execute() {
 
 execute_sudo() {
   local -a args=("$@")
-  if [[ -n "${SUDO_ASKPASS-}" ]]; then
-    args=("-A" "${args[@]}")
-  fi
   if have_sudo_access; then
+    if [[ -n "${SUDO_ASKPASS-}" ]]; then
+      args=("-A" "${args[@]}")
+    fi
     ohai "/usr/bin/sudo" "${args[@]}"
     execute "/usr/bin/sudo" "${args[@]}"
   else
@@ -285,11 +298,14 @@ fi
 if [[ -z "${HOMEBREW_ON_LINUX-}" ]]; then
  have_sudo_access
 else
-  if [[ -n "${CI-}" ]] || [[ -w "$HOMEBREW_PREFIX_DEFAULT" ]] || [[ -w "/home/linuxbrew" ]] || [[ -w "/home" ]]; then
+  if [[ -n "${NONINTERACTIVE-}" ]] ||
+     [[ -w "$HOMEBREW_PREFIX_DEFAULT" ]] ||
+     [[ -w "/home/linuxbrew" ]] ||
+     [[ -w "/home" ]]; then
     HOMEBREW_PREFIX="$HOMEBREW_PREFIX_DEFAULT"
   else
     trap exit SIGINT
-    if [[ $(/usr/bin/sudo -n -l mkdir 2>&1) != *"mkdir"* ]]; then
+    if ! /usr/bin/sudo -n -v &>/dev/null; then
       ohai "Select the Homebrew installation directory"
       echo "- ${tty_bold}Enter your password${tty_reset} to install to ${tty_underline}${HOMEBREW_PREFIX_DEFAULT}${tty_reset} (${tty_bold}recommended${tty_reset})"
       echo "- ${tty_bold}Press Control-D${tty_reset} to install to ${tty_underline}$HOME/.linuxbrew${tty_reset}"
@@ -305,16 +321,33 @@ else
   HOMEBREW_REPOSITORY="${HOMEBREW_PREFIX}/Homebrew"
 fi
 
-if [[ "$UID" == "0" ]]; then
+if [[ "${EUID:-${UID}}" == "0" ]]; then
   abort "Don't run this as root!"
 elif [[ -d "$HOMEBREW_PREFIX" && ! -x "$HOMEBREW_PREFIX" ]]; then
   abort "$(cat <<EOABORT
-The Homebrew prefix, ${HOMEBREW_PREFIX}, exists but is not searchable. If this is
-not intentional, please restore the default permissions and try running the
-installer again:
+The Homebrew prefix, ${HOMEBREW_PREFIX}, exists but is not searchable.
+If this is not intentional, please restore the default permissions and
+try running the installer again:
     sudo chmod 775 ${HOMEBREW_PREFIX}
 EOABORT
 )"
+fi
+
+UNAME_MACHINE="$(uname -m)"
+
+if [[ -z "${HOMEBREW_ON_LINUX-}" ]] && [[ "$UNAME_MACHINE" == "arm64" ]]; then
+  abort "$(cat <<EOABORT
+Homebrew is not (yet) supported on ARM processors!
+Rerun the Homebrew installer under Rosetta 2.
+If you really know what you are doing and are prepared for a very broken
+experience you can use another installation option for installing on ARM:
+  ${tty_underline}https://docs.brew.sh/Installation${tty_reset}
+EOABORT
+)"
+fi
+
+if [[ "$UNAME_MACHINE" != "x86_64" ]]; then
+  abort "Homebrew is only supported on Intel processors!"
 fi
 
 if [[ -z "${HOMEBREW_ON_LINUX-}" ]]; then
@@ -326,11 +359,11 @@ EOABORT
 )"
   elif version_lt "$macos_version" "10.10"; then
     abort "Your OS X version is too old"
-  elif version_gt "$macos_version" "$MACOS_LATEST_SUPPORTED" || \
+  elif version_ge "$macos_version" "$MACOS_NEWEST_UNSUPPORTED" || \
     version_lt "$macos_version" "$MACOS_OLDEST_SUPPORTED"; then
     who="We"
     what=""
-    if version_gt "$macos_version" "$MACOS_LATEST_SUPPORTED"; then
+    if version_ge "$macos_version" "$MACOS_NEWEST_UNSUPPORTED"; then
       what="pre-release version"
     else
       who+=" (and Apple)"
@@ -449,7 +482,7 @@ if should_install_command_line_tools; then
   ohai "The Xcode Command Line Tools will be installed."
 fi
 
-if [[ -t 0 && -z "${CI-}" ]]; then
+if [[ -z "${NONINTERACTIVE-}" ]]; then
   wait_for_user
 fi
 
