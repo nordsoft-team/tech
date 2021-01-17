@@ -9,7 +9,7 @@
 import pymysql
 
 # 打开数据库连接
-db = pymysql.connect("localhost", "root", "", "mysql", charset='utf8' )
+db = pymysql.connect(host="localhost", user="root", password="", database="mysql", charset="utf8")
 
 # 使用cursor()方法获取操作游标
 cursor = db.cursor()
@@ -20,7 +20,7 @@ cursor.execute("SELECT VERSION()")
 # 使用 fetchone() 方法获取一条数据
 data = cursor.fetchone()
 
-print ("Database version : %s " % data)
+print("Database version : %s " % data)
 
 # 关闭数据库连接
 db.close()
