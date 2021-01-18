@@ -5,7 +5,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import Select
 import time
-import requests
 
 # 进入登陆页面
 chrome_options = Options()
