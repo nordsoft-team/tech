@@ -37,3 +37,5 @@ receiveButton = driver.find_element_by_class_name("drawDown")
 if receiveButton.is_enabled():
     receiveButton.click()
     print("finish")
+
+driver.close()
