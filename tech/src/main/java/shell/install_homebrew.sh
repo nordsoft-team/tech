@@ -591,6 +591,7 @@ EOABORT
 fi
 
 ohai "Downloading and installing Homebrew..."
+echo ${HOMEBREW_REPOSITORY}
 
 #brew_mirror="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
 #brew_core_mirror="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
@@ -603,28 +604,28 @@ brew_cask_mirror="https://mirrors.ustc.edu.cn/homebrew-cask.git"
 brew_bottles="https://mirrors.ustc.edu.cn/homebrew-bottles"
 
 cd
-sudo rm -rf /usr/local/Homebrew
-sudo mkdir -p /usr/local/Homebrew
-sudo git clone $brew_mirror /usr/local/Homebrew
+sudo rm -rf ${HOMEBREW_REPOSITORY}
+sudo mkdir -p ${HOMEBREW_REPOSITORY}
+sudo git clone $brew_mirror ${HOMEBREW_REPOSITORY}
 
-sudo rm -rf /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
-sudo mkdir -p /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
-sudo git clone $brew_core_mirror /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
+sudo rm -rf ${HOMEBREW_REPOSITORY}/Library/Taps/homebrew/homebrew-core
+sudo mkdir -p ${HOMEBREW_REPOSITORY}/Library/Taps/homebrew/homebrew-core
+sudo git clone $brew_core_mirror ${HOMEBREW_REPOSITORY}/Library/Taps/homebrew/homebrew-core
 
 
-#sudo rm -rf /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask
-#sudo mkdir -p /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask
-#sudo git clone $brew_cask_mirror /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask
+#sudo rm -rf ${HOMEBREW_REPOSITORY}/Library/Taps/homebrew/homebrew-cask
+#sudo mkdir -p ${HOMEBREW_REPOSITORY}/Library/Taps/homebrew/homebrew-cask
+#sudo git clone $brew_cask_mirror ${HOMEBREW_REPOSITORY}/Library/Taps/homebrew/homebrew-cask
 
 #sudo mkdir -p /usr/local/Caskroom
 #sudo chown -R "$(whoami)" /usr/local/Caskroom
 #chmod u+w /usr/local/Caskroom
 
 sudo rm -rf /usr/local/bin/brew
-sudo ln -s /usr/local/Homebrew/bin/brew /usr/local/bin/brew
+sudo ln -s ${HOMEBREW_REPOSITORY}/bin/brew /usr/local/bin/brew
 
-sudo chown -R $(whoami) /usr/local/Homebrew
-chmod u+w /usr/local/Homebrew
+sudo chown -R $(whoami) ${HOMEBREW_REPOSITORY}
+chmod u+w ${HOMEBREW_REPOSITORY}
 sudo chown -R $(whoami) /usr/local/var/homebrew
 chmod u+w /usr/local/var/homebrew
 
