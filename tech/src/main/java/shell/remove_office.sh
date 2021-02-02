@@ -27,6 +27,10 @@ for file in ~/Library/Caches/*; do removeFile "$file"; done;
 
 #FORGET FILES
 pkgutil --pkgs / | grep -i "Microsoft" | xargs -I{} sudo pkgutil --forget {}
+pkgutil --pkgs / | grep -i "OneDrive" | xargs -I{} sudo pkgutil --forget {}
+
+ps aux |grep -i 'Microsoft' |grep -v 'grep' |awk '{print $2}' |xargs -I{} sudo kill {}
+ps aux |grep -i 'OneDrive' |grep -v 'grep' |awk '{print $2}' |xargs -I{} sudo kill {}
 
 echo "abcd" | pbcopy
 rm -rf ~/abcd
