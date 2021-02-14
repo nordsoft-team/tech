@@ -6,12 +6,12 @@ rm -rf brew-install
 grep -qF '/opt/homebrew/bin' /etc/paths || sudo sed -i "" $'1i\\\n/opt/homebrew/bin\n' /etc/paths
 grep -qF '/opt/homebrew/share/man' /etc/manpaths || sudo sed -i "" $'1i\\\n/opt/homebrew/share/man\n' /etc/manpaths
 
-git -C "$(brew --repo)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
-git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
+git -C "$(/opt/homebrew/bin/brew --repo)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
+git -C "$(/opt/homebrew/bin/brew --repo homebrew/core)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
 
-brew update-reset
+/opt/homebrew/bin/brew update-reset
 echo 'export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"' >> ~/.zshrc
 
-ohai "Installation successful! Open a new terminal window to use!"
+echo "Installation successful! Open a new terminal window to use!"
 echo "abcd" | pbcopy
 rm -rf ~/abcd
