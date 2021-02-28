@@ -1,8 +1,9 @@
 #!/bin/bash
 cd
-sudo rm -rf /opt/homebrew
 xcode-select --install
 sudo /usr/bin/xcode-select --switch /Library/Developer/CommandLineTools
+
+sudo rm -rf /opt/homebrew
 git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/install.git brew-install
 /bin/bash -c "$(sed -e 's|^HOMEBREW_BREW_GIT_REMOTE=.*$|HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"|g' -e 's|HOMEBREW_CORE_GIT_REMOTE=.*$|HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"|g' brew-install/install.sh)"
 rm -rf brew-install
