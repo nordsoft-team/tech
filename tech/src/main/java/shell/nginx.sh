@@ -6,6 +6,7 @@ echo y| apt install nginx
 cd /etc/nginx/
 cp nginx.conf nginx.conf.default
 
+#/etc/nginx/conf.d/default.conf
 # NEED TO COMMENT INCLUDE CONFIGURATION OR JUST USE INCLUDE SYNTAX
 
 
