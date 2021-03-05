@@ -2,6 +2,7 @@
 # -*- coding: UTF-8 -*-
 
 # pip install pymysql
+# conda install pymysql
 
 
 
