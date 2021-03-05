@@ -14,4 +14,4 @@ docker run --name jdk --network exam -p 8080:8080 -v jar:/root -d adoptopenjdk:1
 #6.创建angular卷并把前端项目复制进去
 docker volume create angular
 #7.启动nginx
-docker run --name nginx --network exam -p 80:80 -v angular:/usr/share/nginx/html -d nginx:1.18-alpine
+docker run --name nginx exam -p 80:80 -v angular:/usr/share/nginx/html -d nginx:1.18-alpine
