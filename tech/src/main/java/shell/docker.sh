@@ -24,5 +24,10 @@ docker run --name jdk --network exam -p 8080:8080 -v jar:/root -d adoptopenjdk:1
 docker volume create angular
 #7.启动nginx
 docker run --name nginx -p 80:80 -v angular:/usr/share/nginx/html -d nginx:1.18-alpine
+#8.修改nginx配置
+docker exec -it nginx /bin/sh
+#9.重启nginx
+docker restart nginx
+
 
 
