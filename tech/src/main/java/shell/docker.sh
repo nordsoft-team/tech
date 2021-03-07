@@ -3,7 +3,7 @@
 mvn package
 
 #2.前端项目打包
-ng build --prod --base-href /exam/
+ng build --prod
 
 
 ####################################远程项目准备
@@ -23,7 +23,7 @@ docker run --name jdk --network exam -p 8080:8080 -v jar:/root -d adoptopenjdk:1
 #6.创建angular卷并把本地前端dist复制过去
 docker volume create angular
 #7.启动nginx
-docker run --name nginx -p 80:80 -v angular:/usr/share/nginx/html -d nginx:1.18-alpine
+docker run --name nginx --network exam -p 80:80 -v angular:/usr/share/nginx/html -v nginx_conf:/etc/nginx -d nginx:1.18-alpine
 #8.修改nginx配置
 docker exec -it nginx /bin/sh
 #9.重启nginx
