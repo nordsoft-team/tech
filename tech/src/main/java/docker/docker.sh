@@ -20,7 +20,7 @@ docker volume create jar
 #5.启动项目容器
 docker run --name jdk --network exam -v jar:/root -d adoptopenjdk:11-jre-hotspot java -jar /root/exam-backend-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod
 
-#6.创建angular卷并把本地前端dist复制过去
-docker volume create angular
-#7.启动nginx并把配置复制过去
-docker run --name nginx --network exam -p 80:80 -p 443:443 -v angular:/usr/share/nginx/html -v nginx_conf:/etc/nginx -d nginx:1.18-alpine
+#6.启动nginx
+docker run --name nginx --network exam -p 80:80 -p 443:443 -v angular:/usr/share/nginx/html -v nginxConf:/etc/nginx -d nginx:1.18-alpine
+#7.复制前端项目及nginx配置到对应volume然后重启docker
+docker restart nginx
