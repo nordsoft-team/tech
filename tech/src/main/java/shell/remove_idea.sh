@@ -26,7 +26,6 @@ for file in ~/Library/PreferencePanes/*; do removeFile "$file"; done;
 for file in ~/Library/Caches/*; do removeFile "$file"; done;
 for file in ~/Library/Logs/*; do removeFile "$file"; done;
 
-
 #FORGET FILES
 pkgutil --pkgs / | grep -i "Jetbrains" | xargs -I{} sudo pkgutil --forget {}
 pkgutil --pkgs / | grep -i "idea" | xargs -I{} sudo pkgutil --forget {}
