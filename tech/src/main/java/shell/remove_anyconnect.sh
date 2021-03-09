@@ -25,6 +25,8 @@ for file in ~/Library/Preferences/*; do removeFile "$file"; done;
 for file in ~/Library/PreferencePanes/*; do removeFile "$file"; done;
 for file in ~/Library/Caches/*; do removeFile "$file"; done;
 
+sudo rm -rf /opt/cisco
+
 #FORGET FILES
 pkgutil --pkgs / | grep -i "anyconnect" | xargs -I{} sudo pkgutil --forget {}
 pkgutil --pkgs / | grep -i "cisco" | xargs -I{} sudo pkgutil --forget {}
