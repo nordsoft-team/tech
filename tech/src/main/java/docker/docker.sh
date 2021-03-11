@@ -13,7 +13,7 @@ docker network create exam
 #2.启动mysql容器
 docker run --name mysql --network exam -v mysql:/var/lib/mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -d mysql:8.0.23
 #3.进入容器并新建exam数据库
-docker exec -it mysql /bin/bash
+docker exec -it mysql env LANG=C.UTF-8 /bin/bash
 
 #4.创建jar卷并把本地后端jar复制过去
 docker volume create jar
