@@ -6,7 +6,7 @@
 # 2.rename TeamViewer.app to TeamViewer15.app
 # 3.sudo codesign --force --deep --sign - /Applications/TeamViewer15.app
 # 4.sudo python teamviewer15.py with python2
-# 5.restart the computer
+# 5.restart the computer to get teamviewer id changed
 
 import sys
 import os
