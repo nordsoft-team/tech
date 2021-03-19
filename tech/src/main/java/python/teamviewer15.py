@@ -2,7 +2,12 @@
 
 #coding:utf-8
 
-#
+# 1.install TeamViewer
+# 2.rename TeamViewer.app to TeamViewer15.app
+# 3.sudo codesign --force --deep --sign - /Applications/TeamViewer15.app
+# 4.sudo python teamviewer15.py with python2
+# 5.restart the computer
+
 import sys
 import os
 import glob
@@ -10,12 +15,6 @@ import platform
 import re
 import random
 import string
-
-# 1.install TeamViewer
-# 2.rename TeamViewer.app to TeamViewer15.app
-# 3.sudo codesign --force --deep --sign - /Applications/TeamViewer15.app
-# 4.sudo python teamviewer15.py with python2
-# 5.restart the computer
 
 print('''
 --------------------------------
