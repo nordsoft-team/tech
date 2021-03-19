@@ -15,6 +15,7 @@ import string
 # 2.rename TeamViewer.app to TeamViewer15.app
 # 3.sudo codesign --force --deep --sign - /Applications/TeamViewer15.app
 # 4.sudo python teamviewer15.py
+# 5.restart the computer
 
 print('''
 --------------------------------
