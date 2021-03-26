@@ -25,6 +25,9 @@ for file in ~/Library/Preferences/*; do removeFile "$file"; done;
 for file in ~/Library/PreferencePanes/*; do removeFile "$file"; done;
 for file in ~/Library/Caches/*; do removeFile "$file"; done;
 
+sudo rm -rf "/opt/anaconda3";
+sudo rm -rf "~/opt/anaconda3";
+
 #FORGET FILES
 pkgutil --pkgs / | grep -i "anaconda" | xargs -I{} sudo pkgutil --forget {}
 pkgutil --pkgs / | grep -i "continuum" | xargs -I{} sudo pkgutil --forget {}
