@@ -2,7 +2,6 @@
 cd
 xcode-select --install
 sudo /usr/bin/xcode-select --switch /Library/Developer/CommandLineTools
-sudo chown $(whoami):staff .config
 
 export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
 export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/${BREW_TYPE}-core.git"
