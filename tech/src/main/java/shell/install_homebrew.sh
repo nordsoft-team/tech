@@ -593,10 +593,10 @@ fi
 ohai "Downloading and installing Homebrew..."
 echo ${HOMEBREW_REPOSITORY}
 
-#brew_mirror="https://mirrors.aliyun.com/homebrew/brew.git"
-#brew_core_mirror="https://mirrors.aliyun.com/homebrew/homebrew-core.git"
-#brew_cask_mirror="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git"
-#brew_bottles="https://mirrors.aliyun.com/homebrew/homebrew-bottles
+#brew_mirror="https://mirrors.bfsu.edu.cn/git/homebrew/brew.git"
+#brew_core_mirror="https://mirrors.bfsu.edu.cn/git/homebrew/homebrew-core.git"
+#brew_cask_mirror="https://mirrors.bfsu.edu.cn/git/homebrew/homebrew-cask.git"
+#brew_bottles="https://mirrors.bfsu.edu.cn/homebrew-bottles"
 
 #brew_mirror="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
 #brew_core_mirror="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
