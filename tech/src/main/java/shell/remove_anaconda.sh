@@ -27,6 +27,8 @@ for file in ~/Library/Caches/*; do removeFile "$file"; done;
 
 sudo rm -rf "/opt/anaconda3";
 sudo rm -rf "$HOME/opt/anaconda3";
+sudo rm -rf "/opt/anaconda2";
+sudo rm -rf "$HOME/opt/anaconda2";
 sudo rm -rf "$HOME/.conda";
 sudo rm -rf "$HOME/.anaconda";
 
