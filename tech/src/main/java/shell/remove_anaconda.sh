@@ -1,5 +1,8 @@
 #!/bin/bash
 
+ps aux |grep -i 'anaconda' |grep -v 'grep' |awk '{print $2}' |xargs -I{} sudo kill {}
+ps aux |grep -i 'continuum' |grep -v 'grep' |awk '{print $2}' |xargs -I{} sudo kill {}
+
 function removeFile(){
     if `echo "$1" | grep -qi "anaconda"` || `echo "$1" | grep -qi "continuum"`
     then

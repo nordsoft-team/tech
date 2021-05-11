@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ps aux |grep -i 'adobe' |grep -v 'grep' |awk '{print $2}' |xargs -I{} sudo kill {}
+
 function removeFile(){
     if `echo "$1" | grep -qi "adobe"`
     then
@@ -27,8 +29,6 @@ for file in ~/Library/Caches/*; do removeFile "$file"; done;
 
 #FORGET FILES
 pkgutil --pkgs / | grep -i "adobe" | xargs -I{} sudo pkgutil --forget {}
-
-ps aux |grep -i 'adobe' |grep -v 'grep' |awk '{print $2}' |xargs -I{} sudo kill {}
 
 echo "abcd" | pbcopy
 rm -rf ~/abcd
