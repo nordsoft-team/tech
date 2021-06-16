@@ -635,8 +635,8 @@ sudo chown -R $(whoami) /usr/local/var/homebrew
 chmod u+w /usr/local/var/homebrew
 
 
-echo "export HOMEBREW_BOTTLE_DOMAIN=$brew_bottles" >> ~/.bash_profile
-echo "export HOMEBREW_BOTTLE_DOMAIN=$brew_bottles" >> ~/.zshrc
+#echo "export HOMEBREW_BOTTLE_DOMAIN=$brew_bottles" >> ~/.bash_profile
+#echo "export HOMEBREW_BOTTLE_DOMAIN=$brew_bottles" >> ~/.zshrc
 
 ohai "Installation successful! Open a new terminal window to use!"
 echo "abcd" | pbcopy
