@@ -24,7 +24,7 @@ git -C "$(/opt/homebrew/bin/brew --repo)" remote set-url origin https://mirrors.
 git -C "$(/opt/homebrew/bin/brew --repo homebrew/core)" remote set-url origin https://mirrors.bfsu.edu.cn/git/homebrew/homebrew-core.git
 
 /opt/homebrew/bin/brew update-reset
-echo 'export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.bfsu.edu.cn/homebrew-bottles"' >> ~/.zshrc
+#echo 'export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.bfsu.edu.cn/homebrew-bottles"' >> ~/.zshrc
 
 echo "Installation successful! Open a new terminal window to use!"
 echo "abcd" | pbcopy
