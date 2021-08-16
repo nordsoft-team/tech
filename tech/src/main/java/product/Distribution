@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-gui-script minSpecVersion="1">
+    
+    <title>myProduct</title>
+    <background file="background.jpg"/>
+    <welcome file="welcome.rtf"/>
+    
+    <pkg-ref id="com.taobao.nordsorft"/>
+    <options customize="never" require-scripts="false"/>
+    <choices-outline>
+        <line choice="default">
+            <line choice="com.taobao.nordsorft"/>
+        </line>
+    </choices-outline>
+    <choice id="default"/>
+    <choice id="com.taobao.nordsorft" visible="false">
+        <pkg-ref id="com.taobao.nordsorft"/>
+    </choice>
+    <pkg-ref id="com.taobao.nordsorft" version="0" onConclusion="none">myPkg.pkg/</pkg-ref>
+</installer-gui-script>

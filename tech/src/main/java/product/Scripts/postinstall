@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+RESULT=`/usr/bin/open 'https://nordsoft.taobao.com/'`
+
+exit 0
