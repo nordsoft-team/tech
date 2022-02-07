@@ -22,5 +22,5 @@ docker run --name jdk --network exam -v jar:/root -e TZ=Asia/Shanghai -d adoptop
 
 #6.启动nginx
 docker run --name nginx --network exam -p 80:80 -p 443:443 -v angular:/usr/share/nginx/html -v nginxConf:/etc/nginx -e TZ=Asia/Shanghai -d nginx:1.18-alpine
-#7.复制前端项目及nginx配置到对应volume然后重启docker
+#7.复制前端项目及nginx配置到对应volume然后重启nginx
 docker restart nginx
