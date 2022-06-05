@@ -1,7 +1,8 @@
 #!/usr/bin/expect
 set user [lindex $argv 0]
-set pass [lindex $argv 1]
-spawn ssh $user
+set ip [lindex $argv 1]
+set pass [lindex $argv 2]
+spawn ssh $user@$ip
 expect {
 	"yes/no" { send "yes\r"; exp_continue}
 	"password:" { send "$pass\r" }
