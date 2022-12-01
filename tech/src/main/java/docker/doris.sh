@@ -1,4 +1,5 @@
-#官网下载二进制文件，保存到如下目录
+# 官网下载二进制文件，保存到如下目录
+# https://doris.apache.org/
 /Users/fanfei/Documents/docker/
 
 # 下载镜像
