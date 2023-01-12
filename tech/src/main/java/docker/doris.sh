@@ -1,5 +1,7 @@
 # 官网下载二进制文件，保存到如下目录，复制java-udf-jar-with-dependencies.jar到be/lib目录
 # https://doris.apache.org/
+# 官网下载ODBC驱动，解压并复制到到be目录，该驱动在doris建立外表时会用到
+# https://downloads.mysql.com/archives/get/p/10/file/mysql-connector-odbc-8.0.29-linux-glibc2.12-x86-64bit.tar.gz
 /Users/fanfei/Documents/docker
 
 # 下载镜像
