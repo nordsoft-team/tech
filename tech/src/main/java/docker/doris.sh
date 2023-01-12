@@ -29,6 +29,8 @@ docker run --privileged -it -d --name=doris-be -v /Users/fanfei/Documents/docker
 # 配置BE
 docker exec -it doris-be /bin/bash
 #/opt/doris/be/conf/be.conf priority_networks = 172.17.0.0/16
+#/opt/doris/be/conf/odbcinst.ini
+#/opt/doris/be/mysql-connector-odbc-8.0.29-linux-glibc2.12-x86-64bit/lib/libmyodbc8w.so
 
 # 启动BE
 /opt/doris/be/bin/start_be.sh --daemon
