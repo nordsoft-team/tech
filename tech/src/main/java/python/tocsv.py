@@ -5,7 +5,7 @@ import pandas as pd
 
 # 基于python3.8
 # 将此文件夹包括子文件下的所有excel文件转为csv
-path = '/Users/fanfei/Downloads/202212'
+path = '/Users/fanfei/Downloads/202303/S40'
 
 print(time.asctime())
 for root, dirs, files in os.walk(path):
