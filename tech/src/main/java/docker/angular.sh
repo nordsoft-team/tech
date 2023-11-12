@@ -2,8 +2,8 @@
 brew install node@20
 echo 'export PATH="/usr/local/opt/node@20/bin:$PATH"' >> ~/.zshrc
 sudo chown -R $(whoami) ~/.npm
-sudo chown -R $(whoami) ~/usr/local/lib/node_modules
+sudo chown -R $(whoami) /usr/local/lib/node_modules
 
 # install angular
-sudo npm install -g @angular/cli
+npm install -g @angular/cli
 ng new exam-frontend
