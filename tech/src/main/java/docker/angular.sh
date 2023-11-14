@@ -6,5 +6,10 @@ sudo chown -R $(whoami) /usr/local/lib/node_modules
 
 # install angular
 npm install -g @angular/cli
-ng add @angular/material
 ng new exam-frontend
+ng add @angular/material
+npm install jwt-decode
+
+# start
+ng serve
+ng serve --configuration production
